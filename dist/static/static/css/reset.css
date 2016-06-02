@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html body {
+	background-color: #ffffff;
+	font-family: "微软雅黑";
+	font-size: 16px;
+}
+
+a{
+	color: #333;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	text-decoration: none;
+}
+li{
+	list-style: none;
+	display: inline-block;
+}
+li a{
+	color: #FFFFFF;
+	font-size: 18px;
+}
+input,textarea{
+	font-family: "微软雅黑";
+}
+input::-webkit-input-placeholder{
+	color: #606060;
+}
+input::-moz-placeholder{
+	color: #606060;
+}
+input::-ms-input-placeholder{
+	color: #606060;
+}
+textarea::-webkit-input-placeholder{
+	color: #606060;
+	
+}
+textarea::-moz-placeholder{
+	color: #606060;
+	
+}
+textarea::-ms-input-placeholder{
+	color: #606060;
+	
+}
+textarea{
+	resize: none;
+}
+button{
+	border: none;
+	cursor: pointer;
+}
