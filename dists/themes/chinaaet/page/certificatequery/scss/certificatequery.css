@@ -1,0 +1,72 @@
+article .main {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+article .main .card-search {
+  background: url("/themes/chinaaet/page/certificatequery/img/look.png") no-repeat;
+  width: 623px;
+  height: 99px;
+  margin: 40px auto;
+}
+
+article .main .card-bd {
+  width: 580px;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid #e5e5e5;
+  background: #eee;
+  margin-bottom: 50px;
+}
+
+article .main .card-bd .card-txt {
+  margin-bottom: 20px;
+}
+
+article .main .card-bd .card-txt input {
+  width: 99%;
+  border-color: #c8c8c8;
+  padding: 2px 5px;
+  height: 24px;
+  background-color: #FFF;
+  border: 1px solid #c8c8c8;
+  color: #555;
+  line-height: 24px;
+  vertical-align: middle;
+  -moz-transition: all 0.3s ease-out 0s;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+article .main .card-bd .card-txt #tCode {
+  width: 80px;
+  text-indent: 0px;
+  cursor: auto;
+}
+
+article .main .card-bd .card-txt #imgCode {
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+article .main .card-bd .card-ft {
+  text-align: center;
+}
+
+article .main .card-bd .card-ft .btn {
+  margin: 0;
+  padding: 0 12px;
+  border: 1px solid #e43a3d;
+  border-radius: 3px;
+  background: #e43a3d;
+  height: 30px;
+  line-height: 22px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  display: inline-block;
+  text-decoration: none;
+}

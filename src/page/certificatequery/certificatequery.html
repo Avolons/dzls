@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -9,6 +10,64 @@
 		<link rel="stylesheet" type="text/css" href="../../widget/footer/css/footer.css" />
 		<script src="../../static/lib/jquery/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
 	</head>
+
 	<body>
+		<header id="header">
+
+		</header>
+		<article>
+			<div class="crumbs">
+				<span>
+                     <a class="crumbs_a" href="http://peixun.zjzx.cn/"><i class="home"></i>首页</a> &gt;证书查询 
+				</span>
+			</div>
+			<div class="main">
+				<div class="card-search">
+				</div>
+				<div class="card-bd">
+					<div class="card-txt">
+						<input placeholder="请输入姓名" type="text" id="txtName" class="span3" />
+					</div>
+					<div class="card-txt">
+						<input placeholder="请输入身份证号" type="text" id="txtID" class="span3" />
+					</div>
+					<div class="card-txt">
+						<input placeholder="请输入验证码" type="text" id="tCode" style="width: 80px; padding:2px 5px; text-indent: 0px; cursor: auto; " name="tCode" />
+						<img alt="验证码" onclick="getNewCode(4);" src="" id="imgCode" style="cursor: pointer;vertical-align: middle;" />
+					</div>
+					<div class="card-ft">
+						<button class="btn" id="btnSearch" value="查询" onclick="SearchData()">查询</button>
+					</div>
+				</div>
+				<table id="list" class="table">
+					<thead>
+						<tr>
+							<th style="width:30px;">
+								序号
+							</th>
+							<th>姓名</th>
+							<th>身份证号</th>
+							<th>获得证书</th>
+							<th>获证方式</th>
+							<th>状态</th>
+							<th style="width:100px;">操作</th>
+						</tr>
+					</thead>
+					<tbody id="dataList">
+						<tr>
+							<td colspan="7">
+								<div class="tc c38 line_h30">暂无数据</div>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+					</tfoot>
+				</table>
+			</div>
+		</article>
+		<footer id="footer">
+
+		</footer>
 	</body>
+
 </html>

@@ -1,0 +1,376 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  text-align: center;
+}
+
+article {
+  width: 100%;
+}
+
+article .slider {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+article .slider li {
+  width: 100%;
+}
+
+article .slider li img {
+  width: 100%;
+}
+
+article .will_speak {
+  height: 540px;
+  background-image: url("/static/page/index/img/bc.png");
+  background-size: cover;
+}
+
+article .will_speak .title {
+  padding-top: 40px;
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+article .will_speak .title .titleE {
+  margin: 0 auto;
+  font-size: 17px;
+  color: #656769;
+  margin-bottom: 20px;
+}
+
+article .will_speak .title .titleC {
+  margin: 0 auto;
+  font-size: 22px;
+  color: #414141;
+  margin-bottom: 20px;
+}
+
+article .will_speak .title span {
+  display: block;
+  width: 60px;
+  height: 10px;
+  background-color: #e53939;
+  margin: 0 auto -5px;
+}
+
+article .will_speak .title a {
+  position: absolute;
+  color: #4197d4;
+  font-size: 14px;
+  bottom: 3px;
+  right: 0;
+}
+
+article .will_speak hr {
+  color: #d2d2d2;
+}
+
+article .will_speak .content {
+  width: 1000px;
+  margin: 0 auto;
+  height: 284px;
+  margin-top: 50px;
+}
+
+article .will_speak .content figure {
+  width: 285px;
+  float: left;
+  margin-right: 22px;
+}
+
+article .will_speak .content figure img {
+  box-sizing: border-box;
+  border: 5px solid #FFFFFF;
+  width: 285px;
+}
+
+article .will_speak .content .intrdouce {
+  width: 527px;
+  float: left;
+  margin-right: 25px;
+}
+
+article .will_speak .content .intrdouce h1 {
+  color: #e53939;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: 700;
+}
+
+article .will_speak .content .intrdouce p {
+  color: #414141;
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+article .will_speak .content .intrdouce p i {
+  font-size: 16px;
+  color: #e53939;
+  margin-right: 5px;
+}
+
+article .will_speak .content .charseter {
+  float: left;
+  width: 140px;
+}
+
+article .will_speak .content .charseter img {
+  width: 120px;
+  margin: 0 auto;
+  display: block;
+}
+
+article .will_speak .content .charseter a {
+  text-align: center;
+  font-size: 14px;
+  color: #414141;
+  display: block;
+  margin: 0 auto;
+}
+
+article .will_speak .content .charseter p {
+  font-size: 14px;
+  color: #414141;
+  display: block;
+  margin: 0 auto;
+}
+
+article .will_speak button {
+  height: 40px;
+  line-height: 40px;
+  width: 115px;
+  background-color: #e43a3d;
+  color: #FFFFFF;
+  margin: 0 auto;
+  display: block;
+}
+
+article .signList {
+  background-color: #fafafa;
+  padding-bottom: 50px;
+  padding-top: 30px;
+}
+
+article .signList ul {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+article .signList ul li {
+  margin-top: 20px;
+  height: 130px;
+}
+
+article .signList ul li figure {
+  float: left;
+  height: 130px;
+  margin-right: 27px;
+}
+
+article .signList ul li figure img {
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 3px;
+  border: 1px solid #dcdcdc;
+}
+
+article .signList ul li .intrdouce {
+  float: left;
+  width: 672px;
+}
+
+article .signList ul li .intrdouce h1 {
+  color: #e53939;
+  font-size: 15px;
+  margin: 10px 0;
+  text-align: left;
+  font-weight: 700;
+}
+
+article .signList ul li .intrdouce p {
+  color: #414141;
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+
+article .signList ul li .intrdouce p i {
+  font-size: 16px;
+  color: #e53939;
+  margin-right: 5px;
+}
+
+article .signList ul li button {
+  float: right;
+  background-color: #E43A3D;
+  font-size: 14px;
+  color: #FFFFFF;
+  height: 25px;
+  width: 60px;
+  display: block;
+  margin-top: 70px;
+  margin-left: 28px;
+}
+
+article .signList ul li .haveSign {
+  background-color: #8a8a8a;
+}
+
+article .hotcourseList .titleout {
+  height: 150px;
+  background-image: url(/static/page/index/img/hotbc.png);
+}
+
+article .hotcourseList .titleout .title {
+  padding-top: 30px;
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+article .hotcourseList .titleout .title .titleE {
+  margin: 0 auto;
+  font-size: 17px;
+  color: #656769;
+  margin-bottom: 15px;
+}
+
+article .hotcourseList .titleout .title .titleC {
+  margin: 0 auto;
+  font-size: 22px;
+  color: #414141;
+  margin-bottom: 15px;
+}
+
+article .hotcourseList .titleout .title span {
+  display: block;
+  width: 60px;
+  height: 10px;
+  background-color: #e53939;
+  margin: 0 auto -5px;
+}
+
+article .hotcourseList .titleout .title a {
+  position: absolute;
+  color: #4197d4;
+  font-size: 14px;
+  bottom: 3px;
+  right: 0;
+}
+
+article .hotcourseList ul {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 35px;
+}
+
+article .hotcourseList ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+article .hotcourseList ul li {
+  width: 300px;
+  float: left;
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+article .hotcourseList ul li:hover .mask {
+  opacity: 1;
+}
+
+article .hotcourseList ul li:hover h1 {
+  opacity: 0;
+}
+
+article .hotcourseList ul li:hover h2 {
+  opacity: 0;
+}
+
+article .hotcourseList ul li figure {
+  width: 298px;
+}
+
+article .hotcourseList ul li figure img {
+  width: 298px;
+  height: 180px;
+  display: block;
+}
+
+article .hotcourseList ul li h1 {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #646464;
+}
+
+article .hotcourseList ul li h2 {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #646464;
+}
+
+article .hotcourseList ul li h3 {
+  position: absolute;
+  width: 75px;
+  height: 18px;
+  line-height: 18px;
+  color: #e53939;
+  background-color: #e0e0df;
+  font-size: 16px;
+  top: 162px;
+  right: 0;
+}
+
+article .hotcourseList ul li .mask {
+  box-sizing: border-box;
+  padding: 0 15px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+article .hotcourseList ul li .mask h4 {
+  font-size: 16px;
+  color: #FFFFFF;
+  margin-top: 40px;
+}
+
+article .hotcourseList ul li .mask h5 {
+  color: #FFFFFF;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+article .hotcourseList ul li .mask p {
+  font-size: 12px;
+  color: #FFFFFF;
+  line-height: 25px;
+}
+
+article .hotcourseList ul li .mask h6 {
+  font-size: 14px;
+  color: #e53939;
+}
+
+article .hotcourseList ul li:nth-of-type(2) {
+  margin: 0 50px;
+}
+
+article .hotcourseList ul li:nth-of-type(5) {
+  margin: 0 50px;
+}

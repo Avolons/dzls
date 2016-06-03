@@ -1,6 +1,6 @@
 // 所有的文件产出到 static/ 目录下
 fis.match('*', {
-    release: '/static/$0'
+    release: '/themes/chinaaet/$0'
 });
 
 // 所有模板放到 tempalte 目录下
@@ -27,6 +27,11 @@ fis.match('/test/**/*', {
 
 //对page下的scss文件进行转换
 fis.match('/page/**/*.scss', {
+  rExt: '.css',
+  parser: fis.plugin('node-sass')
+})
+
+fis.match('/widget/**/*.scss', {
   rExt: '.css',
   parser: fis.plugin('node-sass')
 })
