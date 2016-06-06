@@ -99,7 +99,7 @@
   background-color: #f85558;
   background-image: url(/themes/chinaaet/widget/header/img/header_nav.png);
   background-repeat: no-repeat;
-  background-position-y: bottom;
+  background-position: bottom;
 }
 
 #widget_header ul {

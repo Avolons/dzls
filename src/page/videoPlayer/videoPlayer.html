@@ -8,13 +8,14 @@
 		<link rel="stylesheet" type="text/css" href="../../static/lib/videoJs/css/video-js.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/videostyle.css" />
 		<link rel="stylesheet" type="text/css" href="../../widget/header/css/header.scss" />
+		<link rel="stylesheet" type="text/css" href="../../widget/footer/css/footer.scss" />
 		<link href="../../static/lib/ueditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
 	
 		
 	</head>
 
 	<body>
-		<header id="headers" style="height: 130px;"></header>
+		<header id="header" style="height: 130px;"></header>
 		<div class="video">
 			<div class="videoTitle">
 					80、90后员工职业素养提升 01 
@@ -55,23 +56,27 @@
 					<ul>
 						<li id="alertIndex">
 							<i class="iconfont">&#xe600;</i>
-							<a href="javascript:void(0);">章节</a>
+							<a href="javascript:void(0);">目录</a>
 						</li>
 						<li id="alertChat">
 							<i class="iconfont">&#xe602;</i>
-							<a href="javascript:void(0);">聊天室</a>
+							<a href="javascript:void(0);">聊天提问</a>
 						</li>
-						<li id="alertNote">
+						<!--<li id="alertNote">
 							<i class="iconfont">&#xe603;</i>
 							<a href="javascript:void(0);">笔记</a>
 						</li>
 						<li id="alertAsk">
 							<i class="iconfont">&#xe604;</i>
 							<a href="javascript:void(0);">提问</a>
-						</li>
+						</li>-->
 						<li id="alertQuestionnaire">
 							<i class="iconfont">&#xe609;</i>
-							<a href="javascript:void(0);">问卷</a>
+							<a href="javascript:void(0);">问卷调查</a>
+						</li>
+						<li id="alertQuestionnaire">
+							<i class="iconfont">&#xe606;</i>
+							<a href="javascript:void(0);">在线考试</a>
 						</li>
 					</ul>
 				</div>
@@ -131,6 +136,10 @@
 									<li class="stds"><span class="time">09:45</span><b >就是凑字符:</b><a href="javascript:void(0);">你们怎么想的就这点把你们收买了没谁了</a></li>
 									<li class="stds"><span class="time">09:45</span><b >蝙蝠侠  对  穿衣搭配 说:</b><a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a></li>
 									<li class="tch"><span class="time">09:45</span><b >nickie老师:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
+								    <li class="stdsAsk"><i>提问</i><b>红玫瑰:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
+								    <li class="tchAns"><i>回答</i><b>nickie老师:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
+								    	<p><span>【问题】</span><b>红玫瑰:</b><a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a></p>
+								    </li>
 								</ul>
 							</li>
 							<!--展示老师问答区域-->
@@ -488,6 +497,72 @@
 				</div>
 			</div>
 		</div>
+		<footer id="footer"></footer>
+		<!--老师发言模板-->
+		<script type="text/javascript" id="tpl_tec">
+			<li class="tch">
+				<span class="time">d.time</span>
+				<b >d.name</b>
+				<a href="javascript:void(0);">d.texts</a>
+			</li>
+		</script>
+		<!--学生发言模板-->
+		<script type="text/javascript" id="tpl_stds">
+			<li class="stds">
+				<span class="time">09:45</span>
+				<b >红玫瑰:</b>
+				<a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
+			</li>
+		</script>
+		<!--管理员发言模板-->
+		<script type="text/javascript" id="tpl_admin">
+		    <li class="admin">
+				<span class="time">09:45</span>
+				<b >管理员:</b>
+				<a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a>
+			</li>	
+		</script>
+		<!--学生问问题模板-->
+		<script type="text/javascript" id="tpl_tecAns">
+			<li class="stdsAsk">
+				<i>提问</i>
+				<b>红玫瑰:</b>
+				<a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
+			</li>
+		</script>
+		<!--老师回答问题模板-->
+		<script type="text/javascript" id="tpl_stdsAsk">
+			<li class="tchAns">
+				<i>回答</i>
+				<b>nickie老师:</b>
+				<a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
+				<p>
+					<span>【问题】</span>
+					<b>红玫瑰:</b>
+					<a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a>
+				</p>
+			</li>
+		</script>
+		<!--问答区域数据渲染模板-->
+		<script type="text/javascript" id="tpl_tecAnsList">
+			{{#for (var i = 0; i < d.length; i++) {}}
+			<li>
+				<div class="question">
+					<i class="iconfont">&#xe604;</i>
+					<h6>【提问】</h6>
+					<b>红玫瑰</b>
+					<a href="javascript:void(0);">老师ps里面的快捷键视频里为啥没找到，是没有这一节吗？</a>
+				</div>
+				<div class="answer">
+					<i class="iconfont">&#xe605;</i>
+					<h6>【最新回答】</h6>
+					<b>nickie老师</b>
+					<a href="javascript:void(0);">就在视频的结尾呢强调了一次可能你没看到。</a>
+					<span class="time">时间：4天前</span>
+				</div>
+			</li>
+			{{#}}}
+		</script>
 		<script src="../../static/lib/videoJs/js/video.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/lib/videoJs/js/videojs-contrib-hls.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/lib/jquery/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
@@ -499,7 +574,8 @@
 		<script src="js/rightList.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/middleCotent.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			$('#headers').load('../../widget/header/header.html');
+			 $('#header').load('../../widget/header/header.html');
+		     $('#footer').load('../../widget/footer/footer.html');
 			//		初始化富文本编译器
 			var um = UM.getEditor('myUe');
 		</script>

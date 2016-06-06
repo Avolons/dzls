@@ -131,7 +131,7 @@
 
 .selectList ul li {
 	display: block;
-	width: 100px;
+	width: 120px;
 	height: 40px;
 	line-height: 40px;
 	background-color: #484747;
@@ -144,7 +144,7 @@
 }
 
 .selectList ul li:hover {
-	right: 0;
+	right: 20px;
 	background-color: #E43A3D;
 }
 
@@ -317,7 +317,7 @@ color: #e43a3d;
 #chatWindow li{
 	padding: 2px 0;
 	width: 100%;
-	line-height: 20px;
+	line-height: 25px;
 }
 /*时间显示格式*/
 #chatWindow li span{
@@ -357,8 +357,53 @@ color: #e43a3d;
 #chatWindow .admin a{
 	color: #cd955e;
 }
-
-
+/*老师回答问题的样式*/
+#chatWindow .tchAns i{
+	height: 20px;
+	width: 30px;
+	font-style: normal;
+	font-size: 12px;
+	display: inline-block;
+	background-color: #ca4dc9;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 20px;
+}
+#chatWindow .tchAns b{
+	color: #ca4dc9;
+}
+#chatWindow .tchAns a{
+	color: #ca4dc9;
+}
+#chatWindow .tchAns  p span{
+	margin-left: 30px;
+	color: #ca4dc9;
+	font-size: 11px;
+}
+#chatWindow .tchAns p b{
+	font-size: 11px;
+}
+#chatWindow .tchAns p a{
+	font-size: 11px;
+}
+/*学生提问的样式*/
+#chatWindow .stdsAsk i{
+	height: 20px;
+	width: 30px;
+	font-style: normal;
+	font-size: 12px;
+	display: inline-block;
+	background-color: #54a7fb;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 20px;
+}
+#chatWindow .stdsAsk b{
+	color: #54a7fb;
+}
+#chatWindow .stdsAsk a{
+	color: #54a7fb;
+}
 
 
 

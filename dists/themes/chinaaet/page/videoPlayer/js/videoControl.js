@@ -123,67 +123,11 @@
 		}, 6000);
     }
     
-//	var sendLearnTime = (function() {
-////		发送学习时长，pageInfo.id为具体视屏id;
-//		if (!pageInfo.mid) return;
-//      // 定义最终时间
-//		var lastTime = 0,
-//			startTime = new Date().getTime(),
-//			//获取当前时间
-//			_params = {};
-////			定义数据对象
-//
-//		_params.mid = pageInfo.mid;
-//		// 每隔6秒发送一次学习时长信息请求，
-//		// 并更改当前节的icon状态改为已学的icon外观
-//		var postStudyTime=setInterval(function(){
-//			setSectionIconState(function(data){
-//				if (data.data.media) {
-//					$(".course-section-current .section-state-icon")
-//						.removeClass('section-state-icon-learning')
-//						.addClass('section-state-icon-learnt');
-//				}
-//			});
-//		}, 6000);
-//
-//		global.onbeforeunload = function() {
-//			sendMediaUser(function(){
-//				lastTime = stayTime;
-//			}, false);
-//		};
-//		
-//		// 发送请求主体函数,函数定义在函数内
-//		function sendMediaUser(callback, isAsync) {
-//			var overTime,
-//				stayTime;
-//			// 如果播放器初始化还未完成
-//			overTime = new Date().getTime();
-//			stayTime = parseInt(overTime - startTime) / 1000;
-//			_params.time = stayTime - lastTime;
-//			_params.learn_time = videoPlayer.getPosition();
-//			$.ajax({
-//				url: '/course/ajaxmediauser/',
-//				data: _params,
-//				type: "POST",
-//				dataType: 'json',
-//				async: isAsync || true,
-//				success: function(data) {
-//					if (data.result == '0') {
-//						callback && callback(data);
-//					}
-//				}
-//			});
-//		};
-//
-//		function setSectionIconState(callback){
-//			sendMediaUser(callback);
-//		}
-//		return setSectionIconState;
-//  
+   
     
     
     
-    
+    //播放器底部状态栏根据是否显示为播放来切换视屏播放或者是停止
 	myPlayer.ready(function() {
 		showAllTime();
 		showStudyTime();
@@ -192,13 +136,6 @@
 		});
 	})
 
-	//监听播放事件
-	//	(function() {
-	//		
-	//		myPlayer.on('play', function() {
-	//			times = setInterval(function() {
-	//				console.log(myPlayer.currentTime());
-	//			}, 1000);
-	//		})
-	//	}())
+    //
+	
 

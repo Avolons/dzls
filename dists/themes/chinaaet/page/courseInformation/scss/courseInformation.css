@@ -1,7 +1,7 @@
 .content .top {
   width: 100%;
   background-color: #f7f7f7;
-  height: 433px;
+  padding-bottom: 50px;
   margin-bottom: 50px;
 }
 
@@ -15,7 +15,12 @@
   width: 1000px;
   margin: 0 auto;
   position: relative;
-  height: 280px;
+}
+
+.content .top > .headers:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .content .top > .headers img {
@@ -29,7 +34,6 @@
 .content .top > .headers .intrdouce {
   float: left;
   width: 510px;
-  height: 280px;
 }
 
 .content .top > .headers .intrdouce h1 {

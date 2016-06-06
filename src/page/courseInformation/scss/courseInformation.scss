@@ -2,7 +2,8 @@
     .top{
         width: 100%;
         background-color: #f7f7f7;
-        height: 433px;
+//      height: 433px;
+        padding-bottom: 50px;
         margin-bottom: 50px;
         >.navs{
             height: 100px;
@@ -13,7 +14,12 @@
             width: 1000px;
             margin: 0 auto;
             position: relative;
-            height: 280px;
+//          height: 280px;
+            &:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
             img{
                 width: 460px;
                 height: 280px;
@@ -24,7 +30,6 @@
             .intrdouce{
                 float: left;
                 width: 510px;
-                height: 280px;
                 h1{
                   font-size: 20px;
                   color: #202020;  
@@ -46,10 +51,22 @@
                      margin-bottom: 10px;
                 }
                 p{
+//                  max-height: 60px;
                     color: #646464;
                     font-size: 14px;
                     line-height: 30px;
                     margin-bottom: 10px;
+//                  overflow: hidden;
+//                  position: relative;
+//                  text-overflow:ellipsis;
+//                  white-space: pre-wrap;
+//                  &:after{
+//                      content: '...';
+//                      display: block;
+//                      bottom: 0;
+//                      right: -11px;
+//                      position: absolute;
+//                  }
                 }
                 span{
                     color: #E43A3D;

@@ -1,7 +1,6 @@
 
 	//监听浏览器窗口改变事件,重置视屏播放高度
 	$(window).resize(function() {
-		console.log("1");
 		var windowWidth = $(window).width();
 		if ( parseInt( rightList.css("right")) == 0) {
 			//右侧显示层处于显示状态，右侧显示层宽度为340

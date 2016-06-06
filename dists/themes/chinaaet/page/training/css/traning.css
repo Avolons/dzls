@@ -1,0 +1,75 @@
+.tranings {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.tranings .traningsList {
+  width: 1000px;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.tranings .traningsList li {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.tranings .traningsList li:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.tranings .traningsList li figure {
+  height: 130px;
+  width: 215px;
+  box-sizing: border-box;
+  padding: 5px;
+  float: left;
+  margin-right: 25px;
+}
+
+.tranings .traningsList li figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.tranings .traningsList li .intrdouce {
+  width: 670px;
+  margin-right: 30px;
+  float: left;
+}
+
+.tranings .traningsList li .intrdouce h1 {
+  color: #E53939;
+  font-size: 15px;
+  height: 45px;
+  line-height: 45px;
+}
+
+.tranings .traningsList li .intrdouce p {
+  color: #646464;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.tranings .traningsList li .intrdouce p i {
+  color: #E53939;
+  margin-right: 5px;
+}
+
+.tranings .traningsList li button {
+  width: 60px;
+  height: 25px;
+  color: #FFFFFF;
+  font-size: 14px;
+  text-align: center;
+  line-height: 25px;
+  float: right;
+  margin-top: 70px;
+  background-color: #e43a3d;
+}
+
+.tranings .traningsList li .signed {
+  background-color: #8a8a8a;
+}

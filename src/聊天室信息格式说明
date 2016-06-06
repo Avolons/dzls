@@ -12,6 +12,7 @@
     "content": {  //信息内容(需将content整体编码,内部可以扩展)
         "msg": "消息内容---天气很好。",
         "question": "天气怎么样？"
+        "answer":"aaa"
     }
 }
 
@@ -22,8 +23,10 @@
 	"msg":"提示内容",   //提示内容
     "data": [
         {
-            "content": {  //信息内容(需解码)
-                "msg": "消息内容"
+            "content":{  //信息内容(需解码)
+                "msg": "消息内容",
+                "answer"
+                
             },
             "from": {  //发送人个人信息(需解码)
                 "userid": "1213",
@@ -43,7 +46,8 @@
 请求命令类型:
     以下命令编码均为小写。
 public static string ToOnline = "TOONLINE";  ///给在线所有人发言(广播)
-public static string ToAll = "TOALL";///给当前整个聊天室发言(公聊)
+public static string ToAll = "TOALL";///学生给当前整个聊天室发言(公聊)
+public static string teacherToAll="TEACHERTOALL";///老师给当前聊天室发言
 public static string ToPersonal = "TOPERSONAL";///给别人发私信(私聊)
 public static string ToPersonalShow = "TOPERSONALSHOW";///发私信显示公屏顶部(私聊)
     public static string PutProblem = "PUTPROBLEM";///提问
@@ -53,6 +57,7 @@ public static string ToPersonalShow = "TOPERSONALSHOW";///发私信显示公屏�
     public static string GetChatHistory = "GETCHATHISTORY";/// 获取聊天历史
 public static string GetPrivmsg = "GETPRIVMSG";/// 获取私信
 public static string Heart = "HEART"; /// 心跳包(客户端两分钟自动调用一次)
+
 响应消息类型:
  	以下编码均以数字为准.
     public static int Warning = -1; ///警告
@@ -66,6 +71,7 @@ public static int CloseRoom = -3;  /// 关闭房间
     public static int SetPutProblem = 10; /// 提问消息
     public static int SetAnswer = 11; /// 老师回复
     public static int SetAdmin = 12; /// 管理员发送消息
+    public static int SetTeacherSay=14; ///老师发言
 
 
 API接口处:
@@ -76,7 +82,6 @@ http://zjzx.test.com/zh-CN/Chat/ GetUserConfig?room=001    // room为房间号
     "status": 1, //状态码  0----失败，1---成功
     "msg": "asdf", //提示消息(当失败时有内容)
     "result": {
-        "ukey": "asidf;ajdkf;jakdsjfksajf;lksa",  //用户Ukey
         "userid": "t343423", //用户ID
         "name": "张三", //姓名
 		“pic”:”111.jpg”,//头像
