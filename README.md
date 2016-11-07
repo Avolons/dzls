@@ -1,2 +1,2 @@
 # dzls
-电子六所
+Electronic line 6 is training platform
