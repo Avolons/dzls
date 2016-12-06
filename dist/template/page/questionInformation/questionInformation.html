@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/themes/chinaaet/static/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="/themes/chinaaet/page/questionInformation/scss/questionInformation.css" />
+		<link rel="stylesheet" type="text/css" href="/themes/chinaaet/widget/header/css/header.css" />
+		<link rel="stylesheet" type="text/css" href="/themes/chinaaet/widget/footer/css/footer.css" />
+		<link href="/themes/chinaaet/static/lib/ueditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<header id="header"></header>
+		<div class="content">
+			<div class="leftList" id="leftList">
+				<div class="myAskListTitle">
+					<h1>不知道你说的什么恶的蝴蝶花回答黄唱都会出差胡促进？</h1>
+					<p>
+						<img src="/themes/chinaaet/page/questionInformation/img/charster.png"/><span class="charseter_name">寂寞星球的玫瑰</span><span class="create_time">2016-04-25</span><span class="answer_number">4回答</span>
+					</p>
+				</div>
+				<ul id="myAskList">
+					<li>
+						<div class="question">
+							<figure>
+								<img src="/themes/chinaaet/page/questionInformation/img/charster.png"/>
+								<a href="javascript:void(0);">黄老师</a>
+							</figure>
+							<div >
+								<p>不知道你说的什么恶的蝴蝶花回答黄唱都会出差胡促进调查调查的剧场堵得很独家成都句话兑换成句成都火车费发发发发 </p>
+								<span>2016-05-23</span>
+							</div>
+						</div>
+						<div class="answer">
+							<figure>
+								<img src="/themes/chinaaet/page/questionInformation/img/charster.png"/>
+								<a href="javascript:void(0);">黄老师</a>
+							</figure>
+							<div >
+								<p>不知道你说的什么恶的蝴蝶花回答黄唱都会出差胡促进调查调查的剧场堵得很独家成都句话兑换成句成都火车费发发发发 </p>
+								<span>2016-05-23</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="question">
+							<figure>
+								<img src="/themes/chinaaet/page/questionInformation/img/charster.png"/>
+								<a href="javascript:void(0);">黄老师</a>
+							</figure>
+							<div >
+								<p>不知道你说的什么恶的蝴蝶花回答黄唱都会出差胡促进调查调查的剧场堵得很独家成都句话兑换成句成都火车费发发发发 </p>
+								<span>2016-05-23</span>
+							</div>
+						</div>
+						<div class="answer">
+							<figure>
+								<img src="/themes/chinaaet/page/questionInformation/img/charster.png"/>
+								<a href="javascript:void(0);">黄老师</a>
+							</figure>
+							<div >
+								<p>不知道你说的什么恶的蝴蝶花回答黄唱都会出差胡促进调查调查的剧场堵得很独家成都句话兑换成句成都火车费发发发发 </p>
+								<span>2016-05-23</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="question">
+							<figure>
+								<img src="/themes/chinaaet/page/questionInformation/img/charster.png"/>
+								<a href="javascript:void(0);">黄老师</a>
+							</figure>
+							<div >
+								<p>不知道你说的什么恶的蝴蝶花回答黄唱都会出差胡促进调查调查的剧场堵得很独家成都句话兑换成句成都火车费发发发发 </p>
+								<span>2016-05-23</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			    <div class="uritor">
+			    	<div id="uritor">
+			    	   
+			        </div>
+			        <button type="button" id="askAgain">继续追问</button>
+			    </div>
+			</div>
+			<div class="rightList">
+				<h1>我的问题</h1>
+				<ul id="myQestList">
+					<li>地方很多事还互动大伙都符合的基督教</li>
+					<li>地方很多事还互动大伙都符合的基督教</li>
+					<li>地方很多事还互动大伙都符合的基督教</li>
+					<li>地方很多事还互动大伙都符合的基督教</li>
+				</ul>
+			</div>
+		</div>
+		<footer id="footer"></footer>
+		<script type="text/html" id="qstTpl">
+			<div class="myAskListTitle">
+					<h1>{{d[0].Title}}</h1>
+					<p>
+						<img src={{d[0].UserPhoto}}/>
+						<span class="charseter_name">{{d[0].UserName}}</span>
+						<span class="create_time">{{d[0].CreateTimeStr}}</span>
+						<span class="answer_number">{{d[0].Count}}回答</span>
+					</p>
+				</div>
+			<ul id="myAskList">
+			{{# for(var i = 0, len = d.length; i < len; i++){ }}
+			<li>
+				{{#if (d[i].IsReply) {}}
+				<div class="question">
+					<figure>
+						<img src={{d[i].UserPhoto}}/>
+						<a href="javascript:void(0);">{{d[i].UserName}}</a>
+					</figure>
+					<div >
+						<p>{{d[i].Problem}}</p>
+						<span>{{d[i].CreateTimeStr}}</span>
+					</div>
+				</div>
+				<div class="answer">
+					<figure>
+						<img src={{d[i].TeacherPhoto}}/>
+						<a href="javascript:void(0);">{{d[i].TeacherName}}</a>
+					</figure>
+					<div >
+						<p>{{d[i].Reply}}</p>
+						<span>{{d[i].UpdateStr}}</span>
+					</div>
+				</div>
+				{{# } else { }}
+				<div class="question">
+					<figure>
+						<img src={{d[i].UserPhoto}}/>
+						<a href="javascript:void(0);">{{d[i].UserName}}</a>
+					</figure>
+					<div >
+						<p>{{d[i].Problem}}</p>
+						<span>{{d[i].CreateTimeStr}}</span>
+					</div>
+				</div>
+				{{# } }}
+			</li>
+			{{# } }}
+			</ul>
+			{{#if (d[d.length-1].IsReply) {}}
+			 <div class="uritor">
+			    	<div id="uritor">
+			    	   
+			        </div>
+			        <button type="button" id="askAgain">继续追问</button>
+			 </div>
+			 {{# } }}
+		</script>
+		<script type="text/html" id="askTpl">
+			{{# for(var i = 0, len = d.list.length; i < len; i++){ }}
+			  <li data-id=>地方很多事还互动大伙都符合的基督教</li>	
+			{{# } }}
+		</script>
+		<script src="/themes/chinaaet/static/lib/jquery/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8" src="/themes/chinaaet/static/lib/ueditor/umeditor.config.js"></script>
+		<script type="text/javascript" charset="utf-8" src="/themes/chinaaet/static/lib/ueditor/umeditor.min.js"></script>
+		<script type="text/javascript" src="/themes/chinaaet/static/lib/ueditor/lang/zh-cn/zh-cn.js"></script>
+		<script src="/themes/chinaaet/static/lib/laytpi/js/laytpl.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/themes/chinaaet/page/questionInformation/js/question.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//载入头部和尾部
+			$('#header').load('../../widget/header/header.html');
+			$('#footer').load('../../widget/footer/footer.html');
+			//富文本编译器
+			var um = UM.getEditor('uritor', {
+					initialFrameWidth:660 ,
+		            initialFrameHeight:150 ,
+		            
+        		});
+		</script>
+	</body>
+</html>

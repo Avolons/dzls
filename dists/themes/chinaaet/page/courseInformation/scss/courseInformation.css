@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .content .top {
   width: 100%;
   background-color: #f7f7f7;
@@ -24,8 +25,8 @@
 }
 
 .content .top > .headers img {
-  width: 460px;
-  height: 280px;
+  width: 373px;
+  height: 224px;
   display: block;
   float: left;
   margin-right: 30px;
@@ -33,73 +34,70 @@
 
 .content .top > .headers .intrdouce {
   float: left;
-  width: 510px;
+  width: 597px;
+  height: 224px;
+  box-sizing: border-box;
+  padding: 0 22px;
+  border: 1px solid #e5e5e5;
+  position: relative;
+}
+
+.content .top > .headers .intrdouce .sigin {
+  position: absolute;
+  width: 118px;
+  height: 106px;
+  right: 0px;
+  top: 85px;
+  display: block;
 }
 
 .content .top > .headers .intrdouce h1 {
   font-size: 20px;
   color: #202020;
-  margin-bottom: 15px;
-}
-
-.content .top > .headers .intrdouce h2 {
-  font-size: 14px;
-  color: #545454;
-  margin-bottom: 10px;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .content .top > .headers .intrdouce h3 {
   color: #E43A3D;
   font-size: 14px;
-  margin-bottom: 10px;
+}
+
+.content .top > .headers .intrdouce h3 pre {
+  font-family: "微软雅黑";
+  color: #e43a3d;
+  line-height: 35px;
 }
 
 .content .top > .headers .intrdouce h4 {
   color: #545454;
   font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.content .top > .headers .intrdouce p {
-  color: #646464;
-  font-size: 14px;
-  line-height: 30px;
-  margin-bottom: 10px;
+  line-height: 35px;
 }
 
 .content .top > .headers .intrdouce span {
   color: #E43A3D;
   font-size: 14px;
   display: block;
-  margin-bottom: 25px;
+  line-height: 35px;
+  font-weight: 700;
 }
 
 .content .top > .headers .intrdouce .button {
-  height: 33px;
-  width: 320px;
-  margin: 0 auto;
+  height: 40px;
+  margin-top: 15px;
   font-size: 0;
 }
 
 .content .top > .headers .intrdouce .button button {
-  width: 100px;
-  height: 33px;
+  width: 97px;
+  height: 38px;
   background-color: #e43a3d;
   color: #FFFFFF;
   font-size: 14px;
-  margin: 0 30px;
+  margin-right: 50px;
   display: inline-block;
-}
-
-.content .top > .headers a {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 85px;
-  height: 25px;
-  color: #E43A3D;
-  font-size: 17px;
-  background-color: #b8bbbc;
 }
 
 .content .midddle {
@@ -108,7 +106,13 @@
   font-size: 14px;
   color: #646464;
   line-height: 25px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+}
+
+.content .midddle:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .content .midddle img {
@@ -117,14 +121,14 @@
   height: 135px;
   margin-right: 20px;
   margin-bottom: 10px;
+  display: block;
 }
 
-.content .midddle .intrdouce {
-  float: left;
-  width: 855px;
+.content .midddle .couItd {
+  position: relative;
 }
 
-.content .midddle .intrdouce h1 {
+.content .midddle .couItd h1 {
   text-align: center;
   width: 105px;
   height: 25px;
@@ -135,16 +139,70 @@
   margin-bottom: 10px;
 }
 
-.content .midddle .intrdouce h2 {
-  font-size: 17px;
-  color: 646464;
+.content .midddle .couItd > div {
+  max-height: 90px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.content .midddle .couItd > div pre {
+  line-height: 30px;
+  font-family: "微软雅黑";
+}
+
+.content .midddle .couItd button {
+  position: absolute;
+  background-color: transparent;
+  color: #568ee5;
+  bottom: -15px;
+  right: 5px;
+}
+
+.content .midddle .couItd .originalStyle {
+  max-height: none;
+}
+
+.content .midddle .tecItd {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.content .midddle .tecItd h1 {
+  text-align: center;
+  width: 105px;
+  height: 25px;
+  background-color: #f4d467;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 25px;
   margin-bottom: 10px;
+}
+
+.content .midddle .tecItd div {
+  overflow: hidden;
+  max-height: 90px;
+}
+
+.content .midddle .tecItd div p {
+  line-height: 30px;
+  text-indent: 35px;
+}
+
+.content .midddle .tecItd button {
+  position: absolute;
+  bottom: -15px;
+  right: 5px;
+  background-color: transparent;
+  color: #568ee5;
+}
+
+.content .midddle .tecItd .originalStyle {
+  max-height: none;
 }
 
 .content .bottom {
   width: 1000px;
-  margin: 0 auto;
-  margin-bottom: 80px;
+  margin: 0 auto 80px;
 }
 
 .content .bottom .table {
@@ -280,7 +338,11 @@
   display: none;
 }
 
-.content .bottom .main .askQuestion ul > li {
+.content .bottom .main .askQuestion #listbody .clear {
+  display: none;
+}
+
+.content .bottom .main .askQuestion #listbody > div {
   width: 970px;
   margin: 0 15px;
   box-sizing: border-box;
@@ -289,19 +351,19 @@
   position: relative;
 }
 
-.content .bottom .main .askQuestion ul > li:after {
+.content .bottom .main .askQuestion #listbody > div:after {
   content: "";
   display: block;
   clear: both;
 }
 
-.content .bottom .main .askQuestion ul > li figure {
+.content .bottom .main .askQuestion #listbody > div figure {
   height: 66px;
   width: 96px;
   float: left;
 }
 
-.content .bottom .main .askQuestion ul > li figure img {
+.content .bottom .main .askQuestion #listbody > div figure img {
   height: 40px;
   width: 40px;
   display: block;
@@ -309,7 +371,7 @@
   border-radius: 50%;
 }
 
-.content .bottom .main .askQuestion ul > li figure h1 {
+.content .bottom .main .askQuestion #listbody > div figure h1 {
   margin-top: 10px;
   text-align: center;
   line-height: 16px;
@@ -321,70 +383,87 @@
   text-overflow: ellipsis;
 }
 
-.content .bottom .main .askQuestion ul > li .texts {
+.content .bottom .main .askQuestion #listbody > div .texts {
   width: 784px;
   float: left;
   margin-left: 15px;
 }
 
-.content .bottom .main .askQuestion ul > li .texts h1 {
+.content .bottom .main .askQuestion #listbody > div .texts h1 {
   color: #14191e;
   line-height: 22px;
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-.content .bottom .main .askQuestion ul > li .texts h1 i {
+.content .bottom .main .askQuestion #listbody > div .texts h1:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.content .bottom .main .askQuestion #listbody > div .texts h1 p {
+  float: left;
+}
+
+.content .bottom .main .askQuestion #listbody > div .texts h1 i {
   color: #E43A3D;
   font-size: 16px;
   margin-right: 5px;
+  float: left;
 }
 
-.content .bottom .main .askQuestion ul > li .texts > div {
+.content .bottom .main .askQuestion #listbody > div .texts > ul {
+  max-height: 50px;
+  overflow: hidden;
+}
+
+.content .bottom .main .askQuestion #listbody > div .texts > ul > li > div {
   font-size: 12px;
   color: #99a1a6;
   line-height: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
-.content .bottom .main .askQuestion ul > li .texts > div:after {
+.content .bottom .main .askQuestion #listbody > div .texts > ul > li > div:after {
   content: "";
   display: block;
   clear: both;
 }
 
-.content .bottom .main .askQuestion ul > li .texts > div i {
+.content .bottom .main .askQuestion #listbody > div .texts > ul > li > div i {
   color: #99a1a6;
   margin-right: 12px;
   display: inline-block;
   float: left;
 }
 
-.content .bottom .main .askQuestion ul > li .texts > div p {
+.content .bottom .main .askQuestion #listbody > div .texts > ul > li > div p {
   float: left;
   width: 740px;
 }
 
-.content .bottom .main .askQuestion ul > li .texts > div p img {
+.content .bottom .main .askQuestion #listbody > div .texts > ul > li > div p img {
   height: 12px;
   width: 12px;
   border-radius: 50%;
   margin: 0 5px;
 }
 
-.content .bottom .main .askQuestion ul > li .texts > div p a {
+.content .bottom .main .askQuestion #listbody > div .texts > ul > li > div p a {
   color: #14191e;
   font-size: 12px;
   margin-right: 4px;
 }
 
-.content .bottom .main .askQuestion ul > li .texts .time {
+.content .bottom .main .askQuestion #listbody > div .texts > ul > li .time {
   color: #999;
   font-size: 12px;
   margin-left: 30px;
 }
 
-.content .bottom .main .askQuestion ul > li .answer {
+.content .bottom .main .askQuestion #listbody > div .answer {
+  cursor: pointer;
   width: 40px;
   position: absolute;
   top: 20px;
@@ -392,7 +471,7 @@
   text-align: center;
 }
 
-.content .bottom .main .askQuestion ul > li .answer span {
+.content .bottom .main .askQuestion #listbody > div .answer span {
   width: 40px;
   display: block;
   text-align: center;
@@ -419,4 +498,37 @@
   margin-right: 240px;
   color: #555555;
   font-size: 16px;
+}
+
+.layer {
+  position: absolute;
+  top: -1000px;
+}
+
+.layer #layer_Ask {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 600px;
+  height: 200px;
+}
+
+.layer #layer_Ask div {
+  border-radius: 0;
+}
+
+.layer #layer_Ask textarea {
+  border-radius: 0;
+  font-family: "微软雅黑";
+}
+
+.layer #layer_Ask input {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 33px;
+  background-color: #e43a3d;
+  color: #FFFFFF;
+  font-size: 14px;
+  border: none;
+  margin-top: 10px;
 }

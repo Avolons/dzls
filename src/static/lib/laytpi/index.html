@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/laytpl.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="view" id="view">
+
+		</div>
+		<script type="text/javascript" id="demo">
+			       <li>
+			        <h1>d.name</h1>
+			        <h1>d.time</h1>
+			        <h1>d.texts</h1>
+			       </li>
+		</script>
+		<script type="text/javascript">
+//			var nav_list = [{
+//					title: "财务管理",
+//					list: ["全部", "采购管理", "金融资本", "市场营销", "市场营销", "销售类"]
+//				}, {
+//					title: "个人发展规划",
+//					list: ["全部", "人际关系", "创业讲堂", "口才技巧", "人脉管理", "自我提升"]
+//				}, {
+//					title: "国学讲座",
+//					list: ["全部", "百家讲坛", "中国文化", "孙子兵法"]
+//				}, {
+//					title: "领导艺术",
+//					list: ["全部", "员工管理", "处世技巧", "目标结果", "技能提升", "职场必备", "管理类", "团队管理类"]
+//				}, {
+//					title: "情绪管理专家",
+//					list: ["全部", "自我情绪", "员工情绪", "情绪专家"]
+//				}, {
+//					title: "商务礼仪",
+//					list: ["全部", "礼仪作用", "握手礼仪", "仪表礼仪", "举止礼仪", "谈吐礼仪", "交谈礼仪", "会面礼仪", "西餐礼仪", "电话礼仪", "传真礼仪", "国外礼仪"]
+//				}, {
+//					title: "人力资源",
+//					list: ["全部", "员工培训", "人力资本", "薪酬管理", "人力资源管控"]
+//				}, {
+//					title: "生产管理",
+//					list: ["供应管理", "成本管理", "管理实践"]
+//				}]
+            var obj={
+            	name:'asdfa',
+            	time:'90.52',
+            	texts:'asdfasfsafsafs'
+            }
+			var gettpl = document.getElementById('demo').innerHTML;
+			laytpl(gettpl).render(obj, function(html) {
+				document.getElementById('view').innerHTML = html;
+			});
+			//模板渲染
+		</script>
+	</body>
+
+</html>

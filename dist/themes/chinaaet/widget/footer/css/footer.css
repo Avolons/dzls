@@ -1,0 +1,116 @@
+#widget_footer .footer-nav {
+  height: 225px;
+  background-color: #323232;
+}
+
+#widget_footer .container {
+  height: 190px;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+#widget_footer .footer {
+  box-sizing: border-box;
+  position: relative;
+  height: 190px;
+  padding: 20px 0;
+  width: 1000px;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  border-bottom: 1px solid #474747;
+}
+
+#widget_footer .footer:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 1000px;
+  background-color: #212121;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#widget_footer .footer > li {
+  display: block;
+  width: 250px;
+  text-align: center;
+  margin-top: 5px;
+  border-right: 1px dashed #4d4d4d;
+}
+
+#widget_footer .footer .last {
+  margin-top: 0;
+  border: none;
+}
+
+#widget_footer .footer .wechat {
+  margin-left: 10px;
+  margin-bottom: -4px;
+  display: inline-block;
+  width: 24px;
+  height: 19px;
+  background-image: url("../../img/footer/ico_weixin_weibo.png");
+}
+
+#widget_footer .footer .weibo {
+  margin-left: 10px;
+  margin-bottom: -4px;
+  display: inline-block;
+  width: 24px;
+  height: 19px;
+  background-image: url("../../img/footer/ico_weixin_weibo.png");
+  background-position-x: -32px;
+}
+
+#widget_footer .footer .last strong {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+#widget_footer .footer .last .qrcode {
+  margin-top: 10px;
+}
+
+#widget_footer .footer > li ul > li {
+  display: block;
+  font-size: 14px;
+  color: #FFFFFF;
+  height: 37px;
+  line-height: 37px;
+}
+
+#widget_footer .footer > li ul > li a {
+  font-size: 14px;
+  color: #999999;
+}
+
+#widget_footer .footer > li strong {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+#widget_footer .footer > li ul {
+  margin-top: 15px;
+}
+
+#widget_footer .footer-nav p {
+  text-align: center;
+  height: 25px;
+  line-height: 25px;
+  background-color: #000000;
+  color: #999999;
+  font-size: 12px;
+}
+
+#widget_footer .footer-nav .telphone {
+  text-align: center;
+  height: 25px;
+  line-height: 25px;
+  background-color: #323232;
+  color: #999999;
+  font-size: 12px;
+  margin: 5px 0;
+}

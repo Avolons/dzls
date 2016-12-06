@@ -1,552 +1,665 @@
-
-
+@charset "UTF-8";
+/*面包屑导航栏*/
+.crumbs {
+  padding: 15px 100px;
+  font-size: 14px;
+  position: relative;
+  color: #F6D174;
+}
 
 /*视屏播放页面*/
+.video-js .vjs-control-bar {
+  z-index: 2;
+}
 
 .video {
-	position: relative;
-	overflow: hidden;
+  margin-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+  height: 845px;
+  /*视屏播放抬头标签条*/
+  /*视屏播放页右侧选择栏*/
 }
 
-.videoOut{
-	position: relative;
-	height: 800px;
-}
-/*视屏播放抬头标签条*/
-.video .videoTitle{
-	height: 45px;
-	line-height: 45px;
-	text-indent: 100px;
-	font-size: 14px;
-	color: #333333;
-	background-color: #FFFFFF;
-	width: 100%;
+.video .videoTitle {
+  height: 45px;
+  line-height: 45px;
+  text-indent: 100px;
+  font-size: 14px;
+  color: #333333;
+  background-color: #FFFFFF;
+  width: 100%;
 }
 
-.videoOut .videoPlayer {
-	height: 740px;
-	background-color: #000000;
+.video .videoOut {
+  position: relative;
+  height: calc(100% - 45px);
+  background: #000000 url("/themes/chinaaet/page/videoPlayer/img/loading.gif") no-repeat 50% 50%;
+  /*视屏状态栏*/
 }
 
-#my-video {
-	height: 100%;
-	margin: 0 auto;
+.video .videoOut .videoPlayer {
+  height: calc(100% - 60px);
+  background-color: #000000;
 }
 
-/*视屏状态栏*/
-.video .videoState{
-	height: 60px;
-	width: 100%;
-	line-height: 40px;
-	background-color: #292929;
-}
-.video .videoState .allTime{
-	  height: 60px;
-	  line-height: 60px;
-	  margin-left: 80px;
-	  display: inline-block;
-	  font-size: 14px;
-	  color: #9c9b93;
-}
-.video .videoState .allTime a{
-	font-size: 14px;
-	color: #9c9b93;
+.video .videoOut .videoPlayer #my-video {
+  height: 100%;
+  margin: 0 auto;
 }
 
-.video .videoState .studyTime{
-	margin-left: 50px;
-	height: 60px;
-	line-height: 60px;
-	display: inline-block;
-	font-size: 14px;
-	color: #9c9b93;
-}
-.video .videoState .studyTime a{
-	font-size: 14px;
-	color: #9c9b93;
+.video .videoOut .videoState {
+  height: 60px;
+  width: 100%;
+  line-height: 40px;
+  background-color: #292929;
 }
 
-.video .videoState .studyState{
-	float: right;
-	border-radius: 10px;
-	width: 100px;
-	background-color: #3d3c3c;
-	height: 30px;
-	line-height: 30px;
-	margin-top: 15px;
-	margin-right: 100px;
-	font-size: 12px;
-	color: #9c9b93;
-}
-.video .videoState .studyState span{
-	color: #9e1616;
-	height: 30px;
-	line-height: 30px;
-	display: inline-block;
-	width: 29px;
-	text-align: center;
-	border-right:  1px solid #353434;
+.video .videoOut .videoState .studyState {
+  float: right;
+  border-radius: 10px;
+  width: 100px;
+  background-color: #3d3c3c;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 15px;
+  margin-right: 100px;
+  font-size: 12px;
+  color: #9c9b93;
 }
 
-.video .videoState .studyState a{
-	font-size: 14px;
-	color: #9c9b93;
-	display: inline-block;
-	height: 30px;
-	width: 70px;
-	line-height: 30px;
-	text-align: center;
-}
-.video .videoState .studyState a:hover{
-	color: #FFFFFF;
-}
-/*视屏播放页右侧选择栏*/
-
-.rightList {
-	position: absolute;
-	top: 45px;
-	width: 340px;
-	right: -340px;
-	height: 800px;
-	background-color: #191919;
+.video .videoOut .videoState .studyState a {
+  font-size: 14px;
+  color: #9c9b93;
+  display: inline-block;
+  height: 30px;
+  width: 70px;
+  line-height: 30px;
+  text-align: center;
 }
 
-
-/*选项切换卡*/
-.video-js .vjs-control-bar{
-	z-index: 2;
-}
-.selectList ul {
-	position: absolute;
-	left: -100px;
-	height: 800px;
-	display: -moz-box;
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-moz-box-orient: vertical;
-	-webkit-box-pack: center;
-	-moz-box-pack: center;
-	z-index: 1;
+.video .videoOut .videoState .studyState a:hover {
+  color: #FFFFFF;
 }
 
-.selectList ul li {
-	display: block;
-	width: 120px;
-	height: 40px;
-	line-height: 40px;
-	background-color: #484747;
-	margin-bottom: 15px;
-	position: relative;
-	right: -60px;
-	cursor: pointer;
-	-webkit-transition: right .2s ease;
-	-moz-transition: right .2s ease;
+.video .videoOut .videoState .studyState span {
+  color: #9e1616;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  width: 29px;
+  text-align: center;
+  border-right: 1px solid #353434;
 }
 
-.selectList ul li:hover {
-	right: 20px;
-	background-color: #E43A3D;
+.video .videoOut .videoState .studyTime {
+  margin-left: 50px;
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
+  font-size: 14px;
+  color: #9c9b93;
 }
 
-.selectList ul li i {
-	color: #FFFFFF;
-	height: 40px;
-	width: 40px;
-	text-align: center;
-	line-height: 40px;
-	display: inline-block
-}
-.selectList ul .redBackground{
-	background-color: #E43A3D;
+.video .videoOut .videoState .studyTime a {
+  font-size: 14px;
+  color: #9c9b93;
 }
 
-.selectList ul li a {
-	font-size: 14px;
+.video .videoOut .videoState .allTime {
+  height: 60px;
+  line-height: 60px;
+  margin-left: 80px;
+  display: inline-block;
+  font-size: 14px;
+  color: #9c9b93;
 }
 
-
-/*课程目录和聊天室页面*/
-
-.indexAndChat {
-	background-color: #FFFFFF;
-	position: relative;
+.video .videoOut .videoState .allTime a {
+  font-size: 14px;
+  color: #9c9b93;
 }
 
-
-/*课程目录页面*/
-
-.indexAndChat .index {
-	background-color: #191919;
-	z-index: 1;
-	height: 800px;
-	position: absolute;
-	top: 0;
-	left: 0;
+.video .rightList {
+  position: absolute;
+  top: 45px;
+  width: 340px;
+  right: -340px;
+  height: calc(100% - 45px);
+  background-color: #191919;
+  /*选项切换卡*/
+  /*课程目录和聊天室页面*/
 }
 
-.indexAndChat .index h1 {
-	font-size: 16px;
-	color: #b5b9bc;
-	height: 60px;
-	line-height: 60px;
-	font-weight: 400;
-	padding-left: 20px;
-	border-bottom: 1px solid #2e2e2e;
-}
-.indexAndChat .index .sectionList{
-	padding-left: 20px;
-}
-.indexAndChat .index .sectionList>li>a{
-	height: 55px;
-	line-height: 55px;
-	width: 100%;
-	display: block;
-	font-size: 14px;
-	color: #959494;
-	border-bottom: 1px solid #2e2e2e;
-}
-.indexAndChat .index .indexList {
-	padding: 0 12px;
+.video .rightList .selectList > div {
+  position: absolute;
+  left: -60px;
+  height: 100%;
+  z-index: 1;
 }
 
-.indexAndChat .index .indexList li {
-	width: 100%;
-	height: 45px;
-	line-height: 45px;
-	border-bottom: 1px solid #2e2e2e;
-	cursor: pointer;
-}
-.indexAndChat .index .indexList li:hover i{
-	color:#23c8fe ;
-}
-.indexAndChat .index .indexList li:hover a{
-	color:#23c8fe ;
-}
-.indexAndChat .index .indexList li:hover span{
-	color:#23c8fe ;
-}
-.indexAndChat .index .indexList li i {
-	color: #959494;
-	margin-right: 10px;
+.video .rightList .selectList > div ul {
+  height: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-pack: center;
+  /*选项切换卡*/
 }
 
-.indexAndChat .index .indexList li a {
-	color: #959494;
-	font-size: 12px;
+.video .rightList .selectList > div ul li {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: #484747;
+  cursor: pointer;
+  margin-bottom: 2px;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
 }
 
-.indexAndChat .index .indexList li span {
-	color: #959494;
-	font-size: 12px;
-	float: right;
+.video .rightList .selectList > div ul li:hover {
+  background: #E43A3D;
 }
 
-/*聊天室页面*/
-
-.indexAndChat .chat {
-	background-color: #FFFFFF;
-	z-index: 2;
-	height: 800px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
+.video .rightList .selectList > div ul li a {
+  font-size: 14px;
 }
 
-/*聊天室和对话框 切换选项卡*/
-.indexAndChat .chat .chat_table{
-	height: 45px;
-	width:100% ;
-	font-size: 0;
-}
-.indexAndChat .chat .chat_table>li{
-	height: 45px;
-	line-height: 45px;
-	display: block;
-	float: left;
-	width: 50%;
-	text-align: center;
-	background-color: #FFFFFF;
+.video .rightList .selectList > div ul .redBackground {
+  background-color: #E43A3D;
 }
 
-.indexAndChat .chat .chat_table>li>a{
-	color: #1c1c1c;
-	font-size: 16px;
-	width: 100px;
-	text-align: center;
-	display:inline-block;
-	margin: 0 auto;
-	height: 45px;
-	line-height: 45px;
+.video .rightList .indexAndChat {
+  background-color: #FFFFFF;
+  position: relative;
+  height: 100%;
+  /*课程目录页面*/
+  /*聊天室页面*/
 }
 
-.indexAndChat .chat .chat_table>li:hover a{
-   color: #e43a3d;
+.video .rightList .indexAndChat .index {
+  width: 100%;
+  background-color: #191919;
+  z-index: 1;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-/*聊天室和问答区域点击样式展示*/
-.indexAndChat .chat .chat_table .clickStyle_bule{
-	background-color: #ebebeb;
-}
-.indexAndChat .chat .chat_table .clickStyle_bule>a{
-color: #e43a3d;
+.video .rightList .indexAndChat .index .sectionList {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 20px;
 }
 
-/*聊天窗口和问答窗口以及提交回答窗口*/
-
-.chat_cotent{
-	background-color: #e3e3e3;
-	height: 755px;
-	width: 310px;
-	padding: 0 15px;
-	position: relative;
+.video .rightList .indexAndChat .index .sectionList > li {
+  width: 100%;
 }
 
-/*聊天窗口*/
-#chatWindow{
-	position: absolute;
-	width: 310px;
-	padding: 10px 15px;
-	top: 0;
-	left: 0;
-	background-color: #ebebeb;
-	display: block;
-	height: 615px;
-	overflow-y: auto;
-}
-#chatWindow li{
-	padding: 2px 0;
-	width: 100%;
-	line-height: 25px;
-}
-/*时间显示格式*/
-#chatWindow li span{
-	display: inline-block;
-	color: #848484;
-	font-size: 12px;
-	line-height: 14px;
-	height: 14px;
-}
-#chatWindow li b{
-	font-size: 14px;
-	color: #6d6d6d;
-	margin-left: 4px;
-}
-#chatWindow li a{
-	color: #bdbdbd;
-	font-size: 14px;
-}
-/*老师发言的样式*/
-#chatWindow .tch b{
-	color: #ca4dc9;
-}
-#chatWindow .tch a{
-	color: #ca4dc9;
-}
-/*学生发言的样式*/
-#chatWindow .stds b{
-	color: #54a7fb;
-}
-#chatWindow .stds a{
-	color: #434343;
-}
-/*管理员发言的样式*/
-#chatWindow .admin b{
-	color: #cd955e;
-}
-#chatWindow .admin a{
-	color: #cd955e;
-}
-/*老师回答问题的样式*/
-#chatWindow .tchAns i{
-	height: 20px;
-	width: 30px;
-	font-style: normal;
-	font-size: 12px;
-	display: inline-block;
-	background-color: #ca4dc9;
-	color: #FFFFFF;
-	text-align: center;
-	line-height: 20px;
-}
-#chatWindow .tchAns b{
-	color: #ca4dc9;
-}
-#chatWindow .tchAns a{
-	color: #ca4dc9;
-}
-#chatWindow .tchAns  p span{
-	margin-left: 30px;
-	color: #ca4dc9;
-	font-size: 11px;
-}
-#chatWindow .tchAns p b{
-	font-size: 11px;
-}
-#chatWindow .tchAns p a{
-	font-size: 11px;
-}
-/*学生提问的样式*/
-#chatWindow .stdsAsk i{
-	height: 20px;
-	width: 30px;
-	font-style: normal;
-	font-size: 12px;
-	display: inline-block;
-	background-color: #54a7fb;
-	color: #FFFFFF;
-	text-align: center;
-	line-height: 20px;
-}
-#chatWindow .stdsAsk b{
-	color: #54a7fb;
-}
-#chatWindow .stdsAsk a{
-	color: #54a7fb;
+.video .rightList .indexAndChat .index .sectionList > li > a {
+  height: 55px;
+  line-height: 55px;
+  width: 100%;
+  display: block;
+  font-size: 14px;
+  color: #959494;
+  border-bottom: 1px solid #2e2e2e;
 }
 
-
-
-
-
-/*老师问答页面*/
-#answerWindow{
-	width: 340px;
-	height:635px;
-	overflow-y: auto;
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: #ebebeb;
-	display: none;
+.video .rightList .indexAndChat .index .indexList {
+  padding: 0 12px;
 }
 
-#answerWindow li{
-	  margin-top: 50px;
-	  padding: 5px 15px;
-    width: 310px;
-    line-height: 30px;
-    background-color:#f1f0f0;
-}
-/*学生的提问*/
-#answerWindow li .question{
-	line-height: 25px;
-}
-#answerWindow li .question i{
-	color: #E43A3D;
-	font-size: 14px;
-}
-#answerWindow li .question h6{
-	display: inline-block;
-	color: #E43A3D;
-	font-size: 14px;
-}
-#answerWindow li .question b{
-	margin-right: 5px;
-	color: #3f90ff;
-	font-size: 14px;
-}
-#answerWindow li .question a{
-	color: #535353;
-	font-size: 14px;
-}
-/*老师的回答*/
-#answerWindow li .answer{
-	line-height: 25px;
-}
-#answerWindow li .answer i{
-	color: #7d7d7d;
-	font-size: 14px;
-}
-#answerWindow li .answer h6{
-	display: inline-block;
-	color: #7d7d7d;
-	font-size: 12px;
-}
-#answerWindow li .answer b{
-	margin-right: 5px;
-	color: #030303;
-	font-size: 14px;
-}
-#answerWindow li .answer a{
-	color: #6d6d6d;
-	font-size: 12px;
-}
-#answerWindow li .answer span{
-	display: block;
-	color: #acacac;
-	font-size: 12px;
+.video .rightList .indexAndChat .index .indexList li {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #2e2e2e;
+  cursor: pointer;
 }
 
-
-/*提交问答页面*/
-#submitWindow{
-	position: absolute;
-	left: 15px;
-	top: 655px;
-	display: block;
-	height: 100px;
-	width: 310px;
-}
-#submitWindow #yourMessage{
-	resize: none;
-	outline: none;
-	display: block;
-	height: 50px;
-	margin-bottom: 10px;
-	width: 300px;
-	font-size: 14px;
-	font-family: "微软雅黑";
-	background-color: #FFFFFF;
-	border: none;
-	color: #606060;
-	padding-left: 10px;
+.video .rightList .indexAndChat .index .indexList li:hover i {
+  color: #23c8fe;
 }
 
-
-#callObjectOut{
-	height: 20px;
-	width: 97px;
-	position: relative;
-}
-#callObject{
-	display: block;
-	height: 20px;
-	width: 87px;
-	padding-left: 10px;
-	font-size: 12px;
-	font-family: "微软雅黑";
-	background-color: #d0d0d0;
-	border: none;
-	overflow: hidden;
-	white-space: pre;
-	text-overflow: ellipsis;
-	color: #606060;
-}
-#callObjectOut:after{
-	content: "×";
-	display: block;
-	font-size: 16px;
-	line-height: 20px;
-	cursor: pointer;
-	text-align: center;
-	height: 20px;
-	width: 20px;
-	position: absolute;
-	right: 0;
-	top: 0;
-	color: #606060;
+.video .rightList .indexAndChat .index .indexList li:hover a {
+  color: #23c8fe;
 }
 
-#submitChat{
-	font-family: "微软雅黑";
-	position: absolute;
-	right: 8px;
-	top: 60px;
-	z-index: 2;
-	height: 20px;
-	border: none;
+.video .rightList .indexAndChat .index .indexList li:hover span {
+  color: #23c8fe;
+}
+
+.video .rightList .indexAndChat .index .indexList li i {
+  color: #959494;
+  margin-right: 10px;
+}
+
+.video .rightList .indexAndChat .index .indexList li a {
+  color: #959494;
+  font-size: 12px;
+}
+
+.video .rightList .indexAndChat .index .indexList li span {
+  color: #959494;
+  font-size: 12px;
+  float: right;
+}
+
+.video .rightList .indexAndChat .chat {
+  background-color: #FFFFFF;
+  z-index: 2;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*聊天室和对话框 切换选项卡*/
+  /*聊天窗口和问答窗口以及提交回答窗口*/
+}
+
+.video .rightList .indexAndChat .chat .chat_table {
+  height: 45px;
+  width: 100%;
+  font-size: 0;
+  /*聊天室和问答区域点击样式展示*/
+}
+
+.video .rightList .indexAndChat .chat .chat_table .clickStyle_bule {
+  background-color: #ebebeb;
+}
+
+.video .rightList .indexAndChat .chat .chat_table .clickStyle_bule > a {
+  color: #e43a3d;
+}
+
+.video .rightList .indexAndChat .chat .chat_table > li {
+  height: 45px;
+  line-height: 45px;
+  display: block;
+  float: left;
+  width: 50%;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+
+.video .rightList .indexAndChat .chat .chat_table > li:hover a {
+  color: #e43a3d;
+}
+
+.video .rightList .indexAndChat .chat .chat_table > li > a {
+  color: #1c1c1c;
+  font-size: 16px;
+  width: 100px;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  height: 45px;
+  line-height: 45px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent {
+  background-color: #e3e3e3;
+  height: calc(100% - 45px);
+  width: 310px;
+  padding: 0 15px;
+  position: relative;
+  /*聊天窗口*/
+  /*老师问答页面*/
+  /*提交问答页面*/
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow {
+  position: absolute;
+  width: 310px;
+  padding: 10px 15px;
+  top: 0;
+  left: 0;
+  background-color: #ebebeb;
+  display: block;
+  height: calc(100% - 140px);
+  overflow-y: auto;
+  /*时间显示格式*/
+  /*老师发言的样式*/
+  /*学生发言的样式*/
+  /*私聊公屏的样式*/
+  /*管理员发言的样式*/
+  /*老师回答问题的样式*/
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow li {
+  width: 100%;
+  line-height: 25px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow li span {
+  display: inline-block;
+  color: #848484;
+  font-size: 12px;
+  line-height: 14px;
+  height: 14px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow li b {
+  font-size: 12px;
+  color: #ca4dc9;
+  margin-left: 7px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow li a {
+  color: #bdbdbd;
+  font-size: 12px;
+  cursor: default;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow li .iconfont {
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .tch a {
+  color: #3061a6;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .tch b {
+  color: #ca4dc9;
+  font-weight: 700;
+  margin-left: 0;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .tch i {
+  font-size: 18px;
+  color: #3061a6;
+  margin: 0 2px;
+  margin-bottom: -4px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .stds b {
+  color: #ca4dc9;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .stds a {
+  color: #434343;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .teachTo em, .video .rightList .indexAndChat .chat .chat_cotent #chatWindow .studentTo em, .video .rightList .indexAndChat .chat .chat_cotent #chatWindow .adminTo em {
+  font-style: normal;
+  margin: 0 2px;
+  color: #ababab;
+  font-size: 12px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .teachTo b, .video .rightList .indexAndChat .chat .chat_cotent #chatWindow .studentTo b, .video .rightList .indexAndChat .chat .chat_cotent #chatWindow .adminTo b {
+  margin: 0;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .teachTo b {
+  margin-left: 0;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .teachTo a {
+  color: #3061a6;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .teachTo i {
+  color: #3061a6;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .studentTo a {
+  color: #434343;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .studentTo span {
+  margin-right: 7px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .adminTo b {
+  margin-left: 0;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .adminTo a {
+  color: #e43a3d;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .adminTo i {
+  color: #e43a3d;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .admin b {
+  color: #ca4dc9;
+  font-weight: 700;
+  margin-left: 0;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .admin a {
+  color: #e43a3d;
+  font-weight: 700;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .admin i {
+  font-size: 18px;
+  color: #e43a3d;
+  margin: 0 2px;
+  margin-bottom: -4px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .tchAns i {
+  height: 20px;
+  width: 30px;
+  font-style: normal;
+  font-size: 12px;
+  display: inline-block;
+  background-color: #ca4dc9;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 20px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .tchAns .iconfont {
+  display: inline;
+  background-color: transparent;
+  color: #3061a6;
+  font-size: 18px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .tchAns b {
+  color: #ca4dc9;
+  font-weight: 700;
+  margin-left: 0;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .tchAns a {
+  color: #3061a6;
+  font-weight: 700;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .tchAns p span {
+  margin-left: 30px;
+  color: #ca4dc9;
+  font-size: 11px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .tchAns p b,
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .tchAns p a {
+  font-size: 11px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .stdsAsk {
+  /*学生提问的样式*/
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .stdsAsk i {
+  height: 20px;
+  width: 30px;
+  font-style: normal;
+  font-size: 12px;
+  display: inline-block;
+  background-color: #54a7fb;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 20px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .stdsAsk b,
+.video .rightList .indexAndChat .chat .chat_cotent #chatWindow .stdsAsk a {
+  color: #54a7fb;
+  font-weight: 700;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #answerWindow {
+  width: 340px;
+  height: calc(100% - 120px);
+  overflow-y: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ebebeb;
+  display: none;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #answerWindow li {
+  box-sizing: border-box;
+  margin-top: 15px;
+  padding: 5px 15px;
+  line-height: 30px;
+  background-color: #f1f0f0;
+  /*老师的回答*/
+  /*学生的提问*/
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #answerWindow li .answer {
+  line-height: 25px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #answerWindow li .answer i {
+  color: #7d7d7d;
+  font-size: 14px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #answerWindow li .answer h6 {
+  display: inline-block;
+  color: #7d7d7d;
+  font-size: 12px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #answerWindow li .answer b {
+  margin-right: 5px;
+  color: #030303;
+  font-size: 14px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #answerWindow li .answer a {
+  color: #6d6d6d;
+  font-size: 12px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #answerWindow li .answer span {
+  display: block;
+  color: #acacac;
+  font-size: 12px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #answerWindow li .question {
+  line-height: 25px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #answerWindow li .question i {
+  color: #E43A3D;
+  font-size: 14px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #answerWindow li .question h6 {
+  display: inline-block;
+  color: #E43A3D;
+  font-size: 14px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #answerWindow li .question b {
+  margin-right: 5px;
+  color: #3f90ff;
+  font-size: 14px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #answerWindow li .question a {
+  color: #535353;
+  font-size: 14px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #submitWindow {
+  position: absolute;
+  left: 15px;
+  top: calc(100% - 100px);
+  display: block;
+  height: 100px;
+  width: 310px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #submitWindow #yourMessage {
+  resize: none;
+  outline: none;
+  display: block;
+  height: 50px;
+  margin-bottom: 10px;
+  width: 300px;
+  font-size: 14px;
+  font-family: "微软雅黑";
+  background-color: #FFFFFF;
+  border: none;
+  color: #606060;
+  padding-left: 10px;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #submitWindow #callObjectOut {
+  height: 20px;
+  width: 97px;
+  position: relative;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #submitWindow #callObjectOut #callObject {
+  display: block;
+  height: 20px;
+  width: 87px;
+  padding-left: 10px;
+  font-size: 12px;
+  font-family: "微软雅黑";
+  background-color: #d0d0d0;
+  border: none;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+  color: #606060;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #submitWindow #callObjectOut #closeCharest {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #606060;
+}
+
+.video .rightList .indexAndChat .chat .chat_cotent #submitWindow #submitChat {
+  font-family: "微软雅黑";
+  position: absolute;
+  right: 8px;
+  top: 60px;
+  z-index: 2;
+  height: 20px;
+  border: none;
   border-radius: 9px;
   background-color: #e43a3d;
   width: 59px;
@@ -555,14 +668,15 @@ color: #e43a3d;
   font-size: 14px;
   line-height: 21px;
 }
-#sumbitAsk{
-	font-family: "微软雅黑";
-	position: absolute;
-	right: 80px;
-	top: 60px;
-	z-index: 1;
-	height: 20px;
-	border: none;
+
+.video .rightList .indexAndChat .chat .chat_cotent #submitWindow #sumbitAsk {
+  font-family: "微软雅黑";
+  position: absolute;
+  right: 80px;
+  top: 60px;
+  z-index: 1;
+  height: 20px;
+  border: none;
   border-radius: 9px;
   background-color: #e43a3d;
   width: 59px;
@@ -572,588 +686,675 @@ color: #e43a3d;
   line-height: 21px;
 }
 
-/*//课程评价 提问部分*/
-
+/*/
+/课程评价 提问部分*/
 .content {
-	width: 1000px;
-	margin: 0 auto;
+  display: none;
+  width: 1000px;
+  margin: 0 auto;
 }
 
 /*下部主体部分*/
-.callContent{
-	position: relative;
-	height: 2000px;
+.callContent {
+  position: relative;
+  height: 2000px;
 }
-/*三个不同的列表切换选项卡*/
 
+/*三个不同的列表切换选项卡*/
 .content .left {
-	width: 650px;
-	display: inline-block;
+  width: 650px;
+  display: inline-block;
 }
 
 .callList {
-	width: 650px;
-	height: 67px;
-	display: -webkit-box;
-	display: -moz-box;
-	-moz-box-pack: justify;
-	-webkit-box-pack: justify;
-	border-bottom: 1px solid #e7e7e7;
+  width: 650px;
+  height: 67px;
+  display: -webkit-box;
+  display: -moz-box;
+  -moz-box-pack: justify;
+  -webkit-box-pack: justify;
+  border-bottom: 1px solid #e7e7e7;
 }
 
-.callList>li {
-	width: 200px;
+.callList > li {
+  width: 200px;
 }
 
-.callList>li>a {
-	display: block;
-	height: 65px;
-	line-height: 65px;
-	text-align: center;
-	width: 100px;
-	color: #333333;
-	font-size: 14px;
-	margin: 0 auto;
-	border-bottom: 2px solid #FFFFFF;
+.callList > li > a {
+  display: block;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  width: 100px;
+  color: #333333;
+  font-size: 14px;
+  margin: 0 auto;
+  border-bottom: 2px solid #FFFFFF;
 }
 
-.callList>li:hover a {
-	border-color: #e93f32;
-	color: #e93f32;
+.callList > li:hover a {
+  border-color: #e93f32;
+  color: #e93f32;
 }
 
-
-.callList .clickStyle_red a{
-	border-color: #e93f32;
-	color: #e93f32;
+.callList .clickStyle_red a {
+  border-color: #e93f32;
+  color: #e93f32;
 }
-
-
-
 
 /*不同列表分别对应的具体内容部分*/
 /*我的笔记展示部分*/
-.myNote{
-	position: absolute;
-	top: 20px;
-	display: block;
-	width: 650PX;
-	background-color: #FFFFFF;
-	z-index: 4;
-	height: 2000px;
+.myNote {
+  position: absolute;
+  top: 20px;
+  display: block;
+  width: 650PX;
+  background-color: #FFFFFF;
+  z-index: 4;
+  height: 2000px;
 }
 
-#myNoteList li{
-	display: block;
-	width: 650px;
-	border-top: 1px solid #e5e5e5;
+#myNoteList li {
+  display: block;
+  width: 650px;
+  border-top: 1px solid #e5e5e5;
 }
-#myNoteList li:after{
-	content: '';
-	display: block;
-	clear: both;
+
+#myNoteList li:after {
+  content: '';
+  display: block;
+  clear: both;
 }
+
 #myNoteList li img {
-	height: 40px;
-	width: 40px;
-	border-radius: 50%;
-	margin-top: 13px;
-	margin-right: 13px;
-	float: left;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-top: 13px;
+  margin-right: 13px;
+  float: left;
 }
 
 #myNoteList li .myNoteText {
-	float: left;
-	margin: 20px 0;
-	width: 597px;
+  float: left;
+  margin: 20px 0;
+  width: 597px;
 }
 
 #myNoteList li .myNoteText h3 {
-	font-size: 14px;
-	color: #3a3a3a;
-	margin-bottom: 14px;
+  font-size: 14px;
+  color: #3a3a3a;
+  margin-bottom: 14px;
 }
 
-#myNoteList li .myNoteText>p {
-	font-size: 14px;
-	color: #959494;
-	margin-bottom: 14px;
+#myNoteList li .myNoteText > p {
+  font-size: 14px;
+  color: #959494;
+  margin-bottom: 14px;
 }
 
 #myNoteList li .myNoteText .time h6 {
-	font-size: 12px;
-	color: #959494;
-	float: left;
-	margin-right: 50px;
+  font-size: 12px;
+  color: #959494;
+  float: left;
+  margin-right: 50px;
 }
+
 #myNoteList li .myNoteText .time .rightPlay {
-	float: right;
-	line-height: 21px;
+  float: right;
+  line-height: 21px;
 }
 
 #myNoteList li .myNoteText .time .rightPlay i {
-	font-size: 16px;
-	color: #959494;
-	height: 21px;
-	line-height: 21px;
-	cursor: pointer;
+  font-size: 16px;
+  color: #959494;
+  height: 21px;
+  line-height: 21px;
+  cursor: pointer;
 }
 
 #myNoteList li .myNoteText .time .rightPlay span {
-	color: #959494;
-	font-size: 12px;
-	height: 21px;
-	line-height: 21px;
-	cursor: pointer;
+  color: #959494;
+  font-size: 12px;
+  height: 21px;
+  line-height: 21px;
+  cursor: pointer;
 }
 
 #myNoteList li .myNoteText .time .rightPlay .timePoit {
-	margin-right: 25px;
+  margin-right: 25px;
 }
 
 /*老师问答区域*/
-.myAsk{
-	position: absolute;
-	top: 20px;
-	display: block;
-	width: 650PX;
-	background-color: #FFFFFF;
-	z-index: 3;
-	height: 2000px;
+.myAsk {
+  position: absolute;
+  top: 20px;
+  display: block;
+  width: 650PX;
+  background-color: #FFFFFF;
+  z-index: 3;
+  height: 2000px;
 }
 
-#myAskList li{
-	display: block;
-	width: 650px;
-	border-top: 1px solid #e5e5e5;
+#myAskList li {
+  display: block;
+  width: 650px;
+  border-top: 1px solid #e5e5e5;
 }
-#myAskList li:after{
-	content: '';
-	display: block;
-	clear: both;
+
+#myAskList li:after {
+  content: '';
+  display: block;
+  clear: both;
 }
+
 #myAskList li img {
-	height: 40px;
-	width: 40px;
-	border-radius: 50%;
-	margin-top: 13px;
-	margin-right: 13px;
-	float: left;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-top: 13px;
+  margin-right: 13px;
+  float: left;
 }
 
 #myAskList li .myAskText {
-	float: left;
-	margin: 20px 0;
-	width: 597px;
+  float: left;
+  margin: 20px 0;
+  width: 597px;
 }
 
 #myAskList li .myAskText h3 {
-	font-size: 14px;
-	color: #3a3a3a;
-	margin-bottom: 14px;
+  font-size: 14px;
+  color: #3a3a3a;
+  margin-bottom: 14px;
 }
 
-#myAskList li .myAskText>p {
-	font-size: 14px;
-	color: #959494;
-	margin-bottom: 14px;
+#myAskList li .myAskText > p {
+  font-size: 14px;
+  color: #959494;
+  margin-bottom: 14px;
 }
-#myAskList li .myAskText .time:after{
-	display: block;
-	content: '';
-	clear: both;
+
+#myAskList li .myAskText .time:after {
+  display: block;
+  content: '';
+  clear: both;
 }
 
 #myAskList li .myAskText .time h6 {
-	font-size: 12px;
-	color: #959494;
-	float: left;
-	margin-right: 50px;
+  font-size: 12px;
+  color: #959494;
+  float: left;
+  margin-right: 50px;
 }
+
 #myAskList li .myAskText .time .rightPlay {
-	float: right;
-	line-height: 21px;
+  float: right;
+  line-height: 21px;
 }
 
 #myAskList li .myAskText .time .rightPlay i {
-	font-size: 16px;
-	color: #959494;
-	height: 21px;
-	line-height: 21px;
-	cursor: pointer;
+  font-size: 16px;
+  color: #959494;
+  height: 21px;
+  line-height: 21px;
+  cursor: pointer;
 }
 
 #myAskList li .myAskText .time .rightPlay span {
-	color: #959494;
-	font-size: 12px;
-	height: 21px;
-	line-height: 21px;
-	cursor: pointer;
+  color: #959494;
+  font-size: 12px;
+  height: 21px;
+  line-height: 21px;
+  cursor: pointer;
 }
 
 #myAskList li .myAskText .time .rightPlay .timePoit {
-	margin-right: 25px;
+  margin-right: 25px;
 }
-#myAskList li .myAskText .teacher{
-		float: left;
-	margin: 20px 0;
-	width: 544px;
-}
-#myAskList li .myAskText .teacher  h3{
-	font-size: 14px;
-	color: #3a3a3a;
-	margin-bottom: 14px;
-}
-#myAskList li .myAskText .teacher  h3 b{
-	color: #E43A3D;
-}
-#myAskList li .myAskText .teacher p{
-	font-size: 14px;
-	color: #959494;
-	margin-bottom: 14px;
-}
-/*课程评论区域*/
 
+#myAskList li .myAskText .teacher {
+  float: left;
+  margin: 20px 0;
+  width: 544px;
+}
+
+#myAskList li .myAskText .teacher h3 {
+  font-size: 14px;
+  color: #3a3a3a;
+  margin-bottom: 14px;
+}
+
+#myAskList li .myAskText .teacher h3 b {
+  color: #E43A3D;
+}
+
+#myAskList li .myAskText .teacher p {
+  font-size: 14px;
+  color: #959494;
+  margin-bottom: 14px;
+}
+
+/*课程评论区域*/
 .comment {
-	position: absolute;
-	top: 20px;
-	display: block;
-	width: 650PX;
-	background-color: #FFFFFF;
-	z-index: 6;
-	height: 2000px;
+  position: absolute;
+  top: 20px;
+  display: block;
+  width: 650PX;
+  background-color: #FFFFFF;
+  z-index: 6;
+  height: 2000px;
 }
 
 .comment #commentText {
-	width: 638px;
-	height: 70px;
-	padding: 5px;
-	font-family: "微软雅黑";
-	resize: none;
-	outline: none;
+  width: 638px;
+  height: 70px;
+  padding: 5px;
+  font-family: "微软雅黑";
+  resize: none;
+  outline: none;
 }
 
 .comment #submitComment {
-	display: block;
-	height: 30px;
-	width: 90px;
-	border: none;
-	color: #FFFFFF;
-	background-color: #e43a3d;
-	border-radius: 0;
-	margin: 20px 0;
-	margin-left: 560px;
+  display: block;
+  height: 30px;
+  width: 90px;
+  border: none;
+  color: #FFFFFF;
+  background-color: #e43a3d;
+  border-radius: 0;
+  margin: 20px 0 20px 560px;
 }
 
 #commentsList li {
-	display: block;
-	width: 650px;
-	border-top: 1px solid #e5e5e5;
+  display: block;
+  width: 650px;
+  border-top: 1px solid #e5e5e5;
 }
-#commentsList li:after{
-	content: '';
-	display: block;
-	clear: both;
+
+#commentsList li:after {
+  content: '';
+  display: block;
+  clear: both;
 }
+
 #commentsList li img {
-	height: 40px;
-	width: 40px;
-	border-radius: 50%;
-	margin-top: 13px;
-	margin-right: 13px;
-	float: left;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-top: 13px;
+  margin-right: 13px;
+  float: left;
 }
 
 #commentsList li .talkback {
-	float: left;
-	margin: 20px 0;
-	width: 597px;
+  float: left;
+  margin: 20px 0;
+  width: 597px;
 }
 
 #commentsList li .talkback h3 {
-	font-size: 14px;
-	color: #3a3a3a;
-	margin-bottom: 14px;
+  font-size: 14px;
+  color: #3a3a3a;
+  margin-bottom: 14px;
 }
 
-#commentsList li .talkback>p {
-	font-size: 14px;
-	color: #959494;
-	margin-bottom: 14px;
+#commentsList li .talkback > p {
+  font-size: 14px;
+  color: #959494;
+  margin-bottom: 14px;
 }
-#commentsList li .talkback .time:after{
-	content: '';
-	display: block;
-	clear: both;
+
+#commentsList li .talkback .time:after {
+  content: '';
+  display: block;
+  clear: both;
 }
+
 #commentsList li .talkback .time h6 {
-	font-size: 12px;
-	color: #959494;
-	float: left;
+  font-size: 12px;
+  color: #959494;
+  float: left;
 }
 
 #commentsList li .talkback .time .rightback {
-	float: right;
-	line-height: 21px;
+  float: right;
+  line-height: 21px;
 }
 
 #commentsList li .talkback .time .rightback i {
-	font-size: 16px;
-	color: #959494;
-	height: 21px;
-	line-height: 21px;
-	cursor: pointer;
+  font-size: 16px;
+  color: #959494;
+  height: 21px;
+  line-height: 21px;
+  cursor: pointer;
 }
 
 #commentsList li .talkback .time .rightback span {
-	color: #959494;
-	font-size: 12px;
-	height: 21px;
-	line-height: 21px;
-	cursor: pointer;
+  color: #959494;
+  font-size: 12px;
+  height: 21px;
+  line-height: 21px;
+  cursor: pointer;
 }
 
 #commentsList li .talkback .time .rightback .number {
-	margin-right: 25px;
+  margin-right: 25px;
 }
 
 /*别人回复的列表*/
-#commentsList .commentBack{
-	/*background-color: #e7e7e7;*/
+#commentsList .commentBack {
+  /*background-color: #e7e7e7;*/
 }
-#commentsList .commentBack>li{
-	width: 597px;
+
+#commentsList .commentBack > li {
+  width: 597px;
 }
-#commentsList .commentBack>li>.talkback{
-	width: 544px;
+
+#commentsList .commentBack > li > .talkback {
+  width: 544px;
 }
 
 /*课程评论对别人的评论进行回复*/
-#commentsList li .talkback .answertext{
-	width: 650px;
-	margin-left: -53px;
-	background-color: #e7e7e7;
-}
- #commentBackText {
-	width: 638px;
-	height: 70px;
-	padding: 5px;
-	font-family: "微软雅黑";
-	resize: none;
-	outline: none;
+#commentsList li .talkback .answertext {
+  width: 650px;
+  margin-left: -53px;
+  background-color: #e7e7e7;
 }
 
- #submitCommentBack {
-	display: block;
-	height: 30px;
-	width: 90px;
-	border: none;
-	color: #FFFFFF;
-	background-color: #e43a3d;
-	border-radius: 0;
-	margin: 20px 0;
+#commentBackText {
+  width: 638px;
+  height: 70px;
+  padding: 5px;
+  font-family: "微软雅黑";
+  resize: none;
+  outline: none;
 }
 
-
+#submitCommentBack {
+  display: block;
+  height: 30px;
+  width: 90px;
+  border: none;
+  color: #FFFFFF;
+  background-color: #e43a3d;
+  border-radius: 0;
+  margin: 20px 0;
+}
 
 /*主体部分右侧热门推荐部分*/
-.content .right{
-	width: 270px;
-	float: right;
-}
-.content .right>h1{
-	height: 66px;
-	line-height: 66px;
-	font-size: 18px;
-	color: #2b2a2a;
-	margin-bottom: 25px;
-	border-bottom: 1px solid #e7e7e7;
-}
-.content .right .hot_img img{
-	width: 270px;
-}
-.content .right .hot_img p{
-	width: 100%;
-	height: 40px;
-	line-height: 40px;
-	font-size: 14px;
-	color: #575757;
-}
-.content .right .hot_list{
-	width: 270px;
-	border-bottom: 1px solid #E7E7E7;
-}
-.content .right .hot_list li{
-	border-top: 1px dashed #E7E7E7; 
-	width: 270px;
-	padding: 20px 0;
-	font-size: 0;
-	height: 70px;
-}
-.content .right .hot_list li .courseCover{
-	display: inline-block;
-	width: 120px;
-	height: 70px;
-}
-.content .right .hot_list li div{
-	width: 150px;
-	height: 70px;
-	float: right;
-}
-.content .right .hot_list li div .title{
-	color: #434343;
-	font-size: 14px;
-	height: 35px;
-	line-height: 35px;
-	width: 100%;
-	text-align: center;
-	font-weight: 400;
-	
-}
-.content .right .hot_list li div .courseTime{
-	color: #434343;
-	font-size: 14px;
-	height: 35px;
-	line-height: 35px;
-	width: 100%;
-	text-align: center;
-	font-weight: 400;
-}
-/*点击查看更多的按钮*/
-#hotCourseMore{
-	display: block;
-	width: 270px;
-	color: #e43a3d;
-	font-size: 12px;
-	background-color: transparent;
-	height: 50px;
-	line-height: 50px;
-	text-align: right;
+.content .right {
+  width: 270px;
+  float: right;
 }
 
+.content .right > h1 {
+  height: 66px;
+  line-height: 66px;
+  font-size: 18px;
+  color: #2b2a2a;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.content .right .hot_img img {
+  width: 270px;
+}
+
+.content .right .hot_img p {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #575757;
+}
+
+.content .right .hot_list {
+  width: 270px;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.content .right .hot_list li {
+  border-top: 1px dashed #E7E7E7;
+  width: 270px;
+  padding: 20px 0;
+  font-size: 0;
+  height: 70px;
+}
+
+.content .right .hot_list li .courseCover {
+  display: inline-block;
+  width: 120px;
+  height: 70px;
+}
+
+.content .right .hot_list li div {
+  width: 150px;
+  height: 70px;
+  float: right;
+}
+
+.content .right .hot_list li div .title {
+  color: #434343;
+  font-size: 14px;
+  height: 35px;
+  line-height: 35px;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+}
+
+.content .right .hot_list li div .courseTime {
+  color: #434343;
+  font-size: 14px;
+  height: 35px;
+  line-height: 35px;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+}
+
+/*点击查看更多的按钮*/
+#hotCourseMore {
+  display: block;
+  width: 270px;
+  color: #e43a3d;
+  font-size: 12px;
+  background-color: transparent;
+  height: 50px;
+  line-height: 50px;
+  text-align: right;
+}
 
 /*弹出层样式*/
 /*笔记*/
-.layer{
-	position: absolute;
-	top: -1000px;
+.layer {
+  position: absolute;
+  top: -1000px;
 }
-#noteLayer{
-	position: relative;
-	height: 280px;
-	width: 610px;
-	padding: 0 20px;
-	background-color: #FFFFFF;
+
+#noteLayer {
+  position: relative;
+  height: 280px;
+  width: 610px;
+  padding: 0 20px;
+  background-color: #FFFFFF;
 }
-#noteLayer>h1{
-		width: 100%;
-		height: 50px;
-		font-size: 16px;
-		line-height: 50px;
-		font-weight: 500;
-		border-bottom: 1px solid #d0d6d9;
+
+#noteLayer > h1 {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  font-weight: 500;
+  border-bottom: 1px solid #d0d6d9;
 }
-#noteText{
-	    margin: 30px 10px;
-	    width: 568px;
-	    height: 77px;
-	    padding: 8px 10px;
+
+#noteText {
+  margin: 30px 10px;
+  width: 568px;
+  height: 77px;
+  padding: 8px 10px;
 }
-#upNote{
-	display: block;
-	height: 40px;
-	width: 120px;
-	font-size: 14px;
-	background-color: #00b33b;
-	text-align: center;
-	line-height: 40px;
-	color: #FFFFFF;
-	font-family: "微软雅黑";
-	margin: 0 auto;
+
+#upNote {
+  display: block;
+  height: 40px;
+  width: 120px;
+  font-size: 14px;
+  background-color: #00b33b;
+  text-align: center;
+  line-height: 40px;
+  color: #FFFFFF;
+  font-family: "微软雅黑";
+  margin: 0 auto;
 }
-#closeNote{
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	cursor: pointer;
+
+#closeNote {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
 }
+
 /*提问弹出层*/
-#askLayer{
-	position: relative;
-	height: 450px;
-	width: 610px;
-	padding: 0 20px;
+#askLayer {
+  position: relative;
+  height: 450px;
+  width: 610px;
+  padding: 0 20px;
 }
-#askLayer>h1{
-	width: 100%;
-		height: 50px;
-		font-size: 16px;
-		line-height: 50px;
-		font-weight: 500;
-		border-bottom: 1px solid #d0d6d9;
+
+#askLayer > h1 {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  font-weight: 500;
+  border-bottom: 1px solid #d0d6d9;
 }
-#closeAsk{
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	cursor: pointer;
+
+#closeAsk {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
 }
-#askTitle{
-	height: 22px;
-	width: 571px;
-	padding: 8px;
-	margin: 30px 10px;
+
+#askTitle {
+  height: 22px;
+  width: 571px;
+  padding: 8px;
+  margin: 30px 10px;
 }
-#askLayer .uecotent{
-	width: 590px;
-	margin: 0 10px;
-	margin-bottom: 30PX;
+
+#askLayer .uecotent {
+  width: 590px;
+  margin: 0 10px 30PX;
 }
-#myUe{
-	width: 590px;
-	height: 150px;
+
+#myUe {
+  width: 590px;
+  height: 150px;
 }
-#closeAsk{
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	cursor: pointer;
+
+#closeAsk {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
 }
-#inputAskCode{
-	height: 30px;
-	width: 118px;
-	padding: 4px 5px;
-	display: inline-block;
-	margin-left: 10px;
-	float: left;
-	margin-right: 10px;
+
+#inputAskCode {
+  height: 30px;
+  width: 118px;
+  padding: 4px 5px;
+  display: inline-block;
+  margin-left: 10px;
+  float: left;
+  margin-right: 10px;
 }
-#askCode{
-	height: 40px;
-	width: 70px;
-	display: inline-block;
-	float: left;
+
+#askCode {
+  height: 40px;
+  width: 70px;
+  display: inline-block;
+  float: left;
 }
-#changeAskCode{
-	height: 40px;
-	line-height: 40px;
-	width: 70px;
+
+#changeAskCode {
+  height: 40px;
+  line-height: 40px;
+  width: 70px;
   text-align: center;
   float: left;
   margin-left: 10px;
 }
-#upAsk{
-	display: block;
-	height: 40px;
-	width: 120px;
-	font-size: 14px;
-	background-color: #00b33b;
-	text-align: center;
-	line-height: 40px;
-	color: #FFFFFF;
-	font-family: "微软雅黑";
-	margin: 0 auto;
-	float: right;
-	margin-right: 10px;
+
+#upAsk {
+  display: block;
+  height: 40px;
+  width: 120px;
+  font-size: 14px;
+  background-color: #00b33b;
+  text-align: center;
+  line-height: 40px;
+  color: #FFFFFF;
+  font-family: "微软雅黑";
+  margin: 0 auto;
+  float: right;
+  margin-right: 10px;
 }
 
+/*考试层*/
+#examLayer {
+  width: 700px;
+  height: 150px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  padding-top: 15px;
+}
+
+#div_exam {
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#div_exam .fn-left {
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+#div_exam .fn-left > span {
+  display: inline;
+  margin-right: 15px;
+}
+
+#div_exam .fn-left > span:nth-of-type(1) {
+  background-color: #c00;
+  color: #FFFFFF;
+  padding: 0 3px;
+  margin-right: 0;
+}
+
+#div_exam .fn-right {
+  height: 40px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+#div_exam .fn-right > .btn {
+  height: 25px;
+  width: 120px;
+  background-color: #01487F;
+  display: inline-block;
+  margin-right: 15px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+}

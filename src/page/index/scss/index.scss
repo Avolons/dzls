@@ -1,4 +1,9 @@
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 400;
     text-align: center;
 }
@@ -6,7 +11,6 @@ article {
     width: 100%; //  轮播图
     .slider {
         width: 100%;
-        margin-bottom: 50px;
         li {
             width: 100%;
             img {
@@ -16,9 +20,10 @@ article {
     }
     //  即将开讲
     .will_speak {
-        height: 540px;
-        background-image: url("../img/bc.png");
-        background-size: cover; //      标题部分
+        padding-bottom:15px;
+//      background-image: url("../img/bc.png");
+        background-color: #fafafa;
+        background-size: cover;
         .title {
             padding-top: 40px;
             position: relative;
@@ -58,81 +63,112 @@ article {
         .content {
             width: 1000px;
             margin: 0 auto;
-            height: 284px;
             margin-top: 50px;
+            &:after{
+                clear: both;
+                content: '';
+                display: block;
+            }
             figure {
-                width: 285px;
+                width: 384px;
+                height: 235px;
                 float: left;
-                margin-right: 22px;
+                margin-right: 24px;
+                border: 1px solid #c1c1c1;
+                position: relative;
+                box-sizing: border-box;
                 img {
-                    box-sizing: border-box;
-                    border: 5px solid #FFFFFF;
-                    width: 285px;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
                 }
             }
             .intrdouce {
-                width: 527px;
+                width: 461px;
                 float: left;
-                margin-right: 25px;
+                position: relative;
+                margin-right: 20px;
                 h1 {
                     color: #e53939;
-                    font-size: 16px;
-                    margin-bottom: 20px;
-                    text-align: left;
+                    font-size: 21px;
                     font-weight: 700;
+                    text-align: left;
+                    position: relative;
+                    z-index: 999;
+                    height: 25px;
+                    line-height: 25px;
+                    max-width: 400px;
+                    overflow: hidden;
+                    margin-bottom: 10px;
                 }
                 p {
                     color: #414141;
                     font-size: 14px;
-                    margin-bottom: 20px;
+                    position: relative;
+                    z-index: 999;
+                    display: inline-block;
                     line-height: 30px;
                     i {
-                        font-size: 16px;
+                        font-size: 18px;
                         color: #e53939;
                         margin-right: 5px;
+                        font-weight: 700;
                     }
                 }
-            }
-            //          讲师照片
-            .charseter {
-                float: left;
-                width: 140px;
-                img {
-                    width: 120px;
+                p:nth-of-type(2) {
+                    max-height: 90px;
+                    overflow: hidden;
+                }
+                p:nth-of-type(3) {
+                    width: 461px;
+                    line-height: 30px;
+                    i {
+                        font-weight: 400;
+                        font-size: 20px;
+                    }
+                }
+                button {
+                    height: 35px;
+                    line-height: 35px;
+                    width: 90px;
+                    background-color: #e43a3d;
+                    color: #FFFFFF;
+                    border-radius: 5px;
+                    display: block;
                     margin: 0 auto;
+                    margin-top: 5px;
+                }
+            }
+            .charseter {
+                margin-top: 23px;
+                height: 191px;
+                width: 109px;
+                border: 1px solid #c1c1c1;
+                float: left;
+                img {
+                    height: 149px;
+                    width: 109px;
                     display: block;
                 }
                 a {
                     text-align: center;
                     font-size: 14px;
-                    color: #414141;
+                    color: #5a5a5b;
                     display: block;
-                    margin: 0 auto;
-                }
-                p {
-                    font-size: 14px;
-                    color: #414141;
-                    display: block;
-                    margin: 0 auto;
+                    width: 100%;
+                    height: 42px;
+                    line-height: 42px;
+                    background-color: #d9d8d8;
                 }
             }
-        }
-        //      我要报名
-        button {
-            height: 40px;
-            line-height: 40px;
-            width: 115px;
-            background-color: #e43a3d;
-            color: #FFFFFF;
-            margin: 0 auto;
-            display: block;
         }
     }
     //  课程报名列表 
     .signList {
         background-color: #fafafa;
-        padding-bottom: 50px;
-        padding-top: 30px;
+        margin-bottom: 25px;
+        padding-top: 10px;
+        padding-bottom: 30px;
         ul {
             width: 1000px;
             margin: 0 auto;
@@ -151,29 +187,31 @@ article {
                         border: 1px solid #dcdcdc;
                     }
                 }
-                .intrdouce{
+                .intrdouce {
                     float: left;
                     width: 672px;
-                    h1{
-                       color: #e53939;
-                    font-size: 15px;
-                    margin: 10px 0;
-                    text-align: left;
-                    font-weight: 700; 
-                    }
-                     p {
-                    color: #414141;
-                    font-size: 14px;
-                    margin-bottom: 10px;
-                    line-height: 20px;
-                    i {
-                        font-size: 16px;
+                    h1 {
                         color: #e53939;
-                        margin-right: 5px;
+                        font-size: 15px;
+                        margin: 10px 0;
+                        text-align: left;
+                        font-weight: 700;
                     }
-                  }
+                    p {
+                        overflow: hidden;
+                        max-height: 40px;
+                        color: #414141;
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                        line-height: 20px;
+                        i {
+                            font-size: 16px;
+                            color: #e53939;
+                            margin-right: 5px;
+                        }
+                    }
                 }
-                button{
+                button {
                     float: right;
                     background-color: #E43A3D;
                     font-size: 14px;
@@ -184,144 +222,143 @@ article {
                     margin-top: 70px;
                     margin-left: 28px;
                 }
-                .haveSign{
+                .haveSign {
                     background-color: #8a8a8a;
+                    cursor: auto;
                 }
             }
         }
     }
-    .hotcourseList{
-        .titleout{
+    .hotcourseList {
+        .titleout {
             height: 150px;
-            background-image: url(../img/hotbc.png);
+            background-image: url("../img/hotbc.png");
             .title {
-            padding-top: 30px;
-            position: relative;
+                padding-top: 30px;
+                position: relative;
+                width: 1000px;
+                margin: 0 auto;
+                .titleE {
+                    margin: 0 auto;
+                    font-size: 17px;
+                    color: #656769;
+                    margin-bottom: 15px;
+                }
+                .titleC {
+                    margin: 0 auto;
+                    font-size: 22px;
+                    color: #414141;
+                    margin-bottom: 15px;
+                }
+                span {
+                    display: block;
+                    width: 60px;
+                    height: 10px;
+                    background-color: #e53939;
+                    margin: 0 auto -5px;
+                }
+                a {
+                    position: absolute;
+                    color: #4197d4;
+                    font-size: 14px;
+                    bottom: 3px;
+                    right: 0;
+                }
+            }
+        }
+        ul {
             width: 1000px;
             margin: 0 auto;
-            .titleE {
-                margin: 0 auto;
-                font-size: 17px;
-                color: #656769;
-                margin-bottom: 15px;
-            }
-            .titleC {
-                margin: 0 auto;
-                font-size: 22px;
-                color: #414141;
-                margin-bottom: 15px;
-            }
-            span {
+            padding-top: 35px;
+            &:after {
+                content: '';
                 display: block;
-                width: 60px;
-                height: 10px;
-                background-color: #e53939;
-                margin: 0 auto -5px;
+                clear: both;
             }
-            a {
-                position: absolute;
-                color: #4197d4;
-                font-size: 14px;
-                bottom: 3px;
-                right: 0;
-            }
-        }
-        }
-       ul{
-           width: 1000px;
-           margin: 0 auto;
-           padding-top:35px; 
-           &:after{
-               content: '';
-               display: block;
-               clear: both;
-           }
-           li{
-               width: 300px;
-               float: left;
-               box-sizing: border-box;
-               position: relative;
-               border: 1px solid #e5e5e5;
-               margin-bottom: 50px;
-               cursor: pointer;
-               &:hover .mask{
-                   opacity: 1;
-               }
-               &:hover h1{
+            li {
+                width: 300px;
+                float: left;
+                box-sizing: border-box;
+                position: relative;
+                border: 1px solid #e5e5e5;
+                margin-bottom: 50px;
+                cursor: pointer;
+                &:hover .mask {
+                    opacity: 1;
+                }
+                &:hover h1 {
                     opacity: 0;
-               }
-               &:hover h2{
-                   opacity: 0;
-               }
-               figure{
-                   width: 298px;
-                  img{
-                      width: 298px;
-                      height: 180px;
-                      display: block;
-                  } 
-               }
-               h1{
-                  margin: 10px 0;
-                   font-size: 16px;
-                   color: #646464;
-               }
-               h2{
-                   margin: 10px 0;
-                   font-size: 14px;
-                   color: #646464;
-               }
-               h3{
-                   position: absolute;
-                   width: 75px;
-                   height: 18px;
-                   line-height: 18px;
-                   color: #e53939;
-                   background-color: #e0e0df;
-                   font-size: 16px;
-                   top: 162px;
-                   right: 0;
-               }
-               .mask{
-                   box-sizing: border-box;
-                   padding: 0 15px;
-                   height: 100%;
-                   width: 100%;
-                   background-color: rgba(0,0,0,.7);
-                   position: absolute;
-                   top: 0;
-                   left: 0;
-                   opacity: 0;
-                   transition: opacity 0.4s ease; 
-                   h4{
-                       font-size: 16px;
-                       color: #FFFFFF;
-                       margin-top: 40px;
-                   }
-                   h5{
-                      color: #FFFFFF;
-                      font-size: 14px;
-                      margin: 10px 0; 
-                   }
-                   p{
-                      font-size: 12px;
-                      color: #FFFFFF;
-                      line-height: 25px; 
-                   }
-                   h6{
-                       font-size: 14px;
-                       color: #e53939;
-                       
-                   }
-               }
-           }
-           li:nth-of-type(2){
-               margin: 0 50px;
-           }
-           li:nth-of-type(5){
-               margin: 0 50px; 
-           }
-       }
-        
+                }
+                &:hover h2 {
+                    opacity: 0;
+                }
+                figure {
+                    width: 298px;
+                    img {
+                        width: 298px;
+                        height: 180px;
+                        display: block;
+                    }
+                }
+                h1 {
+                    margin: 10px 0;
+                    font-size: 16px;
+                    color: #646464;
+                }
+                h2 {
+                    margin: 10px 0;
+                    font-size: 14px;
+                    color: #646464;
+                }
+                h3 {
+                    position: absolute;
+                    width: 75px;
+                    height: 18px;
+                    line-height: 18px;
+                    color: #e53939;
+                    background-color: #e0e0df;
+                    font-size: 16px;
+                    top: 162px;
+                    right: 0;
+                }
+                .mask {
+                    box-sizing: border-box;
+                    padding: 0 15px;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba(0,0,0,.7);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    transition: opacity 0.4s ease;
+                    h4 {
+                        font-size: 16px;
+                        color: #FFFFFF;
+                        margin-top: 40px;
+                    }
+                    h5 {
+                        color: #FFFFFF;
+                        font-size: 14px;
+                        margin: 10px 0;
+                    }
+                    p {
+                        font-size: 12px;
+                        color: #FFFFFF;
+                        line-height: 25px;
+                    }
+                    h6 {
+                        font-size: 14px;
+                        color: #e53939;
+                    }
+                }
+            }
+            li:nth-of-type(2) {
+                margin: 0 50px;
+            }
+            li:nth-of-type(5) {
+                margin: 0 50px;
+            }
+        }
     }
 }

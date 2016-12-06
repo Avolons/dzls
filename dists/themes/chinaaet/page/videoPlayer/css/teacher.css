@@ -1,0 +1,200 @@
+@charset "UTF-8";
+.chat #chatWindow {
+  box-sizing: border-box;
+  height: 650px;
+  width: 1000px;
+  padding: 10px 15px;
+  background-color: #ebebeb;
+  overflow-y: auto;
+  /*时间显示格式*/
+  /*老师发言的样式*/
+  /*学生发言的样式*/
+  /*私聊公屏的样式*/
+  /*管理员发言的样式*/
+  /*老师回答问题的样式*/
+}
+
+.chat #chatWindow li {
+  border: none;
+  padding: 2px 0;
+  width: 100%;
+  line-height: 30px;
+}
+
+.chat #chatWindow li span {
+  display: inline-block;
+  color: #848484;
+  font-size: 12px;
+  line-height: 14px;
+  height: 14px;
+}
+
+.chat #chatWindow li b {
+  font-size: 12px;
+  color: #ca4dc9;
+  margin-left: 7px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.chat #chatWindow li a {
+  color: #bdbdbd;
+  font-size: 12px;
+  cursor: default;
+}
+
+.chat #chatWindow li .iconfont {
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+.chat #chatWindow .tch a {
+  color: #3061a6;
+}
+
+.chat #chatWindow .tch b {
+  color: #ca4dc9;
+  font-weight: 700;
+  margin-left: 0;
+}
+
+.chat #chatWindow .tch i {
+  font-size: 18px;
+  color: #3061a6;
+  margin: 0 2px -4px;
+}
+
+.chat #chatWindow .stds b {
+  color: #ca4dc9;
+}
+
+.chat #chatWindow .stds a {
+  color: #434343;
+}
+
+.chat #chatWindow .teachTo em,
+.chat #chatWindow .studentTo em,
+.chat #chatWindow .adminTo em {
+  font-style: normal;
+  margin: 0 2px;
+  color: #ababab;
+  font-size: 12px;
+}
+
+.chat #chatWindow .teachTo b,
+.chat #chatWindow .studentTo b,
+.chat #chatWindow .adminTo b {
+  margin: 0;
+}
+
+.chat #chatWindow .teachTo b {
+  margin-left: 0;
+}
+
+.chat #chatWindow .teachTo a {
+  color: #3061a6;
+}
+
+.chat #chatWindow .teachTo i {
+  color: #3061a6;
+}
+
+.chat #chatWindow .studentTo a {
+  color: #434343;
+}
+
+.chat #chatWindow .studentTo span {
+  margin-right: 7px;
+}
+
+.chat #chatWindow .adminTo b {
+  margin-left: 0;
+}
+
+.chat #chatWindow .adminTo a {
+  color: #e43a3d;
+}
+
+.chat #chatWindow .adminTo i {
+  color: #e43a3d;
+}
+
+.chat #chatWindow .admin b {
+  color: #ca4dc9;
+  font-weight: 700;
+  margin-left: 0;
+}
+
+.chat #chatWindow .admin a {
+  color: #e43a3d;
+  font-weight: 700;
+}
+
+.chat #chatWindow .admin i {
+  font-size: 18px;
+  color: #e43a3d;
+  margin: 0 2px -4px;
+}
+
+.chat #chatWindow .tchAns i {
+  height: 20px;
+  width: 30px;
+  font-style: normal;
+  font-size: 12px;
+  display: inline-block;
+  background-color: #ca4dc9;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 20px;
+}
+
+.chat #chatWindow .tchAns .iconfont {
+  display: inline;
+  background-color: transparent;
+  color: #3061a6;
+  font-size: 18px;
+}
+
+.chat #chatWindow .tchAns b {
+  color: #ca4dc9;
+  font-weight: 700;
+  margin-left: 0;
+}
+
+.chat #chatWindow .tchAns a {
+  color: #3061a6;
+  font-weight: 700;
+}
+
+.chat #chatWindow .tchAns p span {
+  margin-left: 30px;
+  color: #ca4dc9;
+  font-size: 11px;
+}
+
+.chat #chatWindow .tchAns p b,
+.chat #chatWindow .tchAns p a {
+  font-size: 11px;
+}
+
+.chat #chatWindow .stdsAsk {
+  /*学生提问的样式*/
+}
+
+.chat #chatWindow .stdsAsk i {
+  height: 20px;
+  width: 30px;
+  font-style: normal;
+  font-size: 12px;
+  display: inline-block;
+  background-color: #54a7fb;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 20px;
+}
+
+.chat #chatWindow .stdsAsk b,
+.chat #chatWindow .stdsAsk a {
+  color: #54a7fb;
+  font-weight: 700;
+}

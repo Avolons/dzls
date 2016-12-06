@@ -6,579 +6,698 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../../static/css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="../../static/lib/videoJs/css/video-js.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/videostyle.css" />
+		<link rel="stylesheet" type="text/css" href="css/videostyle.scss" />
 		<link rel="stylesheet" type="text/css" href="../../widget/header/css/header.scss" />
 		<link rel="stylesheet" type="text/css" href="../../widget/footer/css/footer.scss" />
-		<link href="../../static/lib/ueditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
-	
-		
+		<!--<link href="../../static/lib/ueditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">-->
 	</head>
 
 	<body>
-		<header id="header" style="height: 130px;"></header>
+		<header id="header"></header>
 		<div class="video">
 			<div class="videoTitle">
-					80、90后员工职业素养提升 01 
-			</div>
-			<div class="videoOut" id="videoOut">
-				<div class="videoPlayer">
-					<video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto"  poster="img/3334747hd.jpg" ata-setup="{}" >
-						<!--<source src=" http://7xpfpu.com2.z0.glb.qiniucdn.com/32c21bb95cb74a929149eb8165d85cfb.m3u8" type="application/x-mpegURL"></source>-->
-						
-						<!--<source src="http://cdn.theoplayer.com/video/big_buck_bunny/big_buck_bunny_metadata.m3u8" type="application/x-mpegURL"></source>-->
-					    <!--<source src="video/grossoffenseth_sunrise.m4v" type='video/m4v'></source>-->
-					   
-					    <source src="../../static/video/3334747hd.m4v" type='video/m4v'></source>
-					    <source src="../../static/video/3334747hd.webm" type="video/webm"></source> 
-					    <p class="vjs-no-js">
+				<<80、90后员工职业素养提升 01 </div>
+					<div class="videoOut" id="videoOut">
+						<div class="videoPlayer" id="videoPlayer"> 
+							<div class="mask">
+								<img src="img/1.jpg"/>
+							</div>
+							<!--<video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" autoplay="autoplay" poster="img/3334747hd.jpg" ata-setup="{}">
+								<source src=" http://7xpfpu.com2.z0.glb.qiniucdn.com/32c21bb95cb74a929149eb8165d85cfb.m3u8" type="application/x-mpegURL"></source>
+								<source src="http://o6opd2vt8.bkt.clouddn.com/test/0001.m3u8" type="application/x-mpegURL"></source>
+								<source src="http://www.html5tricks.com/demo/html5-canvas-video/BigBuckBunny_640x360.mp4" type='video/mp4'></source>
+
+								<source src="../../static/video/3334747hd.m4v" type='video/m4v'></source>
+								<source src="../../static/video/3334747hd.webm" type="video/webm"></source>
+								<p class="vjs-no-js">
 					      To view this video please enable JavaScript, and consider upgrading to a web browser that
 					      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
 					    </p>
-		                </video>
-				</div>
-				<ul class="videoState">
-					<li class="allTime">
-						视屏总时长：<a href="javascript:void(0);">00:00</a>
-					</li>
-					<li class="studyTime">
-						已学时长：<a href="javascript:void(0);">00:00</a>
-					</li>
-					<li class="studyState">
-						<span class="iconfont">&#xe60c;</span><a href="javascript:void(0);">播放</a>
-					</li>
-				</ul>
-			</div>
-
-			<!--右侧切换类表-->
-			<div class="rightList" id="rightList">
-				<!--选择列表,使用绝对定位-->
-				<div class="selectList">
-					<ul>
-						<li id="alertIndex">
-							<i class="iconfont">&#xe600;</i>
-							<a href="javascript:void(0);">目录</a>
-						</li>
-						<li id="alertChat">
-							<i class="iconfont">&#xe602;</i>
-							<a href="javascript:void(0);">聊天提问</a>
-						</li>
-						<!--<li id="alertNote">
-							<i class="iconfont">&#xe603;</i>
-							<a href="javascript:void(0);">笔记</a>
-						</li>
-						<li id="alertAsk">
-							<i class="iconfont">&#xe604;</i>
-							<a href="javascript:void(0);">提问</a>
-						</li>-->
-						<li id="alertQuestionnaire">
-							<i class="iconfont">&#xe609;</i>
-							<a href="javascript:void(0);">问卷调查</a>
-						</li>
-						<li id="alertQuestionnaire">
-							<i class="iconfont">&#xe606;</i>
-							<a href="javascript:void(0);">在线考试</a>
-						</li>
-					</ul>
-				</div>
-				<!--聊天室和课程目录区-->
-				<div class="indexAndChat">
-					<div class="index">
-						<!--课程标题-->
-						<h1>80后90后员工的管法</h1>
-						<!--课程列表-->
-						<ul class="sectionList">
-							<li><a href="javascript:void(0);">第一章 80后90后员工管法</a>
-								<ul class="indexList">
-									<li>
-										<i class="iconfont">&#xe607;</i>
-										<a href="javascript:void(0);">80后90后员工的管法 1</a>
-										<span>00:25:06</span>
-									</li>
-									<li>
-										<i class="iconfont">&#xe607;</i>
-										<a href="javascript:void(0);">80后90后员工的管法 1</a>
-										<span>00:25:06</span>
-									</li>
-									<li>
-										<i class="iconfont">&#xe607;</i>
-										<a href="javascript:void(0);">80后90后员工的管法 1</a>
-										<span>00:25:06</span>
-									</li>
-									<li>
-										<i class="iconfont">&#xe607;</i>
-										<a href="javascript:void(0);">80后90后员工的管法 1</a>
-										<span>00:25:06</span>
-									</li>
-								</ul>
+							</video>-->
+							<div id="ckplayer" style="height: 100%;width: 100%;position: relative;">
+								
+							</div>
+						</div>
+						<ul class="videoState">
+							<li class="allTime">
+								应学时长：
+								<a href="javascript:void(0);">00:00</a>
+							</li>
+							<li class="studyTime">
+								已学时长：
+								<a href="javascript:void(0);">00:00</a>
+							</li>
+							<li class="studyState">
+								<span class="iconfont">&#xe60c;</span>
+								<a href="javascript:void(0);">播放</a>
 							</li>
 						</ul>
 					</div>
-					<div class="chat">
-						<ul class="chat_table">
-							<li id="chatbutton" class="clickStyle_bule"><a href="javascript:void(0);">聊天室</a></li>
-							<li id="answerbutton"><a href="javascript:void(0);">问答</a></li>
-						</ul>
-						<ul class="chat_cotent">
-							<!--展示聊天窗口区域-->
-							<li id="chatWindow">
-								<ul id="messageList">
-									<li class="stds"><span class="time">09:45</span><b >红玫瑰:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
-									<li class="stds"><span class="time">09:45</span><b >小老鼠::</b><a href="javascript:void(0);">是呀不错呀讲的老师敬业.....</a></li>
-									<li class="stds"><span class="time">09:45</span><b >穿衣搭配:</b><a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a></li>
-									<li class="admin"><span class="time">09:45</span><b >管理员:</b><a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a></li>
-									<li class="stds"><span class="time">09:45</span><b >就是凑字符:</b><a href="javascript:void(0);">你们怎么想的就这点把你们收买了没谁了</a></li>
-									<li class="stds"><span class="time">09:45</span><b >蝙蝠侠  对  穿衣搭配 说:</b><a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a></li>
-									<li class="tch"><span class="time">09:45</span><b >nickie老师:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
-								    <li class="stds"><span class="time">09:45</span><b >红玫瑰:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
-									<li class="stds"><span class="time">09:45</span><b >小老鼠::</b><a href="javascript:void(0);">是呀不错呀讲的老师敬业.....</a></li>
-									<li class="stds"><span class="time">09:45</span><b >穿衣搭配:</b><a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a></li>
-									<li class="admin"><span class="time">09:45</span><b >管理员:</b><a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a></li>
-									<li class="stds"><span class="time">09:45</span><b >就是凑字符:</b><a href="javascript:void(0);">你们怎么想的就这点把你们收买了没谁了</a></li>
-									<li class="stds"><span class="time">09:45</span><b >蝙蝠侠  对  穿衣搭配 说:</b><a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a></li>
-									<li class="tch"><span class="time">09:45</span><b >nickie老师:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
-								    <li class="stdsAsk"><i>提问</i><b>红玫瑰:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
-								    <li class="tchAns"><i>回答</i><b>nickie老师:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
-								    	<p><span>【问题】</span><b>红玫瑰:</b><a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a></p>
-								    </li>
-								</ul>
-							</li>
-							<!--展示老师问答区域-->
-							<!--使用绝对定位-->
-							<li id="answerWindow">
-								<ul id="teacherAnswerList">
-									<li>
-										<div class="question">
-											<i class="iconfont">&#xe604;</i>
-											<h6>【提问】</h6>
-											<b>红玫瑰</b>
-											<a href="javascript:void(0);">老师ps里面的快捷键视频里为啥没找到，是没有这一节吗？</a>
-										</div>
-										<div class="answer">
-											<i class="iconfont">&#xe605;</i>
-											<h6>【最新回答】</h6>
-											<b>nickie老师</b>
-											<a href="javascript:void(0);">就在视频的结尾呢强调了一次可能你没看到。</a>
-											<span class="time">时间：4天前</span>
-										</div>
-									</li>
-									<li>
-										<div class="question">
-											<i class="iconfont">&#xe604;</i>
-											<h6>【提问】</h6>
-											<b>红玫瑰</b>
-											<a href="javascript:void(0);">老师ps里面的快捷键视频里为啥没找到，是没有这一节吗？</a>
-										</div>
-										<div class="answer">
-											<i class="iconfont">&#xe605;</i>
-											<h6>【最新回答】</h6>
-											<b>nickie老师</b>
-											<a href="javascript:void(0);">就在视频的结尾呢强调了一次可能你没看到。</a>
-											<span class="time">时间：4天前</span>
-										</div>
-									</li>
-								</ul>
-							</li>
-							<!--提交回答区域-->
-							<li id="submitWindow">
-								<textarea id="yourMessage" name="yourmessage" rows="" cols="" placeholder="和大伙聊聊吧"></textarea>
-								<div id="callObjectOut">
-									<input type="text" name="callObject" id="callObject" value="" placeholder="对所有人说" />
-								</div>
-								<button type="button" id="submitChat">发表</button>
-								<button type="button" id="sumbitAsk">提问</button>
-							</li>
 
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="content">
-				<div class="left">
-					<!--选项卡-->
-					<ul class="callList">
-						<li id="myNoteBtn" class="clickStyle_red"><a href="javascript:void(0);">学习笔记</a></li>
-						<li id="myAskBtn"><a href="javascript:void(0);">提问</a></li>
-						<li id="myCommentBtn"><a href="javascript:void(0);">课程评论</a></li>
-					</ul>
-					<!--主体部分-->
-					<ul class="callContent">
-						<!--学习笔记-->
-						<li class="myNote">
-							<ul id="myNoteList">
-								<li>
-									<img src="img/water.jpg" />
-									<div class="myNoteText">
-										<h3>亚特兰蒂斯</h3>
-										<p>感觉很好还不错学到了很多知识嘻嘻</p>
-										<div class="time">
-											<h6>2016-04-23   10:05:01</h6>
-											<h6>优秀员工的十大心态 02</h6>
-											<div class="rightPlay">
-												<i class="iconfont">&#xe60b;</i>
-												<span class="timePoit">00:23:22</span>
-											</div>
+					<!--右侧切换类表-->
+					<div class="rightList" id="rightList">
+						<!--选择列表,使用绝对定位-->
+						<div class="selectList">
+							<div>
+								<ul>
+									<li id="alertIndex">
+										<a href="javascript:void(0);">课程目录</a>
+									</li>
+									<li id="alertChat" class="redBackground">
+										<a href="javascript:void(0);">聊天提问</a>
+									</li>
+									<li id="alertQuestionnaire">
+										<a href="javascript:void(0);">问卷调查</a>
+									</li>
+									<li id="alertExam">
+										<a href="javascript:void(0);">在线考试</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--聊天室和课程目录区-->
+						<div class="indexAndChat">
+							<div class="index">
+								<!--课程列表-->
+								<ul class="sectionList">
+									<li>
+										<a href="javascript:void(0);">全部分类</a>
+										<ul class="indexList" id="indexList">
+											<li data-href="http://vjs.zencdn.net/v/oceans.mp4" data-img="http://image.tianjimedia.com/uploadImages/2014/050/I0I228KL3DSV.jpg">
+												<i class="iconfont">&#xe607;</i>
+												<a href="javascript:void(0);">80后90后员工的管法 1</a>
+												<span>00:25:06</span>
+											</li>
+											<li data-href="../../static/video/3334747hd.m4v" data-img="img/3334747hd.jpg">
+												<i class="iconfont">&#xe607;</i>
+												<a href="javascript:void(0);">80后90后员工的管法 1</a>
+												<span>00:25:06</span>
+											</li>
+											<li data-href="../../static/video/3334747hd.m4v" data-img="img/3334747hd.jpg">
+												<i class="iconfont">&#xe607;</i>
+												<a href="javascript:void(0);">80后90后员工的管法 1</a>
+												<span>00:25:06</span>
+											</li>
+											<li data-href="../../static/video/3334747hd.m4v" data-img="img/3334747hd.jpg">
+												<i class="iconfont">&#xe607;</i>
+												<a href="javascript:void(0);">80后90后员工的管法 1</a>
+												<span>00:25:06</span>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="chat">
+								<ul class="chat_table">
+									<li id="chatbutton" class="clickStyle_bule">
+										<a href="javascript:void(0);">聊天室</a>
+									</li>
+									<li id="answerbutton">
+										<a href="javascript:void(0);">问答</a>
+									</li>
+								</ul>
+								<ul class="chat_cotent">
+									<!--展示聊天窗口区域-->
+									<li id="chatWindow">
+										<!--公告区域-->
+										<div id="Notice">
+											<img src="img/notice.png" />
+											<p>本场课程即将开始，请各位做好准备本场课程即将开始，请各位做好准备本场课程即将开始，请各位做好准备本场课程即将开始，请各位做好准备</p>
 										</div>
-									</div>
-								</li>
-								<li>
-									<img src="img/water.jpg" />
-									<div class="myNoteText">
-										<h3>亚特兰蒂斯</h3>
-										<p>感觉很好还不错学到了很多知识嘻嘻</p>
-										<div class="time">
-											<h6>2016-04-23   10:05:01</h6>
-											<h6>优秀员工的十大心态 02</h6>
-											<div class="rightPlay">
-												<i class="iconfont">&#xe60b;</i>
-												<span class="timePoit">00:23:22</span>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<img src="img/water.jpg" />
-									<div class="myNoteText">
-										<h3>亚特兰蒂斯</h3>
-										<p>感觉很好还不错学到了很多知识嘻嘻</p>
-										<div class="time">
-											<h6>2016-04-23   10:05:01</h6>
-											<h6>优秀员工的十大心态 02</h6>
-											<div class="rightPlay">
-												<i class="iconfont">&#xe60b;</i>
-												<span class="timePoit">00:23:22</span>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</li>
-						<!--我的提问-->
-						<li class="myAsk">
-							<ul id="myAskList">
-								<li>
-									<img src="img/water.jpg" />
-									<div class="myAskText">
-										<h3>亚特兰蒂斯</h3>
-										<p>感觉很好还不错学到了很多知识嘻嘻</p>
-										<div class="time">
-											<h6>2016-04-23   10:05:01</h6>
-											<h6>优秀员工的十大心态 02</h6>
-											<div class="rightPlay">
-												<i class="iconfont">&#xe60b;</i>
-												<span class="timePoit">00:23:22</span>
-											</div>
-										</div>
-										<div class="teacherBack">
-											<img src="img/charster.png" />
-											<div class="teacher">
-												<h3>讲师&nbsp;<b>回复</b>&nbsp;匿名</h3>
-												<p>飛機架構師設計架構藍圖時，先訂好機翼與機身的接口，就分出5個機翼和一個機身。 經過幾個月後，機翼機身都製造出來了，就將它們組合起來。所以，先分后合!!
+										<div id="messageListOut">
+											<ul id="messageList">
+												<li class="stds"><span class="time">09:45</span><b data_userid='124567' data_name='wzh'>红玫瑰</b>
+													<a href="javascript:void(0);">当时的通信技术研究者们正在准备给手机的文字短信订立标准。由于当时的技术条件所限，无线传输的带宽并不高，而且主要是在汽车电话上使用，这就要求手机短信要言简意赅。</a>
+												</li>
+												<li class="admin"><span class="time">09:45</span><img src="img/admin.png"/><b data_userid='124567' data_name='wzh'>管理员</b>
+													<a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a>
+												</li>
+												<li class="teachTo"><span class="time">09:45</span><img src="img/teacher.png"/><b data_userid='124567' data_name='wzh'>蝙蝠侠</b><em>对</em><b data_userid='124567' data_name='wzh'>穿衣搭配</b><em>说</em>
+													<a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a>
+												</li>
+												<li class="adminTo"><span class="time">09:45</span><img src="img/admin.png"/><b data_userid='124567' data_name='wzh'>蝙蝠侠</b><em>对</em><b data_userid='124567' data_name='wzh'>穿衣搭配</b><em>说</em>
+													<a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a>
+												</li>
+												<li class="studentTo"><span class="time">09:45</span><b data_userid='124567' data_name='wzh'>蝙蝠侠</b><em>对</em><b data_userid='124567' data_name='wzh'>穿衣搭配</b><em>说</em></b>
+													<a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a>
+												</li>
+												<li class="tch"><span class="time">09:45</span><img src="img/teacher.png"/><b>nickie老师</b>
+													<a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
+												</li>
+												<li class="stdsAsk"><img src="img/question.png"/><b data_userid='124567' data_name='wzh'>红玫瑰</b>
+													<a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
+												</li>
+												<li class="tchAns">
+												<p>
+													<img src="img/answer.png"/>
+													<img src="img/teacher.png"/>
+													<b data_userid='124567' data_name='wzh'>nickie老师</b>
+													<a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
 												</p>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<img src="img/water.jpg" />
-									<div class="myAskText">
-										<h3>亚特兰蒂斯</h3>
-										<p>感觉很好还不错学到了很多知识嘻嘻</p>
-										<div class="time">
-											<h6>2016-04-23   10:05:01</h6>
-											<h6>优秀员工的十大心态 02</h6>
-											<div class="rightPlay">
-												<i class="iconfont">&#xe60b;</i>
-												<span class="timePoit">00:23:22</span>
-											</div>
-										</div>
-										<div class="teacherBack">
-											<img src="img/charster.png" />
-											<div class="teacher">
-												<h3>讲师&nbsp;<b>回复</b>&nbsp;匿名</h3>
-												<p>飛機架構師設計架構藍圖時，先訂好機翼與機身的接口，就分出5個機翼和一個機身。 經過幾個月後，機翼機身都製造出來了，就將它們組合起來。所以，先分后合!!
+												<p>
+													<img src="img/question.png"/>
+													<b data_userid='124567' data_name='wzh'>红玫瑰</b>
+													<a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a>
 												</p>
-											</div>
+												</li>
+											</ul>
 										</div>
-									</div>
-								</li>
-								<li>
-									<img src="img/water.jpg" />
-									<div class="myAskText">
-										<h3>亚特兰蒂斯</h3>
-										<p>感觉很好还不错学到了很多知识嘻嘻</p>
-										<div class="time">
-											<h6>2016-04-23   10:05:01</h6>
-											<h6>优秀员工的十大心态 02</h6>
-											<div class="rightPlay">
-												<i class="iconfont">&#xe60b;</i>
-												<span class="timePoit">00:23:22</span>
-											</div>
-										</div>
-										<div class="teacherBack">
-											<img src="img/charster.png" />
-											<div class="teacher">
-												<h3>讲师&nbsp;<b>回复</b>&nbsp;匿名</h3>
-												<p>飛機架構師設計架構藍圖時，先訂好機翼與機身的接口，就分出5個機翼和一個機身。 經過幾個月後，機翼機身都製造出來了，就將它們組合起來。所以，先分后合!!
-												</p>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</li>
-						<!--我的评论-->
-						<li class="comment">
-							<textarea id="commentText" name="comment"  placeholder="你可以对此课程进行评价、讨论，字数不得超过200字。"></textarea>
-							<button type="button" id="submitComment">发表评论</button>
-							<ul id="commentsList">
-								<li>
-									<img src="img/water.jpg" />
-									<div class="talkback">
-										<h3>亚特兰蒂斯</h3>
-										<p>感觉很好还不错学到了很多知识嘻嘻</p>
-										<div class="time">
-											<h6>2016-04-23   10:05:01</h6>
-											<div class="rightback">
-												<i class="iconfont">&#xe605;</i>
-												<span class="number">3</span>
-												<i class="iconfont">&#xe606;</i>
-												<span class="answer">回答</span>
-											</div>
-										</div>
-										<div class="answertext">
-                                             <textarea id="commentBackText" name="comment"  placeholder="请输入你的回复"></textarea>
-							                 <button type="button" id="submitCommentBack">回复</button>
-									    </div>
-										<ul class="commentBack">
+									</li>
+									<!--展示老师问答区域-->
+									<!--使用绝对定位-->
+									<li id="answerWindow">
+										<ul id="teacherAnswerList">
 											<li>
-												<img src="img/water.jpg" />
-												<div class="talkback">
-													<h3>亚特兰蒂斯</h3>
-													<p>感觉很好还不错学到了很多知识嘻嘻</p>
-													<div class="time">
-														<h6>2016-04-23   10:05:01</h6>
-													</div>
+												<div class="question">
+													<img src="img/question.png"/>
+													<b>红玫瑰</b>
+													<a href="javascript:void(0);">老师ps里面的快捷键视频里为啥没找到，是没有这一节吗？</a>
+												</div>
+												<div class="answer">
+													<img src="img/answer.png"/>
+													<img src="img/teacher.png"/>
+													<b>nickie老师</b>
+													<a href="javascript:void(0);">就在视频的结尾呢强调了一次可能你没看到。</a>
+													<span class="time">时间：4天前</span>
 												</div>
 											</li>
 											<li>
-												<img src="img/water.jpg" />
-												<div class="talkback">
-													<h3>亚特兰蒂斯</h3>
-													<p>感觉很好还不错学到了很多知识嘻嘻</p>
-													<div class="time">
-														<h6>2016-04-23   10:05:01</h6>
-													</div>
+												<div class="question">
+													<img src="img/question.png"/>
+													<b>红玫瑰</b>
+													<a href="javascript:void(0);">老师ps里面的快捷键视频里为啥没找到，是没有这一节吗？</a>
+												</div>
+												<div class="answer">
+													<img src="img/answer.png"/>
+													<img src="img/teacher.png"/>
+													<b>nickie老师</b>
+													<a href="javascript:void(0);">就在视频的结尾呢强调了一次可能你没看到。</a>
+													<span class="time">时间：4天前</span>
 												</div>
 											</li>
 											<li>
-												<img src="img/water.jpg" />
-												<div class="talkback">
-													<h3>亚特兰蒂斯</h3>
-													<p>感觉很好还不错学到了很多知识嘻嘻</p>
-													<div class="time">
-														<h6>2016-04-23   10:05:01</h6>
-													</div>
+												<div class="question">
+													<img src="img/question.png"/>
+													<b>红玫瑰</b>
+													<a href="javascript:void(0);">老师ps里面的快捷键视频里为啥没找到，是没有这一节吗？</a>
+												</div>
+												<div class="answer">
+													<img src="img/answer.png"/>
+													<img src="img/teacher.png"/>
+													<b>nickie老师</b>
+													<a href="javascript:void(0);">就在视频的结尾呢强调了一次可能你没看到。</a>
+													<span class="time">时间：4天前</span>
+												</div>
+											</li>
+											<li>
+												<div class="question">
+													<img src="img/question.png"/>
+													<b>红玫瑰</b>
+													<a href="javascript:void(0);">老师ps里面的快捷键视频里为啥没找到，是没有这一节吗？</a>
+												</div>
+												<div class="answer">
+													<img src="img/answer.png"/>
+													<img src="img/teacher.png"/>
+													<b>nickie老师</b>
+													<a href="javascript:void(0);">就在视频的结尾呢强调了一次可能你没看到。</a>
+													<span class="time">时间：4天前</span>
+												</div>
+											</li>
+											<li>
+												<div class="question">
+													<img src="img/question.png"/>
+													<b>红玫瑰</b>
+													<a href="javascript:void(0);">老师ps里面的快捷键视频里为啥没找到，是没有这一节吗？</a>
+												</div>
+												<div class="answer">
+													<img src="img/answer.png"/>
+													<img src="img/teacher.png"/>
+													<b>nickie老师</b>
+													<a href="javascript:void(0);">就在视频的结尾呢强调了一次可能你没看到。</a>
+													<span class="time">时间：4天前</span>
 												</div>
 											</li>
 										</ul>
+									</li>
+									<!--提交回答区域-->
+									<li id="submitWindow">
+										<textarea id="yourMessage" name="yourmessage" rows="" cols="" placeholder="和大伙聊聊吧"></textarea>
+										<div id="callObjectOut">
+											<input type="text" name="callObject" id="callObject" value="" placeholder="对所有人说" />
+											<i class="iconfont" id="closeCharest">&#xe60a;</i>
+										</div>
+										<button type="button" id="submitChat">发表</button>
+										<button type="button" id="sumbitAsk">提问</button>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="content">
+						<div class="left">
+							<!--选项卡-->
+							<ul class="callList">
+								<li id="myNoteBtn" class="clickStyle_red">
+									<a href="javascript:void(0);">学习笔记</a>
+								</li>
+								<li id="myAskBtn">
+									<a href="javascript:void(0);">提问</a>
+								</li>
+								<li id="myCommentBtn">
+									<a href="javascript:void(0);">课程评论</a>
+								</li>
+							</ul>
+							<!--主体部分-->
+							<ul class="callContent">
+								<!--学习笔记-->
+								<li class="myNote">
+									<ul id="myNoteList">
+										<li>
+											<img src="img/water.jpg" />
+											<div class="myNoteText">
+												<h3>亚特兰蒂斯</h3>
+												<p>感觉很好还不错学到了很多知识嘻嘻</p>
+												<div class="time">
+													<h6>2016-04-23   10:05:01</h6>
+													<h6>优秀员工的十大心态 02</h6>
+													<div class="rightPlay">
+														<i class="iconfont">&#xe60b;</i>
+														<span class="timePoit">00:23:22</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<img src="img/water.jpg" />
+											<div class="myNoteText">
+												<h3>亚特兰蒂斯</h3>
+												<p>感觉很好还不错学到了很多知识嘻嘻</p>
+												<div class="time">
+													<h6>2016-04-23   10:05:01</h6>
+													<h6>优秀员工的十大心态 02</h6>
+													<div class="rightPlay">
+														<i class="iconfont">&#xe60b;</i>
+														<span class="timePoit">00:23:22</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<img src="img/water.jpg" />
+											<div class="myNoteText">
+												<h3>亚特兰蒂斯</h3>
+												<p>感觉很好还不错学到了很多知识嘻嘻</p>
+												<div class="time">
+													<h6>2016-04-23   10:05:01</h6>
+													<h6>优秀员工的十大心态 02</h6>
+													<div class="rightPlay">
+														<i class="iconfont">&#xe60b;</i>
+														<span class="timePoit">00:23:22</span>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!--我的提问-->
+								<li class="myAsk">
+									<ul id="myAskList">
+										<li>
+											<img src="img/water.jpg" />
+											<div class="myAskText">
+												<h3>亚特兰蒂斯</h3>
+												<p>感觉很好还不错学到了很多知识嘻嘻</p>
+												<div class="time">
+													<h6>2016-04-23   10:05:01</h6>
+													<h6>优秀员工的十大心态 02</h6>
+													<div class="rightPlay">
+														<i class="iconfont">&#xe60b;</i>
+														<span class="timePoit">00:23:22</span>
+													</div>
+												</div>
+												<div class="teacherBack">
+													<img src="img/charster.png" />
+													<div class="teacher">
+														<h3>讲师&nbsp;<b>回复</b>&nbsp;匿名</h3>
+														<p>飛機架構師設計架構藍圖時，先訂好機翼與機身的接口，就分出5個機翼和一個機身。 經過幾個月後，機翼機身都製造出來了，就將它們組合起來。所以，先分后合!!
+														</p>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<img src="img/water.jpg" />
+											<div class="myAskText">
+												<h3>亚特兰蒂斯</h3>
+												<p>感觉很好还不错学到了很多知识嘻嘻</p>
+												<div class="time">
+													<h6>2016-04-23   10:05:01</h6>
+													<h6>优秀员工的十大心态 02</h6>
+													<div class="rightPlay">
+														<i class="iconfont">&#xe60b;</i>
+														<span class="timePoit">00:23:22</span>
+													</div>
+												</div>
+												<div class="teacherBack">
+													<img src="img/charster.png" />
+													<div class="teacher">
+														<h3>讲师&nbsp;<b>回复</b>&nbsp;匿名</h3>
+														<p>飛機架構師設計架構藍圖時，先訂好機翼與機身的接口，就分出5個機翼和一個機身。 經過幾個月後，機翼機身都製造出來了，就將它們組合起來。所以，先分后合!!
+														</p>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<img src="img/water.jpg" />
+											<div class="myAskText">
+												<h3>亚特兰蒂斯</h3>
+												<p>感觉很好还不错学到了很多知识嘻嘻</p>
+												<div class="time">
+													<h6>2016-04-23   10:05:01</h6>
+													<h6>优秀员工的十大心态 02</h6>
+													<div class="rightPlay">
+														<i class="iconfont">&#xe60b;</i>
+														<span class="timePoit">00:23:22</span>
+													</div>
+												</div>
+												<div class="teacherBack">
+													<img src="img/charster.png" />
+													<div class="teacher">
+														<h3>讲师&nbsp;<b>回复</b>&nbsp;匿名</h3>
+														<p>飛機架構師設計架構藍圖時，先訂好機翼與機身的接口，就分出5個機翼和一個機身。 經過幾個月後，機翼機身都製造出來了，就將它們組合起來。所以，先分后合!!
+														</p>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!--我的评论-->
+								<li class="comment">
+									<textarea id="commentText" name="comment" placeholder="你可以对此课程进行评价、讨论，字数不得超过200字。"></textarea>
+									<button type="button" id="submitComment">发表评论</button>
+									<ul id="commentsList">
+										<li>
+											<img src="img/water.jpg" />
+											<div class="talkback">
+												<h3>亚特兰蒂斯</h3>
+												<p>感觉很好还不错学到了很多知识嘻嘻</p>
+												<div class="time">
+													<h6>2016-04-23   10:05:01</h6>
+													<div class="rightback">
+														<i class="iconfont">&#xe605;</i>
+														<span class="number">3</span>
+														<i class="iconfont">&#xe606;</i>
+														<span class="answer">回答</span>
+													</div>
+												</div>
+												<div class="answertext">
+													<textarea id="commentBackText" name="comment" placeholder="请输入你的回复"></textarea>
+													<button type="button" id="submitCommentBack">回复</button>
+												</div>
+												<ul class="commentBack">
+													<li>
+														<img src="img/water.jpg" />
+														<div class="talkback">
+															<h3>亚特兰蒂斯</h3>
+															<p>感觉很好还不错学到了很多知识嘻嘻</p>
+															<div class="time">
+																<h6>2016-04-23   10:05:01</h6>
+															</div>
+														</div>
+													</li>
+													<li>
+														<img src="img/water.jpg" />
+														<div class="talkback">
+															<h3>亚特兰蒂斯</h3>
+															<p>感觉很好还不错学到了很多知识嘻嘻</p>
+															<div class="time">
+																<h6>2016-04-23   10:05:01</h6>
+															</div>
+														</div>
+													</li>
+													<li>
+														<img src="img/water.jpg" />
+														<div class="talkback">
+															<h3>亚特兰蒂斯</h3>
+															<p>感觉很好还不错学到了很多知识嘻嘻</p>
+															<div class="time">
+																<h6>2016-04-23   10:05:01</h6>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+
+										</li>
+										<li>
+											<img src="img/water.jpg" />
+											<div class="talkback">
+												<h3>亚特兰蒂斯</h3>
+												<p>感觉很好还不错学到了很多知识嘻嘻</p>
+												<div class="time">
+													<h6>2016-04-23   10:05:01</h6>
+													<div class="rightback">
+														<i class="iconfont">&#xe605;</i>
+														<span class="number">3</span>
+														<i class="iconfont">&#xe606;</i>
+														<span class="answer">回答</span>
+													</div>
+												</div>
+											</div>
+											<div class="answertext">
+
+											</div>
+										</li>
+										<li>
+											<img src="img/water.jpg" />
+											<div class="talkback">
+												<h3>亚特兰蒂斯</h3>
+												<p>感觉很好还不错学到了很多知识嘻嘻</p>
+												<div class="time">
+													<h6>2016-04-23   10:05:01</h6>
+													<div class="rightback">
+														<i class="iconfont">&#xe605;</i>
+														<span class="number">3</span>
+														<i class="iconfont">&#xe606;</i>
+														<span class="answer">回答</span>
+													</div>
+												</div>
+											</div>
+											<div class="answertext">
+
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!--主体右侧热门推荐部分-->
+						<div class="right">
+							<h1>热门推荐</h1>
+							<div class="hot_img">
+								<img src="img/course_one.png" />
+								<p>web前端高级开发教程</p>
+							</div>
+							<ul class="hot_list">
+								<li>
+									<img src="img/course_two.png" class="courseCover" />
+									<div>
+										<h6 class="title">java软件开发</h6>
+										<h6 class="courseTime">总时长 30分钟</h6>
 									</div>
-									
 								</li>
 								<li>
-									<img src="img/water.jpg" />
-									<div class="talkback">
-										<h3>亚特兰蒂斯</h3>
-										<p>感觉很好还不错学到了很多知识嘻嘻</p>
-										<div class="time">
-											<h6>2016-04-23   10:05:01</h6>
-											<div class="rightback">
-												<i class="iconfont">&#xe605;</i>
-												<span class="number">3</span>
-												<i class="iconfont">&#xe606;</i>
-												<span class="answer">回答</span>
-											</div>
-										</div>
-									</div>
-									<div class="answertext">
-
+									<img src="img/course_two.png" class="courseCover" />
+									<div>
+										<h6 class="title">java软件开发</h6>
+										<h6 class="courseTime">总时长 30分钟</h6>
 									</div>
 								</li>
 								<li>
-									<img src="img/water.jpg" />
-									<div class="talkback">
-										<h3>亚特兰蒂斯</h3>
-										<p>感觉很好还不错学到了很多知识嘻嘻</p>
-										<div class="time">
-											<h6>2016-04-23   10:05:01</h6>
-											<div class="rightback">
-												<i class="iconfont">&#xe605;</i>
-												<span class="number">3</span>
-												<i class="iconfont">&#xe606;</i>
-												<span class="answer">回答</span>
-											</div>
-										</div>
+									<img src="img/course_two.png" class="courseCover" />
+									<div>
+										<h6 class="title">java软件开发</h6>
+										<h6 class="courseTime">总时长 30分钟</h6>
 									</div>
-									<div class="answertext">
-
+								</li>
+								<li>
+									<img src="img/course_two.png" class="courseCover" />
+									<div>
+										<h6 class="title">java软件开发</h6>
+										<h6 class="courseTime">总时长 30分钟</h6>
 									</div>
 								</li>
 							</ul>
-						</li>
-					</ul>
-				</div>
-				<!--主体右侧热门推荐部分-->
-				<div class="right">
-					<h1>热门推荐</h1>
-					<div class="hot_img">
-						<img src="img/course_one.png" />
-						<p>web前端高级开发教程</p>
-					</div>
-					<ul class="hot_list">
-						<li>
-							<img src="img/course_two.png" class="courseCover" />
-							<div>
-								<h6 class="title">java软件开发</h6>
-								<h6 class="courseTime">总时长 30分钟</h6>
-							</div>
-						</li>
-						<li>
-							<img src="img/course_two.png" class="courseCover" />
-							<div>
-								<h6 class="title">java软件开发</h6>
-								<h6 class="courseTime">总时长 30分钟</h6>
-							</div>
-						</li>
-						<li>
-							<img src="img/course_two.png" class="courseCover" />
-							<div>
-								<h6 class="title">java软件开发</h6>
-								<h6 class="courseTime">总时长 30分钟</h6>
-							</div>
-						</li>
-						<li>
-							<img src="img/course_two.png" class="courseCover" />
-							<div>
-								<h6 class="title">java软件开发</h6>
-								<h6 class="courseTime">总时长 30分钟</h6>
-							</div>
-						</li>
-					</ul>
-					<a href="javascript:void(0);" id="hotCourseMore">>>更多</a>
-				</div>
+							<a href="javascript:void(0);" id="hotCourseMore">>>更多</a>
+						</div>
 
-			</div>
-			
-			<!--所有弹出层-->
-			<div class="layer">
-				<!--笔记-->
-				<div id="noteLayer">
-					<span class="iconfont" id="closeNote">&#xe60a;</span>
-					<h1>笔记</h1>
-					<textarea name="" id="noteText" rows="" cols="" placeholder="请输入笔记内容..."></textarea>
-					<button type="button" id="upNote">保存</button>
-				</div>
-				<!--提问-->
-				<div id="askLayer">
-					<span class="iconfont" id="closeAsk">&#xe60a;</span>
-					<h1>提问</h1>
-					<input type="text" name="" id="askTitle" value="" placeholder="请输入问标题" />
-					<div class="uecotent">
-						<div id="myUe">
+					</div>
+
+					<!--所有弹出层-->
+					<div class="layer">
+						<!--笔记-->
+						<div id="noteLayer">
+							<span class="iconfont" id="closeNote">&#xe60a;</span>
+							<h1>笔记</h1>
+							<textarea name="" id="noteText" rows="" cols="" placeholder="请输入笔记内容..."></textarea>
+							<button type="button" id="upNote">保存</button>
+						</div>
+						<!--提问-->
+						<div id="askLayer">
+							<span class="iconfont" id="closeAsk">&#xe60a;</span>
+							<h1>提问</h1>
+							<input type="text" name="" id="askTitle" value="" placeholder="请输入问标题" />
+							<div class="uecotent">
+								<div id="myUe">
+								</div>
+							</div>
+							<input type="text" name="askCode" id="inputAskCode" value="" placeholder="请输入验证码" />
+							<img src="img/getcoursequestioncode.png" id="askCode" />
+							<a href="javascript:void(0);" id="changeAskCode">换一张</a>
+							<button type="button" id="upAsk">发布</button>
+						</div>
+						<!--在线考试-->
+						<div id="examLayer">
+							<div class="fn-clear" id="div_exam">
+								<div class="fn-left" style="line-height: 30px;">
+									<span>测</span>
+									<span id="examTitle"></span>
+									<span>考试时长:<label id="examlength"></label>分钟 </span>
+									<span>剩余考试次数：<label id="canExamTimes"></label>次 </span>
+									<span>完成状态：<label id="statuStr"></label></span>
+								</div>
+								<div class="fn-right">
+									<a class="btn" onclick="gotoExam()">进入考试</a>
+									<a class="btn" onclick="browseDetail()">答卷详情</a>
+								</div>
+							</div>
+							<input id="userWareId" type="hidden" value="163" />
+							<input id="examUserId" type="hidden" value="" />
+							<input id="examId" type="hidden" value="" />
+						</div>
+						<!--随即弹出问题，防止挂机-->
+						<div id="randomQst">
+							
 						</div>
 					</div>
-					<input type="text" name="askCode" id="inputAskCode" value="" placeholder="请输入验证码" />
-					<img src="img/getcoursequestioncode.png" id="askCode" />
-					<a href="javascript:void(0);" id="changeAskCode">换一张</a>
-					<button type="button" id="upAsk">发布</button>
-				</div>
-				<!--问卷调差-->
-				<div id="questionnaireLayer">
-
-				</div>
 			</div>
-		</div>
-		<footer id="footer"></footer>
-		<!--老师发言模板-->
-		<script type="text/javascript" id="tpl_tec">
-			<li class="tch">
-				<span class="time">d.time</span>
-				<b >d.name</b>
-				<a href="javascript:void(0);">d.texts</a>
-			</li>
-		</script>
-		<!--学生发言模板-->
-		<script type="text/javascript" id="tpl_stds">
-			<li class="stds">
-				<span class="time">09:45</span>
-				<b >红玫瑰:</b>
-				<a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
-			</li>
-		</script>
-		<!--管理员发言模板-->
-		<script type="text/javascript" id="tpl_admin">
-		    <li class="admin">
-				<span class="time">09:45</span>
-				<b >管理员:</b>
-				<a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a>
-			</li>	
-		</script>
-		<!--学生问问题模板-->
-		<script type="text/javascript" id="tpl_tecAns">
-			<li class="stdsAsk">
-				<i>提问</i>
-				<b>红玫瑰:</b>
-				<a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
-			</li>
-		</script>
-		<!--老师回答问题模板-->
-		<script type="text/javascript" id="tpl_stdsAsk">
-			<li class="tchAns">
-				<i>回答</i>
-				<b>nickie老师:</b>
-				<a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
-				<p>
-					<span>【问题】</span>
-					<b>红玫瑰:</b>
-					<a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a>
-				</p>
-			</li>
-		</script>
-		<!--问答区域数据渲染模板-->
-		<script type="text/javascript" id="tpl_tecAnsList">
-			{{#for (var i = 0; i < d.length; i++) {}}
-			<li>
-				<div class="question">
-					<i class="iconfont">&#xe604;</i>
-					<h6>【提问】</h6>
-					<b>红玫瑰</b>
-					<a href="javascript:void(0);">老师ps里面的快捷键视频里为啥没找到，是没有这一节吗？</a>
-				</div>
-				<div class="answer">
-					<i class="iconfont">&#xe605;</i>
-					<h6>【最新回答】</h6>
-					<b>nickie老师</b>
-					<a href="javascript:void(0);">就在视频的结尾呢强调了一次可能你没看到。</a>
-					<span class="time">时间：4天前</span>
-				</div>
-			</li>
-			{{#}}}
-		</script>
-		<script src="../../static/lib/videoJs/js/video.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../../static/lib/videoJs/js/videojs-contrib-hls.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../../static/lib/jquery/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" charset="utf-8" src="../../static/lib/ueditor/umeditor.min.js"></script>
-		<script type="text/javascript" charset="utf-8" src="../../static/lib/ueditor/umeditor.config.js"></script>
-		<script type="text/javascript" src="../../static/lib/ueditor/lang/zh-cn/zh-cn.js"></script>
-		<script src="../../static/lib/layer/layer/layer.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/videoControl.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/rightList.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/middleCotent.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			 $('#header').load('../../widget/header/header.html');
-		     $('#footer').load('../../widget/footer/footer.html');
-			//		初始化富文本编译器
-			var um = UM.getEditor('myUe');
-		</script>
+			<footer id="footer"></footer>
+			<!--老师发言模板-->
+			<!--老师发言模板OK-->
+			<script type="text/html" id="tpl_tec">
+				{{#for (var i = 0; i< d.length; i++) {}} <li class="tch">
+					<span class="time">{{d[i].timestamp}}</span>
+					<img src="img/teacher.png"/>
+					<b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>{{d[i].from.name}}</b>
+					<a href="javascript:void(0);">{{d[i].content.msg}}</a>
+					</li>
+				{{#}}}
+			</script>
+			<!--学生发言模板ok-->
+			<script type="text/html" id="tpl_stds">
+				{{#for (var i = 0; i< d.length; i++) {}} <li class="stds">
+					<span class="time">{{d[i].timestamp}}</span>
+					<b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>{{d[i].from.name}}</b>
+					<a href="javascript:void(0);">{{d[i].content.msg}}</a>
+					</li>
+				{{#}}}
+			</script>
+			<!--管理员发言模板OK-->
+			<script type="text/html" id="tpl_admin">
+				{{#for (var i = 0; i< d.length; i++) {}} <li class="admin">
+					<span class="time">{{d[i].timestamp}}</span>
+					<img src="img/admin.png"/>
+					<b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>管理员:</b>
+					<a href="javascript:void(0);">{{d[i].content.msg}}</a>
+					</li>
+				{{#}}}
+			</script>
+			<!--学生问问题模板OK-->
+			<script type="text/html" id="tpl_tecAns">
+				{{#for (var i = 0; i< d.length; i++) {}} <li class="stdsAsk">
+					<img src="img/question.png"/>
+					<b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>{{d[i].from.name}}</b>
+					<a href="javascript:void(0);">{{d[i].content.question}}</a>
+					</li>
+				{{#}}}
+			</script>
+			<!--老师对谁说模板OK-->
+			<script type="text/html" id="tpl_teachTo">
+				{{#for (var i = 0; i< d.length; i++) {}} <li class="teachTo">
+					<span class="time">{{d[i].timestamp}}</span>
+					<img src="img/teacher.png"/>
+					<b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>{{d[i].from.name}}</b><em>对</em><b data_userid={{d[i].to.userid}} data_name={{d[i].to.name}}>d[i].to.name</b><em>说</em>:
+					<a href="javascript:void(0);">{{d[i].content.msg}}</a>
+					</li>
+					{{#}}}
+			</script>
+			<!--学生对谁说模板OK-->
+			<script type="text/html" id="tpl_studentTo">
+				{{#for (var i = 0; i< d.length; i++) {}} <li class="studentTo">
+					<span class="time">{{d[i].timestamp}}</span>
+					<b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>{{d[i].from.name}}</b><em>对</em><b data_userid={{d[i].to.userid}} data_name={{d[i].to.name}}>d[i].to.name</b><em>说</em>:
+					<a href="javascript:void(0);">{{d[i].content.msg}}</a>
+					</li>
+					{{#}}}
+			</script>
+			<!--管理员对谁说OK-->
+			<script type="text/html" id="tpl_adminTo">
+				{{#for (var i = 0; i< d.length; i++) {}} <li class="adminTo">
+					<span class="time">{{d[i].timestamp}}</span>
+					<img src="img/admin.png"/>
+					<b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>{{d[i].from.name}}</b><em>对</em><b data_userid={{d[i].to.userid}} data_name={{d[i].to.name}}>d[i].to.name</b><em>说</em>:
+					<a href="javascript:void(0);">{{d[i].content.msg}}</a>
+					</li>
+					{{#}}}
+			</script>
+			<!--老师回答问题模板OK-->
+			<script type="text/html" id="tpl_stdsAsk">
+				{{#for (var i = 0; i< d.length; i++) {}} <li class="tchAns">
+					<p>
+						<img src="img/answer.png"/>
+				        <img src="img/teacher.png"/> 
+				        <b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>{{d[i].from.name}}</b>
+					    <a href="javascript:void(0);">{{d[i].content.answer}}</a>
+					</p>
+					<p>
+						<img src="img/question.png"/>
+						<b data_userid={{d[i].to.userid}} data_name={{d[i].to.name}}>{{d[i].to.name}}</b>
+						<a href="javascript:void(0);">{{d[i].content.question}}</a>
+					</p>
+					</li>
+				{{#}}}
+			</script>
+			<!--问答区域数据渲染模板ok-->
+			<script type="text/html" id="tpl_tecAnsList">
+				{{#for (var i = 0; i< d.length; i++) {}} <li>
+					<div class="question">
+						<img src="img/question.png"/>
+						<b>{{d[i].to.name}}</b>
+						<a href="javascript:void(0);">{{d[i].content.question}}</a>
+					</div>
+					<div class="answer">
+						<img src="img/answer.png"/>
+					    <img src="img/teacher.png"/>  
+						<b>{{d[i].from.name}}</b>
+						<a href="javascript:void(0);">{{d[i].content.answer}}</a>
+						<span class="time">时间：{{d[i].timestamp}}</span>
+					</div>
+					</li>
+			    {{#}}}
+			</script>
+			<script src="../../static/lib/jquery/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script> 
+			<script type="text/javascript">
+				$('#header').load('../../widget/header/header.html');
+				$('#footer').load('../../widget/footer/footer.html');
+			</script>
+			<script src="../../static/lib/ckplayer/ckplayer/ckplayer.js" type="text/javascript" charset="utf-8"></script>
+			<script src="../../static/lib/layer/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/videoControl.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/rightList.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/chatAndAsk.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>

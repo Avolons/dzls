@@ -1,0 +1,881 @@
+{
+    "res": {
+        "chat.html": {
+            "uri": "/template/chat.html",
+            "type": "html"
+        },
+        "page/certificatequery/certificatequery.html": {
+            "uri": "/template/page/certificatequery/certificatequery.html",
+            "type": "html"
+        },
+        "page/certificatequery/scss/certificatequery.scss": {
+            "uri": "/themes/chinaaet/page/certificatequery/scss/certificatequery.css",
+            "type": "css"
+        },
+        "page/courseCenter/courseCenter.html": {
+            "uri": "/template/page/courseCenter/courseCenter.html",
+            "type": "html"
+        },
+        "page/courseInformation/courseInformation.html": {
+            "uri": "/template/page/courseInformation/courseInformation.html",
+            "type": "html"
+        },
+        "page/courseInformation/js/control.js": {
+            "uri": "/themes/chinaaet/page/courseInformation/js/control.js",
+            "type": "js"
+        },
+        "page/courseInformation/scss/courseInformation.scss": {
+            "uri": "/themes/chinaaet/page/courseInformation/scss/courseInformation.css",
+            "type": "css"
+        },
+        "page/index/index.html": {
+            "uri": "/template/page/index/index.html",
+            "type": "html",
+            "deps": [
+                "index.scss"
+            ]
+        },
+        "page/index/scss/index.scss": {
+            "uri": "/themes/chinaaet/page/index/scss/index.css",
+            "type": "css"
+        },
+        "page/intrdouce/intrdouce.html": {
+            "uri": "/template/page/intrdouce/intrdouce.html",
+            "type": "html"
+        },
+        "page/questionInformation/js/question.js": {
+            "uri": "/themes/chinaaet/page/questionInformation/js/question.js",
+            "type": "js"
+        },
+        "page/questionInformation/questionInformation.html": {
+            "uri": "/template/page/questionInformation/questionInformation.html",
+            "type": "html"
+        },
+        "page/questionInformation/scss/questionInformation.scss": {
+            "uri": "/themes/chinaaet/page/questionInformation/scss/questionInformation.css",
+            "type": "css"
+        },
+        "page/teacherChat/css/teacherChat.scss": {
+            "uri": "/themes/chinaaet/page/teacherChat/css/teacherChat.css",
+            "type": "css"
+        },
+        "page/teacherChat/js/teacherChat.js": {
+            "uri": "/themes/chinaaet/page/teacherChat/js/teacherChat.js",
+            "type": "js"
+        },
+        "page/teacherChat/teacher.html": {
+            "uri": "/template/page/teacherChat/teacher.html",
+            "type": "html"
+        },
+        "page/training/css/traning.scss": {
+            "uri": "/themes/chinaaet/page/training/css/traning.css",
+            "type": "css"
+        },
+        "page/training/js/traning.js": {
+            "uri": "/themes/chinaaet/page/training/js/traning.js",
+            "type": "js"
+        },
+        "page/training/traning.html": {
+            "uri": "/template/page/training/traning.html",
+            "type": "html"
+        },
+        "page/video/css/video.scss": {
+            "uri": "/themes/chinaaet/page/video/css/video.css",
+            "type": "css"
+        },
+        "page/video/js/video.js": {
+            "uri": "/themes/chinaaet/page/video/js/video.js",
+            "type": "js"
+        },
+        "page/video/video.html": {
+            "uri": "/template/page/video/video.html",
+            "type": "html"
+        },
+        "page/videoPlayer/css/teacher.scss": {
+            "uri": "/themes/chinaaet/page/videoPlayer/css/teacher.css",
+            "type": "css"
+        },
+        "page/videoPlayer/css/videostyle.scss": {
+            "uri": "/themes/chinaaet/page/videoPlayer/css/videostyle.css",
+            "type": "css"
+        },
+        "page/videoPlayer/demoText.html": {
+            "uri": "/template/page/videoPlayer/demoText.html",
+            "type": "html"
+        },
+        "page/videoPlayer/js/chatAndAsk.js": {
+            "uri": "/themes/chinaaet/page/videoPlayer/js/chatAndAsk.js",
+            "type": "js"
+        },
+        "page/videoPlayer/js/chatAndAsk.min.js": {
+            "uri": "/themes/chinaaet/page/videoPlayer/js/chatAndAsk.min.js",
+            "type": "js"
+        },
+        "page/videoPlayer/js/middleCotent.js": {
+            "uri": "/themes/chinaaet/page/videoPlayer/js/middleCotent.js",
+            "type": "js"
+        },
+        "page/videoPlayer/js/rightList.js": {
+            "uri": "/themes/chinaaet/page/videoPlayer/js/rightList.js",
+            "type": "js"
+        },
+        "page/videoPlayer/js/rightList.min.js": {
+            "uri": "/themes/chinaaet/page/videoPlayer/js/rightList.min.js",
+            "type": "js"
+        },
+        "page/videoPlayer/js/videoControl.js": {
+            "uri": "/themes/chinaaet/page/videoPlayer/js/videoControl.js",
+            "type": "js"
+        },
+        "page/videoPlayer/js/videoControl.min.js": {
+            "uri": "/themes/chinaaet/page/videoPlayer/js/videoControl.min.js",
+            "type": "js"
+        },
+        "page/videoPlayer/tpl/template.js": {
+            "uri": "/themes/chinaaet/page/videoPlayer/tpl/template.js",
+            "type": "js"
+        },
+        "page/videoPlayer/videoPlayer.html": {
+            "uri": "/template/page/videoPlayer/videoPlayer.html",
+            "type": "html"
+        },
+        "static/css/reset.css": {
+            "uri": "/themes/chinaaet/static/css/reset.css",
+            "type": "css"
+        },
+        "static/lib/ckplayer/ckplayer/ckplayer.js": {
+            "uri": "/themes/chinaaet/static/lib/ckplayer/ckplayer/ckplayer.js",
+            "type": "js"
+        },
+        "static/lib/ckplayer/js/offlights.js": {
+            "uri": "/themes/chinaaet/static/lib/ckplayer/js/offlights.js",
+            "type": "js"
+        },
+        "static/lib/jqcool.net-Glide.js/dist/css/gulid.css": {
+            "uri": "/themes/chinaaet/static/lib/jqcool.net-Glide.js/dist/css/gulid.css",
+            "type": "css"
+        },
+        "static/lib/jqcool.net-Glide.js/dist/jquery.glide.js": {
+            "uri": "/themes/chinaaet/static/lib/jqcool.net-Glide.js/dist/jquery.glide.js",
+            "type": "js"
+        },
+        "static/lib/jqcool.net-Glide.js/dist/jquery.glide.min.js": {
+            "uri": "/themes/chinaaet/static/lib/jqcool.net-Glide.js/dist/jquery.glide.min.js",
+            "type": "js"
+        },
+        "static/lib/jqcool.net-Glide.js/index.html": {
+            "uri": "/template/static/lib/jqcool.net-Glide.js/index.html",
+            "type": "html"
+        },
+        "static/lib/jquery/jquery-1.11.0.js": {
+            "uri": "/themes/chinaaet/static/lib/jquery/jquery-1.11.0.js",
+            "type": "js"
+        },
+        "static/lib/jquery/jquery-2.1.0.js": {
+            "uri": "/themes/chinaaet/static/lib/jquery/jquery-2.1.0.js",
+            "type": "js"
+        },
+        "static/lib/jsRender/css/jsrender.css": {
+            "uri": "/themes/chinaaet/static/lib/jsRender/css/jsrender.css",
+            "type": "css"
+        },
+        "static/lib/jsRender/extend.js": {
+            "uri": "/themes/chinaaet/static/lib/jsRender/extend.js",
+            "type": "js"
+        },
+        "static/lib/jsRender/jsrender.js": {
+            "uri": "/themes/chinaaet/static/lib/jsRender/jsrender.js",
+            "type": "js"
+        },
+        "static/lib/jsRender/plug.js": {
+            "uri": "/themes/chinaaet/static/lib/jsRender/plug.js",
+            "type": "js"
+        },
+        "static/lib/layer/demo.html": {
+            "uri": "/template/static/lib/layer/demo.html",
+            "type": "html"
+        },
+        "static/lib/layer/layer/layer.js": {
+            "uri": "/themes/chinaaet/static/lib/layer/layer/layer.js",
+            "type": "js"
+        },
+        "static/lib/layer/layer/skin/layer.css": {
+            "uri": "/themes/chinaaet/static/lib/layer/layer/skin/layer.css",
+            "type": "css"
+        },
+        "static/lib/laytpi/index.html": {
+            "uri": "/template/static/lib/laytpi/index.html",
+            "type": "html"
+        },
+        "static/lib/laytpi/js/laytpl.js": {
+            "uri": "/themes/chinaaet/static/lib/laytpi/js/laytpl.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/anchor/anchor.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/anchor/anchor.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/attachment/attachment.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/attachment/attachment.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/dialogs/attachment/attachment.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/attachment/attachment.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/attachment/callbacks.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/attachment/callbacks.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/attachment/fileTypeMaps.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/attachment/fileTypeMaps.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/background/background.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/background/background.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/dialogs/background/background.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/background/background.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/background/background.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/background/background.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/charts/chart.config.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/charts/chart.config.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/charts/charts.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/charts/charts.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/dialogs/charts/charts.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/charts/charts.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/charts/charts.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/charts/charts.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/emotion/emotion.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/emotion/emotion.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/dialogs/emotion/emotion.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/emotion/emotion.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/emotion/emotion.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/emotion/emotion.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/gmap/gmap.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/gmap/gmap.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/help/help.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/help/help.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/dialogs/help/help.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/help/help.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/help/help.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/help/help.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/image/image.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/image/image.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/dialogs/image/image.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/image/image.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/image/image.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/image/image.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/insertframe/insertframe.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/insertframe/insertframe.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/internal.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/internal.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/link/link.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/link/link.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/map/map.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/map/map.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/map/show.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/map/show.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/music/music.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/music/music.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/dialogs/music/music.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/music/music.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/music/music.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/music/music.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/preview/preview.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/preview/preview.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/scrawl/scrawl.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/scrawl/scrawl.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/dialogs/scrawl/scrawl.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/scrawl/scrawl.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/scrawl/scrawl.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/scrawl/scrawl.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/searchreplace/searchreplace.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/searchreplace/searchreplace.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/searchreplace/searchreplace.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/searchreplace/searchreplace.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/snapscreen/snapscreen.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/snapscreen/snapscreen.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/spechars/spechars.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/spechars/spechars.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/spechars/spechars.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/spechars/spechars.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/table/edittable.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/table/edittable.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/dialogs/table/edittable.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/table/edittable.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/table/edittable.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/table/edittable.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/table/edittd.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/table/edittd.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/table/edittip.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/table/edittip.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/tangram.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/tangram.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/template/config.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/template/config.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/template/template.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/template/template.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/dialogs/template/template.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/template/template.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/template/template.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/template/template.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/video/callbacks.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/video/callbacks.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/video/video.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/video/video.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/dialogs/video/video.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/video/video.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/video/video.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/video/video.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/dialogs/webapp/webapp.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/webapp/webapp.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/wordimage/wordimage.html": {
+            "uri": "/template/static/lib/oldueditor/dialogs/wordimage/wordimage.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/dialogs/wordimage/wordimage.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/dialogs/wordimage/wordimage.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/index.html": {
+            "uri": "/template/static/lib/oldueditor/index.html",
+            "type": "html"
+        },
+        "static/lib/oldueditor/lang/en/en.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/lang/en/en.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/lang/zh-cn/zh-cn.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/lang/zh-cn/zh-cn.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/themes/default/css/ueditor.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/themes/default/css/ueditor.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/themes/default/css/ueditor.min.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/themes/default/css/ueditor.min.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/themes/default/dialogbase.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/themes/default/dialogbase.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/themes/iframe.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/themes/iframe.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/third-party/codemirror/codemirror.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/codemirror/codemirror.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/third-party/codemirror/codemirror.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/codemirror/codemirror.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/adapters/mootools-adapter.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/adapters/mootools-adapter.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/adapters/mootools-adapter.src.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/adapters/mootools-adapter.src.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/adapters/prototype-adapter.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/adapters/prototype-adapter.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/adapters/prototype-adapter.src.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/adapters/prototype-adapter.src.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/adapters/standalone-framework.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/adapters/standalone-framework.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/adapters/standalone-framework.src.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/adapters/standalone-framework.src.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/highcharts-more.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/highcharts-more.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/highcharts-more.src.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/highcharts-more.src.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/highcharts.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/highcharts.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/highcharts.src.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/highcharts.src.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/annotations.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/annotations.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/annotations.src.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/annotations.src.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/canvas-tools.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/canvas-tools.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/canvas-tools.src.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/canvas-tools.src.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/data.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/data.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/data.src.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/data.src.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/drilldown.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/drilldown.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/drilldown.src.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/drilldown.src.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/exporting.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/exporting.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/exporting.src.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/exporting.src.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/funnel.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/funnel.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/funnel.src.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/funnel.src.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/heatmap.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/heatmap.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/heatmap.src.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/heatmap.src.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/map.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/map.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/map.src.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/map.src.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/no-data-to-display.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/no-data-to-display.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/modules/no-data-to-display.src.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/modules/no-data-to-display.src.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/themes/dark-blue.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/themes/dark-blue.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/themes/dark-green.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/themes/dark-green.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/themes/gray.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/themes/gray.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/themes/grid.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/themes/grid.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/highcharts/themes/skies.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/highcharts/themes/skies.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/jquery-1.10.2.min.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/jquery-1.10.2.min.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/swfupload/fileprogress.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/swfupload/fileprogress.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/swfupload/swfupload.cookies.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/swfupload/swfupload.cookies.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/swfupload/swfupload.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/swfupload/swfupload.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/swfupload/swfupload.proxy.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/swfupload/swfupload.proxy.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/swfupload/swfupload.queue.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/swfupload/swfupload.queue.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/swfupload/swfupload.speed.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/swfupload/swfupload.speed.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/SyntaxHighlighter/shCore.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/SyntaxHighlighter/shCore.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/SyntaxHighlighter/shCoreDefault.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/SyntaxHighlighter/shCoreDefault.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/third-party/video-js/video-js.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/video-js/video-js.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/third-party/video-js/video-js.min.css": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/video-js/video-js.min.css",
+            "type": "css"
+        },
+        "static/lib/oldueditor/third-party/video-js/video.dev.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/video-js/video.dev.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/third-party/video-js/video.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/third-party/video-js/video.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/ueditor.all.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/ueditor.all.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/ueditor.all.min.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/ueditor.all.min.js",
+            "type": "js",
+            "extras": {}
+        },
+        "static/lib/oldueditor/ueditor.config.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/ueditor.config.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/ueditor.parse.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/ueditor.parse.js",
+            "type": "js"
+        },
+        "static/lib/oldueditor/ueditor.parse.min.js": {
+            "uri": "/themes/chinaaet/static/lib/oldueditor/ueditor.parse.min.js",
+            "type": "js"
+        },
+        "static/lib/ueditor/dialogs/emotion/emotion.css": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/dialogs/emotion/emotion.css",
+            "type": "css"
+        },
+        "static/lib/ueditor/dialogs/emotion/emotion.js": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/dialogs/emotion/emotion.js",
+            "type": "js"
+        },
+        "static/lib/ueditor/dialogs/formula/formula.css": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/dialogs/formula/formula.css",
+            "type": "css"
+        },
+        "static/lib/ueditor/dialogs/formula/formula.html": {
+            "uri": "/template/static/lib/ueditor/dialogs/formula/formula.html",
+            "type": "html"
+        },
+        "static/lib/ueditor/dialogs/formula/formula.js": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/dialogs/formula/formula.js",
+            "type": "js"
+        },
+        "static/lib/ueditor/dialogs/image/image.css": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/dialogs/image/image.css",
+            "type": "css"
+        },
+        "static/lib/ueditor/dialogs/image/image.js": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/dialogs/image/image.js",
+            "type": "js"
+        },
+        "static/lib/ueditor/dialogs/link/link.js": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/dialogs/link/link.js",
+            "type": "js"
+        },
+        "static/lib/ueditor/dialogs/map/map.html": {
+            "uri": "/template/static/lib/ueditor/dialogs/map/map.html",
+            "type": "html"
+        },
+        "static/lib/ueditor/dialogs/map/map.js": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/dialogs/map/map.js",
+            "type": "js"
+        },
+        "static/lib/ueditor/dialogs/video/video.css": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/dialogs/video/video.css",
+            "type": "css"
+        },
+        "static/lib/ueditor/dialogs/video/video.js": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/dialogs/video/video.js",
+            "type": "js"
+        },
+        "static/lib/ueditor/index.html": {
+            "uri": "/template/static/lib/ueditor/index.html",
+            "type": "html"
+        },
+        "static/lib/ueditor/lang/en/en.js": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/lang/en/en.js",
+            "type": "js"
+        },
+        "static/lib/ueditor/lang/zh-cn/zh-cn.js": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/lang/zh-cn/zh-cn.js",
+            "type": "js"
+        },
+        "static/lib/ueditor/themes/default/css/umeditor.css": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/themes/default/css/umeditor.css",
+            "type": "css"
+        },
+        "static/lib/ueditor/themes/default/css/umeditor.min.css": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/themes/default/css/umeditor.min.css",
+            "type": "css"
+        },
+        "static/lib/ueditor/third-party/jquery.min.js": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/third-party/jquery.min.js",
+            "type": "js"
+        },
+        "static/lib/ueditor/third-party/mathquill/mathquill.css": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/third-party/mathquill/mathquill.css",
+            "type": "css"
+        },
+        "static/lib/ueditor/third-party/mathquill/mathquill.js": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/third-party/mathquill/mathquill.js",
+            "type": "js"
+        },
+        "static/lib/ueditor/third-party/mathquill/mathquill.min.js": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/third-party/mathquill/mathquill.min.js",
+            "type": "js"
+        },
+        "static/lib/ueditor/umeditor.config.js": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/umeditor.config.js",
+            "type": "js"
+        },
+        "static/lib/ueditor/umeditor.js": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/umeditor.js",
+            "type": "js"
+        },
+        "static/lib/ueditor/umeditor.min.js": {
+            "uri": "/themes/chinaaet/static/lib/ueditor/umeditor.min.js",
+            "type": "js"
+        },
+        "static/lib/videoJs/css/video-js.min.css": {
+            "uri": "/themes/chinaaet/static/lib/videoJs/css/video-js.min.css",
+            "type": "css"
+        },
+        "static/lib/videoJs/js/video.min.js": {
+            "uri": "/themes/chinaaet/static/lib/videoJs/js/video.min.js",
+            "type": "js"
+        },
+        "static/lib/videoJs/js/videojs-contrib-hls.min.js": {
+            "uri": "/themes/chinaaet/static/lib/videoJs/js/videojs-contrib-hls.min.js",
+            "type": "js"
+        },
+        "static/lib/videoJs/js/videojs-ie8.min.js": {
+            "uri": "/themes/chinaaet/static/lib/videoJs/js/videojs-ie8.min.js",
+            "type": "js"
+        },
+        "static/lib/videoJs/js/videojs-watchdog-plugin.min.js": {
+            "uri": "/themes/chinaaet/static/lib/videoJs/js/videojs-watchdog-plugin.min.js",
+            "type": "js"
+        },
+        "test/box.html": {
+            "uri": "/template/test/box.html",
+            "type": "html"
+        },
+        "test/chat.html": {
+            "uri": "/template/test/chat.html",
+            "type": "html"
+        },
+        "test/img.html": {
+            "uri": "/template/test/img.html",
+            "type": "html"
+        },
+        "test/indexs.html": {
+            "uri": "/template/test/indexs.html",
+            "type": "html"
+        },
+        "test/jsonp.html": {
+            "uri": "/template/test/jsonp.html",
+            "type": "html"
+        },
+        "test/questionnaire.html": {
+            "uri": "/template/test/questionnaire.html",
+            "type": "html"
+        },
+        "test/tecask.html": {
+            "uri": "/template/test/tecask.html",
+            "type": "html"
+        },
+        "test/video_two.js": {
+            "uri": "/themes/chinaaet/test/video_two.js",
+            "type": "js"
+        },
+        "test/video.js": {
+            "uri": "/themes/chinaaet/test/video.js",
+            "type": "js"
+        },
+        "test/videotext.html": {
+            "uri": "/template/test/videotext.html",
+            "type": "html"
+        },
+        "test/yuanvideo.html": {
+            "uri": "/template/test/yuanvideo.html",
+            "type": "html"
+        },
+        "widget/footer/css/footer.scss": {
+            "uri": "/themes/chinaaet/widget/footer/css/footer.css",
+            "type": "css"
+        },
+        "widget/footer/footer.html": {
+            "uri": "/template/widget/footer/footer.html",
+            "type": "html"
+        },
+        "widget/header/css/header.scss": {
+            "uri": "/themes/chinaaet/widget/header/css/header.css",
+            "type": "css"
+        },
+        "widget/header/header.html": {
+            "uri": "/template/widget/header/header.html",
+            "type": "html"
+        },
+        "widget/header/img/charest.png": {
+            "uri": "/themes/chinaaet/widget/header/img/charest.png",
+            "type": "png"
+        },
+        "widget/header/img/header_logo.png": {
+            "uri": "/themes/chinaaet/widget/header/img/header_logo.png",
+            "type": "png"
+        },
+        "widget/header/img/header_nav.png": {
+            "uri": "/themes/chinaaet/widget/header/img/header_nav.png",
+            "type": "png"
+        },
+        "widget/header/img/header_phone.png": {
+            "uri": "/themes/chinaaet/widget/header/img/header_phone.png",
+            "type": "png"
+        },
+        "widget/header/img/ico_weixin_weibo.png": {
+            "uri": "/themes/chinaaet/widget/header/img/ico_weixin_weibo.png",
+            "type": "png"
+        },
+        "widget/header/img/logo.png": {
+            "uri": "/themes/chinaaet/widget/header/img/logo.png",
+            "type": "png"
+        }
+    },
+    "pkg": {}
+}

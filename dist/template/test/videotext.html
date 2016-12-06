@@ -1,0 +1,264 @@
+@using RetechWing.Extensions
+@{
+    Layout = null;
+}
+@section head{
+    <style>
+        #edui1_toolbarbox { display: none; }
+        #edui1_bottombar { display: none; }
+        a { cursor: pointer; }
+        .uploadify-button { text-align: center; }
+    </style>
+}
+<div class="ln-course-comment fn-clear">
+    <form class="ui-form">
+        <div class="">
+            <div class=""></div>
+            <div class="">
+                <textarea name="txtContent" id="txtContent" cols="30" rows="10" style="width: 980px; height: 170px"></textarea>
+            </div>
+            <div class="fn-clear fn-mt10">
+                <div class="fn-left" title="上传图片">
+                    <input type="file" value="" class="uploadResource" id="uploadImage"/>
+                    <input type="hidden" name="hidResource" value="" id="hidResource" />
+                </div>
+                <div class="fn-right">
+                    <input type="button" value="发表" class="btn btn-primary" id="btnSave" onclick="SubmitComment();" />
+                </div>
+
+            </div>
+            <div id="uploadResource-queue" style="margin-top: 20px">
+            </div>
+        </div>
+    </form>
+    <div class="com-list" id="commentList"></div>
+</div>
+<script id="commentListTemplate" type="text/x-jsrender">
+{{for #data}}
+<div  class="item-ta-topic">
+      <div class="ui-headImg">
+         <img src="{{:PhotoStr}}"><i class="icon-user"></i>
+      </div>
+      <div class="name">{{>Realname}}</div>
+      <div class="time">
+           {{:CommentTimeStr}}
+      </div>
+      <div class="con">{{>ContentNohtml}}</div>
+      <div class="name fn-clear">
+           <div class="ui-eva" style="cursor: pointer;" onclick="showComment({{:Id}},'show')"><span>
+            <i class="icon-comments"></i>{{:CommentAnswerCount}}</span></div>
+       </div>
+      {{if  photos.length>0}}
+      <div class="plusview">
+        <ul class="ui-pic-list">
+            {{for photos}}
+                <li>
+			        <a href="{{:ImgPath}}" data-type="image" data-plusview-id="{{:#index}}">
+                        <i class="icon-zoom-in"></i>
+				        <img src="{{:ImgPath}}" />
+			        </a>
+		        </li>
+            {{/for}}
+         </ul>
+      </div>
+      {{/if}}
+        {{if CommentAnswer.length>0}}
+            {{for CommentAnswer tmpl="#singleCommentAnswerTemplate" /}}
+            <div class="item-eva pub" id="divComment{{:Id}}" style="display:none;">
+                <div class="ui-headImg" style="height:60px">
+                    <img src="@Url.Addr(CurrentUser.PhotoUrl)"><i class="icon-user"></i></div>
+                        <textarea maxlength="200" id="txtComment{{:Id}}" onkeydown=" TextearaMaxlength(this); " onkeyup=" TextearaMaxlength(this); " onpropertychange="TextearaMaxlength(this);" style="height:60px"></textarea>
+                <div class="do">
+                    <input type="button" class="btn btn-cancel" onclick="showComment({{:Id}},'hide');" value="取消" style="width:auto;margin-left:15px;" />
+                    <input class="btn" value="发表" type="button" onclick="AddComment({{:Id}});" style="width:auto;" />
+                </div>
+            </div>
+        {{else}}
+            <div class="item-eva pub" id="divComment{{:Id}}" style="display:none;">
+                <div class="ui-headImg" style="height:60px">
+                    <img src="@Url.Addr(CurrentUser.PhotoUrl)"><i class="icon-user"></i></div>
+                        <textarea maxlength="200" id="txtComment{{:Id}}" onkeydown=" TextearaMaxlength(this); " onkeyup=" TextearaMaxlength(this); " onpropertychange="TextearaMaxlength(this);" style="height:60px"></textarea>
+                <div class="do">
+                    <input type="button" class="btn btn-cancel" onclick="showComment({{:Id}},'hide');" value="取消" style="width:auto;margin-left:15px;" />
+                    <input class="btn" value="发表" type="button" onclick="AddComment({{:Id}});" style="width:auto;" />
+                </div>
+            </div>
+        {{/if}}
+    </div>
+{{/for}}
+</script>
+
+<script id="singleCommentAnswerTemplate" type="text/x-jsRender">
+    <li>
+      <span class="ui-c-hot">{{>Realname}}：</span>{{>ContentNohtml}}
+      <span class="time">{{:CreateTimeStr}}</span>
+    </li>
+</script>
+
+<script type="text/javascript">
+    var currentListPage = 1;
+    $(document).ready(function () {
+
+        editor.addListener('wordcount', function (type) {
+            var contentlength = editor.getContentTxt().trim().length;
+            var less = 2000 - contentlength;
+            if (less < 0) {
+                $('#charNum').css("color", "red").text("超过最大字符限制");
+            } else {
+                $('#charNum').css("color", "#999").text("最多还可以输入" + less + "字");
+            }
+        });
+
+        editor.render("txtContent");
+        currentListPage = 0;
+
+
+
+        //#region   上传附件
+        $('#uploadImage').uploadify({
+            'formData': { 'folder': "@(System.Configuration.ConfigurationManager.AppSettings["CommImg"])" },
+            'buttonText': '',
+            'buttonClass': 'icon-camera c_blue',
+            'buttonImage': '',
+            'removeCompleted': false,
+            'swf': "@Url.Addr("~/Scripts/fileupload/uploadify/uploadify.swf")",
+            'uploader': '/Common/UploadFileAction',//此处因需要增加了detailFlag字段 其他地方使用请自行移除
+            'auto': false,
+            'multi': true,
+            'fileDesc': '图片',
+            'queueID': "uploadResource-queue",
+            'fileSizeLimit': '10MB',
+            'fileTypeExts': '*.bmp;*.png;*.png;*.jpeg;*.gif;*.tiff;*.jpg;',
+            'queueSizeLimit': 5,
+            'onCancel': function (file) {
+            },
+            'onSelect': function (file) {
+                $("#tempAttachQueueId").val(file.id);
+            },
+            'onSelectError': function (file, errorCode, errorMsg) {
+                showDialog('上传图片不能多于5张', '提示', 3);
+            },
+            'onUploadStart': function (file) {
+            },
+            'onUploadError': function (file, errorCode, errorMsg, errorString) {
+
+                if (errorCode != -280) {
+                    art.dialog.tips('上传过程中发送异常，请重新选择文件！', 1.5);
+                    $("#btnSave").removeAttr("disabled", "disabled");
+                }
+
+            },
+            'onUploadSuccess': function (file, data, response) {
+                if (data == "0") {
+                    $('#uploadImage').uploadify('cancel', '*');
+                    $("#hidResource").val("");
+                    $("#btnSave").removeAttr("disabled");
+                } else {
+                    var ids = $("#hidResource").val();
+                    ids = ids == '' ? (data) : (ids + '|' + data);
+                    $("#hidResource").val(ids);
+                }
+            },
+            'onQueueComplete': function (queueData) {
+                if (queueData.uploadsErrored > 0) {
+                    $("#hidResource").val("");
+                    showDialog("发表失败！");
+                    $("#btnSave").removeAttr("disabled");
+                } else {
+                    Submitdata();
+                }
+            }
+        });
+
+
+        $("#uploadImage-button").removeClass("uploadify-button").css("font-size", "24px");
+
+        InitComment();
+
+    });
+
+    function showComment(commentId, type) {
+        if (type == "show") {
+            $("#txtComment" + commentId).val("");
+            $("#divComment" + commentId).show();
+        } else {
+            $("#divComment" + commentId).hide();
+        }
+    }
+
+    function hideComment(commentId) {
+        $("#divComment" + commentId).hide();
+    }
+
+    function AddComment(commentId) {
+        var comment = $.trim($("#txtComment" + commentId).val());
+        if (comment == "") {
+            showDialog("请输入回复内容！");
+            $("#txtComment" + commentId).focus();
+            return false;
+        }
+
+        $.post('@Url.RetechAction("SubmitCommentReply", "Learn", new { area = "Student" })', {
+            cid:@(ViewBag.courseId),
+            wid:@(ViewBag.wareId),
+            RevaluId: commentId,
+            comment: comment
+        }, function (data) {
+            if (data.result > 0) {
+                InitComment();
+                $("#txtComment" + commentId).val("");
+            } else {
+                showDialog(data.content);
+            }
+        });
+    }
+
+    function InitComment() {
+        var url = '@Url.RetechAction("GetWareComment", "Learn", new { area = "Student" })?cid=@(ViewBag.courseId)&wid=@(ViewBag.wareId)&t=' + (new Date()).valueOf();
+        //jsrender准备数据
+        $("#commentList").JsRenderData({
+            sourceUrl: url,
+            isPage: true,
+            pageSize: 5,
+            pageIndex: 1,
+            templateID: "commentListTemplate",
+            funCallback: function () {
+                $('.plusview').plusview();
+            }
+        });
+    }
+    function SubmitComment() {
+        if ($.trim(editor.getContent()) == "") {
+            showDialog("请填写要发表的内容！");
+            return false;
+        }
+        $("#btnSave").attr("disabled", "disabled");
+        if ($("#uploadResource-queue .uploadify-queue-item").length > 0) {
+            $('#uploadImage').uploadify('upload', '*');
+        } else {
+            Submitdata();
+        }
+    }
+
+    function Submitdata() {
+        $.post('SaveWareComment?cid=@(ViewBag.courseId)&wid=@(ViewBag.wareId)&t=' + (new Date()).valueOf(),
+            {
+                content: editor.getContent(),
+                piclist: $("#hidResource").val()
+            }, function (data) {
+                if (data.result > 0) {
+                    $("#btnSave").removeAttr("disabled");
+                    InitComment();
+                    showDialog("发表成功！");
+                }
+                else {
+                    showDialog(data.content);
+                    $("#btnSave").removeAttr("disabled");
+                }
+                $("#uploadResource-queue").html("");
+                editor.setContent("");
+            });
+    }
+
+
+</script>

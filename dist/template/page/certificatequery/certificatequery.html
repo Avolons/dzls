@@ -4,11 +4,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="/static/static/css/reset.css" />
-		<link rel="stylesheet" type="text/css" href="/static/page/certificatequery/scss/certificatequery.css" />
-		<link rel="stylesheet" type="text/css" href="/static/widget/header/css/header.css" />
-		<link rel="stylesheet" type="text/css" href="/static/widget/footer/css/footer.css" />
-		<script src="/static/static/lib/jquery/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="/themes/chinaaet/static/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="/themes/chinaaet/page/certificatequery/scss/certificatequery.css" />
+		<link rel="stylesheet" type="text/css" href="../../widget/header/css/header.css" />
+		<link rel="stylesheet" type="text/css" href="../../widget/footer/css/footer.css" />
+		<script src="/themes/chinaaet/static/lib/jquery/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
@@ -32,7 +32,7 @@
 						<input placeholder="请输入身份证号" type="text" id="txtID" class="span3" />
 					</div>
 					<div class="card-txt">
-						<input placeholder="请输入验证码" type="text" id="tCode" "width: 80px; padding:2px 5px; text-indent: 0px; cursor: auto; " name="tCode" />
+						<input placeholder="请输入验证码" type="text" id="tCode" style="width: 80px; padding:2px 5px; text-indent: 0px; cursor: auto; " name="tCode" />
 						<img alt="验证码" onclick="getNewCode(4);" src="" id="imgCode" style="cursor: pointer;vertical-align: middle;" />
 					</div>
 					<div class="card-ft">
@@ -42,7 +42,7 @@
 				<table id="list" class="table">
 					<thead>
 						<tr>
-							<th "width:30px;">
+							<th style="width:30px;">
 								序号
 							</th>
 							<th>姓名</th>
@@ -50,7 +50,7 @@
 							<th>获得证书</th>
 							<th>获证方式</th>
 							<th>状态</th>
-							<th "width:100px;">操作</th>
+							<th style="width:100px;">操作</th>
 						</tr>
 					</thead>
 					<tbody id="dataList">

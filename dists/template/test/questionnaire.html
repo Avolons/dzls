@@ -1,0 +1,389 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>问卷调查</title>
+		<meta charset="UTF-8"/>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<style>
+			.headDiv {
+				font-family: "微软雅黑";
+				width: 700px;
+				margin: 0 auto;
+				border-top: 2px solid #e43a3d;
+				border-bottom: 2px dashed #e43a3d;
+				color: #4c4c4c;
+				position: relative;
+				margin-bottom: 60px;
+			}
+			.headDiv p{
+				font-family: "微软雅黑";
+			}
+			.headDiv label{
+				margin-right: 40px;
+			}
+			.headDiv  input[type=button]{
+				display: block;
+			    position: absolute;
+			    height: 35px;
+			    width: 65px;
+			    border: none;
+			    background-color: #E43A3D;
+			    font-size: 14px;
+			    text-align: center;
+			    line-height: 35px;
+			    font-family: "微软雅黑";
+			    color: #FFFFFF;
+			    bottom: -55px;
+			    left: 317.5px;
+			    cursor: pointer;
+			}
+			.topTitle {
+				font-weight: bold;
+				font-family: sans-serif;
+				font-size: 14px;
+				margin-left: 15px;
+			}
+			
+			.number {
+				font-weight: normal;
+			}
+			
+			.content {
+				margin-left: 25px;
+				font-size: 13px;
+				margin-bottom: 25px;
+			}
+			
+			textarea {
+				width: 600px;
+				height: 120px;
+				resize: none;
+				width: 510px;
+				height: 60px;
+				margin: 0 auto;
+				font-family: "微软雅黑";
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="headDiv">
+			<div class="main">
+				<div class="topTitle">
+					<p class="title"><span class="number">1</span> 课程好吗</p>
+				</div>
+
+				<div class="content">
+					<div class="itemGroup" type="1" id="6" name="1_1">
+
+						<input id="1_1" name="1_1" value="1" type="radio">
+						<label for="1_1">好</label>
+						<input id="1_2" name="1_1" value="2" type="radio">
+						<label for="1_2">不好</label>
+						<input id="1_3" name="1_1" value="3" type="radio">
+						<label for="1_3">一般</label>
+					</div>
+				</div>
+			</div>
+			<div class="main">
+				<div class="topTitle">
+					<p class="title"><span class="number">2</span> 老师教授满意吗</p>
+				</div>
+
+				<div class="content">
+					<div class="itemGroup" type="1" id="7" name="2_1">
+
+						<input id="2_1" name="2_1" value="1" type="radio">
+						<label for="2_1">满意</label>
+						<input id="2_2" name="2_1" value="2" type="radio">
+						<label for="2_2">不满意</label>
+						<input id="2_3" name="2_1" value="3" type="radio">
+						<label for="2_3">一般</label>
+					</div>
+				</div>
+			</div>
+			<div class="main">
+				<div class="topTitle">
+					<p class="title"><span class="number">3</span> 比较喜欢哪门课程</p>
+				</div>
+
+				<div class="content">
+					<div class="itemGroup" type="2" id="8" name="3_2">
+						<input id="3_1" name="3_2" value="1" type="checkbox">
+						<label for="3_1">职业化员工的修炼</label>
+						<input id="3_2" name="3_2" value="2" type="checkbox">
+						<label for="3_2">金点子</label>
+						<input id="3_3" name="3_2" value="3" type="checkbox">
+						<label for="3_3">创意营销</label>
+						<input id="3_4" name="3_2" value="4" type="checkbox">
+						<label for="3_4">向会议要效益</label>
+					</div>
+				</div>
+			</div>
+			<div class="main">
+				<div class="topTitle">
+					<p class="title"><span class="number">4</span> 您的建议和意见是</p>
+				</div>
+				<div class="content">
+					<div class="itemGroup" id="9" type="3">
+						<textarea placeholder="请输入您的意见..."></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="footer" "text-align: center">
+			<input id="btnSave" type="button" value="保存"></div>
+		</div>
+
+		<input type="hidden" value="1667" id="sId">
+		<input type="hidden" value="492" id="cId">
+
+		<script>
+			// 设置值
+			function setVal() {
+				var sId = $("#sId").val();
+				var cId = $("#cId").val();
+				$.post("http://webinar.chinaaet.com/zh-CN/Chinaaet/Questionnaire/GetStudentCourseAnswerList", {
+					"cId": cId,
+					"sId": sId
+				}, function(data) {
+					//循环答案赋值
+					$(data).each(function(index, item) {
+						if (item.TypeId == 1) {
+							$($("#" + item.QuestionnaireId).find("[type=radio]")[item.AnswerText - 1]).attr("checked", "checked");
+							// 单选框处理
+
+						} else if (item.TypeId == 2) {
+							// 复选框处理
+							var checkbox = $("#" + item.QuestionnaireId).find("[type=checkbox]");
+							$(item.CheckBoxAnswerList).each(function(index, val) {
+								$(checkbox[val - 1]).attr("checked", "checked");
+							});
+
+						} else {
+							// 文本框处理
+							$("#" + item.QuestionnaireId).find("textarea").val(item.AnswerText);
+						}
+					});
+
+				});
+			}
+
+			$(document).ready(function() {
+
+				// 设置值
+				setVal();
+				$("#btnSave").click(function() {
+
+					var sId = $("#sId").val();
+					var cId = $("#cId").val();
+					var resultStr1 = "";
+					var resultStr2 = "";
+					var resultStr3 = "";
+
+					// 遍历题干，取出题干对应的值提交到数据库
+					$(".itemGroup").each(function(index, item) {
+						var type = $(item).attr("type");
+						var name = $(item).attr("name");
+						var id = $(item).attr("id");
+
+						// 单选题干取值处理
+						if (type == 1) {
+							var val1 = $('input:radio[name="' + name + '"]:checked').val();
+							if (val1) {
+								resultStr1 += id + "⌒" + val1 + "^";
+							}
+						};
+
+						// 复选题干取值处理
+						if (type == 2) {
+							var val2 = $('input:checkbox[name="' + name + '"]:checked');
+							var cresult = "";
+							$(val2).each(function(index, itemVal) {
+								if ($(itemVal).val()) {
+									cresult += $(itemVal).val();
+								}
+							});
+							if (cresult) {
+								resultStr2 += id + "⌒" + cresult + "^";
+							}
+
+						};
+
+						// 客观题干取值处理
+						if (type == 3) {
+							var val3 = $(item).find("textarea").val();
+							if (val3) {
+								resultStr3 += id + "⌒" + val3 + "^";
+							}
+						}
+					});
+
+					// 提交数据
+					$.post("http://webinar.chinaaet.com/zh-CN/Chinaaet/Questionnaire/InsertData", {
+						"resultStr1": resultStr1,
+						"resultStr2": resultStr2,
+						"resultStr3": resultStr3,
+						"sId": sId,
+						"cId": cId
+					}, function(res) {
+						if (res) {
+							alert("提交成功！");
+							window.location.reload();
+						}
+					});
+				});
+			});
+		</script><audio controls="controls" style="display: none;"></audio></body>
+	<style type="text/css">
+		#yddContainer {
+			display: block;
+			font-family: Microsoft YaHei;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			top: -4px;
+			left: -4px;
+			font-size: 12px;
+			border: 1px solid
+		}
+		
+		#yddTop {
+			display: block;
+			height: 22px
+		}
+		
+		#yddTopBorderlr {
+			display: block;
+			position: static;
+			height: 17px;
+			padding: 2px 28px;
+			line-height: 17px;
+			font-size: 12px;
+			color: #5079bb;
+			font-weight: bold;
+			border-style: none solid;
+			border-width: 1px
+		}
+		
+		#yddTopBorderlr .ydd-sp {
+			position: absolute;
+			top: 2px;
+			height: 0;
+			overflow: hidden
+		}
+		
+		.ydd-icon {
+			left: 5px;
+			width: 17px;
+			padding: 0px 0px 0px 0px;
+			padding-top: 17px;
+			background-position: -16px -44px
+		}
+		
+		.ydd-close {
+			right: 5px;
+			width: 16px;
+			padding-top: 16px;
+			background-position: left -44px
+		}
+		
+		#yddKeyTitle {
+			float: left;
+			text-decoration: none
+		}
+		
+		#yddMiddle {
+			display: block;
+			margin-bottom: 10px
+		}
+		
+		.ydd-tabs {
+			display: block;
+			margin: 5px 0;
+			padding: 0 5px;
+			height: 18px;
+			border-bottom: 1px solid
+		}
+		
+		.ydd-tab {
+			display: block;
+			float: left;
+			height: 18px;
+			margin: 0 5px -1px 0;
+			padding: 0 4px;
+			line-height: 18px;
+			border: 1px solid;
+			border-bottom: none
+		}
+		
+		.ydd-trans-container {
+			display: block;
+			line-height: 160%
+		}
+		
+		.ydd-trans-container a {
+			text-decoration: none;
+		}
+		
+		#yddBottom {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 22px;
+			line-height: 22px;
+			overflow: hidden;
+			background-position: left -22px
+		}
+		
+		.ydd-padding010 {
+			padding: 0 10px
+		}
+		
+		#yddWrapper {
+			color: #252525;
+			z-index: 10001;
+			background: url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);
+		}
+		
+		#yddContainer {
+			background: #fff;
+			border-color: #4b7598
+		}
+		
+		#yddTopBorderlr {
+			border-color: #f0f8fc
+		}
+		
+		#yddWrapper .ydd-sp {
+			background-image: url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)
+		}
+		
+		#yddWrapper a,
+		#yddWrapper a:hover,
+		#yddWrapper a:visited {
+			color: #50799b
+		}
+		
+		#yddWrapper .ydd-tabs {
+			color: #959595
+		}
+		
+		.ydd-tabs,
+		.ydd-tab {
+			background: #fff;
+			border-color: #d5e7f3
+		}
+		
+		#yddBottom {
+			color: #363636
+		}
+		
+		#yddWrapper {
+			min-width: 250px;
+			max-width: 400px;
+		}
+	</style>
+
+</html>

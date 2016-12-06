@@ -1,0 +1,163 @@
+.content {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 50px;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    //提问详情左侧列表部分
+    .leftList {
+        width: 660px;
+        float: left;
+        //我的提问主题干
+        .myAskListTitle {
+            padding-bottom: 40px;
+            >h1 {
+                color: #000000;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+            >p {
+                border-bottom: 1px solid #dddddd;
+                padding-bottom: 10px;
+                &:after {
+                    clear: both;
+                    display: block;
+                    content: '';
+                }
+                img {
+                    height: 25px;
+                    width: 25px;
+                    border-radius: 50%;
+                    display: block;
+                    float: left;
+                    margin-right: 4px;
+                }
+                span {
+                    float: left;
+                    display: block;
+                    font-size: 12px;
+                    color: #a9a9a9;
+                    height: 25px;
+                    line-height: 25px;
+                }
+                //个人角色昵称
+                .charseter_name {
+                    margin-right: 30px;
+                }
+                //问题创建时间
+                .create_time {}
+                //回答问题数量
+                .answer_number {
+                    float: right;
+                }
+            }
+        }
+        //我的提问和回答的列表
+        #myAskList {
+            >li {
+                border-bottom: 1px solid #DDDDDD;
+                padding: 0 0 20px;
+                margin-bottom: 15px;
+                //统一设置样式
+                >div {
+                    &:after {
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+                    >figure {
+                        width: 45px;
+                        float: left;
+                        margin-right: 10px;
+                        img {
+                            border-radius: 50%;
+                            height: 45px;
+                            width: 45px;
+                            display: block;
+                            margin: 0 auto;
+                        }
+                        a {
+                            width: 45px;
+                            overflow: hidden;
+                            white-space: pre;
+                            text-overflow: ellipsis;
+                            margin-top: 10px;
+                            display: block;
+                            color: #92a6a9;
+                            font-size: 12px;
+                        }
+                    }
+                    >div {
+                        float: left;
+                        width: 565px;
+                        >p {
+                            line-height: 25px;
+                            color: #504f4f;
+                            font-size: 14px;
+                        }
+                        >span {
+                            color: #CCCCCC;
+                            font-size: 12px;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+                >.question {
+                    >div {
+                        width: 605px;
+                    }
+                }
+                .answer {
+                    box-sizing: border-box;
+                    padding-left: 40px;
+                    padding-top: 15px;
+                }
+            }
+        }
+        .uritor {
+            height: 250px;
+            #askAgain {
+                height: 35px;
+                padding: 0 15px;
+                color: #FFFFFF;
+                background-color: #E43A3D;
+                line-height: 35px;
+                text-align: center;
+                font-size: 14px;
+                margin-top: 10px;
+                border-radius: 2px;
+            }
+        }
+    }
+    //提问详情右侧列表部分
+    .rightList {
+        width: 270px;
+        float: right;
+        >h1 {
+            text-align: center;
+            height: 35px;
+            line-height: 35px;
+            color: #FFFFFF;
+            background-color: #f85558;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        ul {
+            li {
+                width: 100%;
+                overflow: hidden;
+                white-space: pre;
+                text-overflow: ellipsis;
+                height: 45px;
+                line-height: 45px;
+                color: #494949;
+                font-size: 14px;
+                text-align: left;
+                border-bottom: 1px solid #ededed;
+            }
+        }
+    }
+}

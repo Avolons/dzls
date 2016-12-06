@@ -1,0 +1,150 @@
+/* 翻页 */
+
+#list-page {
+	padding: 15px 0;
+	color: #666;
+}
+
+#list-page .num {
+	float: left;
+}
+
+#list-page .page,
+#list-page .total,
+#list-page .jump {
+	margin-left: 10px;
+	line-height: 32px;
+	_height: 32px;
+	float: right;
+}
+
+#list-page .num label,
+#list-page .num ul {
+	float: left;
+	line-height: 30px;
+}
+
+#list-page .num label {
+	display: none;
+}
+
+#list-page .num ul li {
+	margin-right: -1px;
+	padding: 0 7px;
+	background: #fff;
+	border: 1px solid #ddd;
+	cursor: pointer;
+	float: left;
+}
+
+#list-page .num ul li:hover {
+	background: #999;
+	border-color: #999;
+	color: #fff;
+}
+
+#list-page .num ul li.active {
+	background: #f2b928;
+	color: #fff;
+	border-color: #f2b928;
+}
+
+#list-page .jump {
+	position: relative;
+	top: -1px;
+}
+
+#list-page .jump input[type="text"],
+.ie #list-page .jump input {
+	width: 40px;
+	height: 26px;
+	text-align: center;
+}
+
+#list-page .jump .btn {
+	margin-left: 10px;
+	height: 32px;
+	background: #f2b928;
+	border-color: #f2b928;
+	color: #fff;
+	padding: 0 10px 1px;
+	border: 1px solid #f2b928;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#list-page .jump .btn:hover {
+	background: #f2b928;
+	border-color: #f2b928;
+}
+
+#list-page .page {
+	border-right: 1px solid #ddd;
+	font-size: 0;
+}
+
+#list-page .page span,
+#list-page .page a {
+	font-size: 12px;
+	min-width: 30px;
+	_width: 30px;
+	display: inline-block;
+	height: 30px;
+	border: 1px solid #ddd;
+	border-right: none 0;
+	background: #fff;
+	color: #333;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: none;
+	overflow: hidden;
+	float: left;
+}
+
+#list-page .page a {
+	cursor: pointer;
+}
+
+#list-page .page a:hover {
+	background: #ddd;
+	filter: none;
+}
+
+#list-page .page .status_disabled {
+	display: none;
+}
+
+#list-page .page .status-on {
+	display: block;
+	background: #f2b928;
+	filter: none;
+	border-color: #f2b928;
+	color: #fff;
+}
+
+.fn-clear:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.tables {
+	padding: 5px;
+}
+
+.icon-angle-right{
+	background-image: url(../img/right.png);
+	height: 12px;
+	width: 4px;
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+.icon-angle-left{
+	background-image: url(../img/left.png);
+	height: 12px;
+	width: 4px;
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 5px;
+}

@@ -5,15 +5,17 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="/themes/chinaaet/page/courseInformation/scss/courseInformation.css" />
-		<link rel="stylesheet" type="text/css" href="/themes/chinaaet/static/css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="/themes/chinaaet/static/css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="/themes/chinaaet/widget/header/css/header.css" />
 		<link rel="stylesheet" type="text/css" href="/themes/chinaaet/widget/footer/css/footer.css" />
-	    <script src="/themes/chinaaet/static/lib/jquery/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="/themes/chinaaet/static/lib/jsRender/css/jsrender.css" />
+		<link rel="stylesheet" type="text/css" href="/themes/chinaaet/static/lib/oldueditor/themes/default/css/ueditor.min.css" />
+		<script src="/themes/chinaaet/static/lib/jquery/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
 		<header id="header">
-			
+
 		</header>
 		<div class="content">
 			<div class="top">
@@ -23,29 +25,45 @@
 					<img src="/themes/chinaaet/page/courseInformation/img/one.png" />
 					<div class="intrdouce">
 						<h1>陈列结构创意</h1>
-						<h2>报名时间：2016年2月22日-2016年7月25日</h2>
-						<h3>开讲时间：2016年5月03日      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    10:00-12：00 </h3>
-						<h4>学习有效期：120天</h4>
-						<p>简介：前端技术包括JavaScript、ActionScript、CSS、xHTML等“传统”技术与Adobe对完成的页面进行维简介：前端技术包括JavaScript、ActionScript、CSS、xHTML等“传统”技术与Adobe对完成的页面进行维简介：前端技术包括xHTML等“传统”技术与Adobe对完成的页面进行维简介：前端技术包括JavaScript、ActionScript、CSS、xHTML等“传统”技术与Adobe对完成的页面进行维...........</p>
+						<h3><pre>开讲时间：2016年5月03日      10:00</pre></h3>
+						<h4>主讲教师：黄娇娇</h4>
 						<span>奖品:50元手机充值卡5张、20元代金券一张</span>
 						<div class="button">
-							<button type="button">我要报名</button>
-							<button type="button">我要提问</button>
+							<button type="button" id="mySign">我要报名</button>
+							<button type="button" id="iAsk">我要提问</button>
+							<button type="button" id="certificate" >申请证书</button>
 						</div>
+					<img src="/themes/chinaaet/page/courseInformation/img/sigin.png" class="sigin"/>
 					</div>
-					<a href="javascript:void(0);">￥200.00</a>
 				</div>
 			</div>
 			<div class="midddle">
-				<img src="/themes/chinaaet/page/courseInformation/img/two.png" />
-				<div class="intrdouce">
-					<h1>主要讲师</h1>
-					<h2>万朱浩</h2>
+				<div class="couItd">
+					<h1>课程简介</h1>
+					<div ><pre>
+   	前端技术包括JavaScript、ActionScript、CSS、xHTML等“传统括JavaScript、ActionScript、CSS、xHTML等“传统”技术与前端技Adobe对完成的前端
+技术包括JavaScript、io前端技术包括JavaScript、Actio前端技术包括JavaScri.Actio前端技术包括”技术与Adobe对完成的页面进行维ML等“传统括JavaScript
+、ActionScript、CSS、xHTML等“传统”技术与前端技ACSS、xHTML等“传统”技术与前端dobvaScript、Actio前端技术包括JavaScri.Actio前vaScript、Actio前端技术包括JavaScri.Actio前
+vaScript、Actio前端技术包括JavaScri.Actio前vaScript、Actio前端技术包括JavaScri.Actio前ctio前vaScript、Actio前端技术包括Ja
+ctio前vaScript、Actio前端技术包括Jactio前vaScript、Actio前端技术包括Jactio前vaScript、Actio前端技术包括Jactio前vaScript、Actio前端技术包括Ja
+ctio前vaScript、Actio前端技术包括Jactio前vaScript、Actio前端技术包括Jactio前vaScript、Actio前端技术包括Jactio前vaScript、Actio前端技术包括Ja
+ctio前vaScript、Actio前端技术包括Jactio前vaScript、Actio前端技术包括Ja
+					</pre> </div>
+					<button type="button" class="unflod">>>展开</button>
 				</div>
-				传统”技术与Adobe对完成的前端技术包括JavaScript、 io前端技术包括JavaScript、Actio前端技术介绍：前端技术包括JavaScript、ActionScript、CSS、xHTML等“传统”技术与Adobe对完成的前端技术包括JavaScript、 io前端技术包括JavaScript、Actio前端技术包括JavaScri.Actio前端技术包括JavaScriActio前 介绍：前端技术包括JavaScript、ActionScript、CSS、xHTML等“传统”技术与Adobe对完成的前端技术包括JavaScript、 io前端技术包括JavaScript、Actio前端技术包括JavaScri.Actio前端技术包括JavaScriActio前
+				<div class="tecItd">
+					<h1>授课讲师</h1>
+					<div>
+						<p >
+   	前端技术包括JavaScript、ActionScript、CSS、xHTML等“传统括JavaScript、ActionScript、CSS、xHTML等“传统”技术与前端技Adobe对完成的前端
+技术包括JavaScript、io前端技术包括JavaScript、Actio前端技术包括JavaScri.Actio前端技术包括”技术与Adobe对完成的页面进行维ML等“传统括JavaScript
+					</p>
+					</div>
+					<button type="button" class="unflod">>>展开</button>
+				</div>
 			</div>
 			<div class="bottom">
-				<ul class="table" >
+				<ul class="table">
 					<li class="check" id="table_study">学习内容</li>
 					<li id="table_ask">我要提问</li>
 					<li id="table_recorde">获奖记录</li>
@@ -97,63 +115,8 @@
 						</ul>
 					</li>
 					<li class="askQuestion" id="askQuestion">
-						<ul>
-							<li>
-								<figure>
-									<img src="/themes/chinaaet/page/courseInformation/img/two.png"/>
-									<h1>jack_wanzhujh</h1>
-								</figure>
-								<div class="texts">
-									<h1><i class="iconfont">&#xe604;</i>为什么直接显示的是”团购已结束“，而不是倒计时呢？ </h1>
-									<div>
-										<i class="iconfont">&#xe605;</i>
-										<p>[最新回答] <img src="/themes/chinaaet/page/courseInformation/img/two.png"/><a href="javascript:void(0);">yangtezz</a>你这 var lefttime= parseInt((endtime.getDate()-nowtime.getDate())/1000);    getDate获取的是今天多少号换成getTime  毫秒数</p>
-									</div>
-								    <h2 class="time">时间：4天前</h2>
-								</div>
-								<div class="answer">
-									<span>0</span>
-									回答
-								</div>
-							</li>
-							<li>
-								<figure>
-									<img src="/themes/chinaaet/page/courseInformation/img/two.png"/>
-									<h1>jack_wanzhujh</h1>
-								</figure>
-								<div class="texts">
-									<h1><i class="iconfont">&#xe604;</i>为什么直接显示的是”团购已结束“，而不是倒计时呢？ </h1>
-									<div>
-										<i class="iconfont">&#xe605;</i>
-										<p>[最新回答] <img src="/themes/chinaaet/page/courseInformation/img/two.png"/><a href="javascript:void(0);">yangtezz</a>你这 var lefttime= parseInt((endtime.getDate()-nowtime.getDate())/1000);    getDate获取的是今天多少号换成getTime  毫秒数</p>
-									</div>
-								    <h2 class="time">时间：4天前</h2>
-								</div>
-								<div class="answer">
-									<span>0</span>
-									回答
-								</div>
-							</li>
-							<li>
-								<figure>
-									<img src="/themes/chinaaet/page/courseInformation/img/two.png"/>
-									<h1>jack_wanzhujh</h1>
-								</figure>
-								<div class="texts">
-									<h1><i class="iconfont">&#xe604;</i>为什么直接显示的是”团购已结束“，而不是倒计时呢？ </h1>
-									<div>
-										<i class="iconfont">&#xe605;</i>
-										<p>[最新回答] <img src="/themes/chinaaet/page/courseInformation/img/two.png"/><a href="javascript:void(0);">yangtezz</a>你这 var lefttime= parseInt((endtime.getDate()-nowtime.getDate())/1000);    getDate获取的是今天多少号换成getTime  毫秒数</p>
-									</div>
-								    <h2 class="time">时间：4天前</h2>
-								</div>
-								<div class="answer">
-									<span>0</span>
-									回答
-								</div>
-							</li>
-						</ul>
-					
+						<div id="askQuestionLists">
+						</div>
 					</li>
 					<li class="recorde" id="recorde">
 						<ul>
@@ -171,15 +134,65 @@
 				</ul>
 			</div>
 		</div>
+		<!--所有弹出层-->
+		<div class="layer">
+			<div id="layer_Ask">
+				<form class="ui-form">
+					<div class="">
+						<div class=""></div>
+						<div class="">
+							<textarea name="txtContent" id="txtContent" cols="30" rows="10" "width: 980px; height: 170px"></textarea>
+						</div>
+						<div class="fn-clear fn-mt10">
+							<div class="fn-right">
+								<input type="button" value="发表" class="btn btn-primary" id="btnSave" />
+							</div>
+						</div>
+						<div id="uploadResource-queue" "margin-top: 20px">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 		<footer id="footer">
-			
+
 		</footer>
-		
+		<script type="text/x-jsrender" id="answerListTpl">
+			{{for #data}}
+			<div class="list">
+				<figure>
+					<img src={{:PhotoStr}}/>
+					<h1>{{:Realname}}</h1>
+				</figure>
+				<div class="texts">
+					<h1><i class="iconfont">&#xe604;</i>{{:Contents}}</h1>
+					<ul>
+						{{for CommentAnswer}}
+						<li>
+							<div>
+								<i class="iconfont">&#xe605;</i> {{if #index==0}}
+								<p>[最新回答] <img src="img/two.png" /><a href="javascript:void(0);">{{:Realname}}</a>{{:Contents}}</p>
+								{{else}}
+								<p><img src="img/two.png" /><a href="javascript:void(0);">{{:Realname}}</a>{{:Contents}}</p>
+								{{/if}}
+							</div>
+							<h2 class="time">{{:CommentTimeStr}}</h2>
+						</li>
+						{{/for}}
+					</ul>
+				</div>
+				<div class="answer">
+					<span>{{:CommentAnswerCount}}</span> 回答
+				</div>
+			</div>
+			{{/for}}
+		</script>
 	</body>
-    <script type="text/javascript">
-    	 $('#header').load('../../widget/header/header.html');
-		 $('#footer').load('../../widget/footer/footer.html');
-    </script>
-    <script src="/themes/chinaaet/page/courseInformation/js/control.js" type="text/javascript" charset="utf-8"></script>
-    
+	<script src="/themes/chinaaet/static/lib/layer/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/themes/chinaaet/static/lib/jsRender/jsrender.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/themes/chinaaet/static/lib/jsRender/extend.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/themes/chinaaet/static/lib/oldueditor/ueditor.config.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/themes/chinaaet/static/lib/oldueditor/ueditor.all.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/themes/chinaaet/static/lib/oldueditor/lang/zh-cn/zh-cn.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/themes/chinaaet/page/courseInformation/js/control.js" type="text/javascript" charset="utf-8"></script>
 </html>

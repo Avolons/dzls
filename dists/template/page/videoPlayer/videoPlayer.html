@@ -10,35 +10,33 @@
 		<link rel="stylesheet" type="text/css" href="/themes/chinaaet/widget/header/css/header.css" />
 		<link rel="stylesheet" type="text/css" href="/themes/chinaaet/widget/footer/css/footer.css" />
 		<link href="/themes/chinaaet/static/lib/ueditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
-	
-		
 	</head>
 
 	<body>
 		<header id="header" "height: 130px;"></header>
 		<div class="video">
 			<div class="videoTitle">
-					80、90后员工职业素养提升 01 
+					<<80、90后员工职业素养提升 01 
 			</div>
 			<div class="videoOut" id="videoOut">
-				<div class="videoPlayer">
-					<video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto"  poster="/themes/chinaaet/page/videoPlayer/img/3334747hd.jpg" ata-setup="{}" >
+				<div class="videoPlayer" id="videoPlayer">
+					<video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" autoplay="autoplay" poster="/themes/chinaaet/page/videoPlayer/img/3334747hd.jpg" ata-setup="{}" >
 						<!--<source src=" http://7xpfpu.com2.z0.glb.qiniucdn.com/32c21bb95cb74a929149eb8165d85cfb.m3u8" type="application/x-mpegURL"></source>-->
 						
-						<!--<source src="http://cdn.theoplayer.com/video/big_buck_bunny/big_buck_bunny_metadata.m3u8" type="application/x-mpegURL"></source>-->
-					    <!--<source src="video/grossoffenseth_sunrise.m4v" type='video/m4v'></source>-->
+						<source src="http://cdn.theoplayer.com/video/big_buck_bunny/big_buck_bunny_metadata.m3u8" type="application/x-mpegURL"></source>
+					    <!--<source src="http://www.html5tricks.com/demo/html5-canvas-video/BigBuckBunny_640x360.mp4" type='video/mp4'></source>-->
 					   
-					    <source src="/themes/chinaaet/static/video/3334747hd.m4v" type='video/m4v'></source>
-					    <source src="/themes/chinaaet/static/video/3334747hd.webm" type="video/webm"></source> 
-					    <p class="vjs-no-js">
+					    <!--<source src="../../static/video/3334747hd.m4v" type='video/m4v'></source>-->
+					    <!--<source src="../../static/video/3334747hd.webm" type="video/webm"></source>--> 	
+					    <!--<p class="vjs-no-js">
 					      To view this video please enable JavaScript, and consider upgrading to a web browser that
 					      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-					    </p>
-		                </video>
+					    </p>-->
+		            </video>
 				</div>
 				<ul class="videoState">
 					<li class="allTime">
-						视屏总时长：<a href="javascript:void(0);">00:00</a>
+						应学时长：<a href="javascript:void(0);">00:00</a>
 					</li>
 					<li class="studyTime">
 						已学时长：<a href="javascript:void(0);">00:00</a>
@@ -53,58 +51,46 @@
 			<div class="rightList" id="rightList">
 				<!--选择列表,使用绝对定位-->
 				<div class="selectList">
-					<ul>
+					<div>
+						<ul>
 						<li id="alertIndex">
-							<i class="iconfont">&#xe600;</i>
-							<a href="javascript:void(0);">目录</a>
+							<a href="javascript:void(0);">课程目录</a>
 						</li>
 						<li id="alertChat">
-							<i class="iconfont">&#xe602;</i>
 							<a href="javascript:void(0);">聊天提问</a>
 						</li>
-						<!--<li id="alertNote">
-							<i class="iconfont">&#xe603;</i>
-							<a href="javascript:void(0);">笔记</a>
-						</li>
-						<li id="alertAsk">
-							<i class="iconfont">&#xe604;</i>
-							<a href="javascript:void(0);">提问</a>
-						</li>-->
 						<li id="alertQuestionnaire">
-							<i class="iconfont">&#xe609;</i>
 							<a href="javascript:void(0);">问卷调查</a>
 						</li>
-						<li id="alertQuestionnaire">
-							<i class="iconfont">&#xe606;</i>
+						<li id="alertExam">
 							<a href="javascript:void(0);">在线考试</a>
 						</li>
 					</ul>
+					</div>
 				</div>
 				<!--聊天室和课程目录区-->
 				<div class="indexAndChat">
 					<div class="index">
-						<!--课程标题-->
-						<h1>80后90后员工的管法</h1>
 						<!--课程列表-->
 						<ul class="sectionList">
-							<li><a href="javascript:void(0);">第一章 80后90后员工管法</a>
-								<ul class="indexList">
-									<li>
+							<li><a href="javascript:void(0);">全部分类</a>
+								<ul class="indexList" id="indexList">
+									<li data-href = "http://vjs.zencdn.net/v/oceans.mp4" data-img = "http://image.tianjimedia.com/uploadImages/2014/050/I0I228KL3DSV.jpg">
 										<i class="iconfont">&#xe607;</i>
 										<a href="javascript:void(0);">80后90后员工的管法 1</a>
 										<span>00:25:06</span>
 									</li>
-									<li>
+									<li data-href = "../../static/video/3334747hd.m4v" data-img = "img/3334747hd.jpg">
 										<i class="iconfont">&#xe607;</i>
 										<a href="javascript:void(0);">80后90后员工的管法 1</a>
 										<span>00:25:06</span>
 									</li>
-									<li>
+									<li data-href = "../../static/video/3334747hd.m4v" data-img = "img/3334747hd.jpg">
 										<i class="iconfont">&#xe607;</i>
 										<a href="javascript:void(0);">80后90后员工的管法 1</a>
 										<span>00:25:06</span>
 									</li>
-									<li>
+									<li data-href = "../../static/video/3334747hd.m4v" data-img = "img/3334747hd.jpg">
 										<i class="iconfont">&#xe607;</i>
 										<a href="javascript:void(0);">80后90后员工的管法 1</a>
 										<span>00:25:06</span>
@@ -122,23 +108,15 @@
 							<!--展示聊天窗口区域-->
 							<li id="chatWindow">
 								<ul id="messageList">
-									<li class="stds"><span class="time">09:45</span><b >红玫瑰:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
-									<li class="stds"><span class="time">09:45</span><b >小老鼠::</b><a href="javascript:void(0);">是呀不错呀讲的老师敬业.....</a></li>
-									<li class="stds"><span class="time">09:45</span><b >穿衣搭配:</b><a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a></li>
-									<li class="admin"><span class="time">09:45</span><b >管理员:</b><a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a></li>
-									<li class="stds"><span class="time">09:45</span><b >就是凑字符:</b><a href="javascript:void(0);">你们怎么想的就这点把你们收买了没谁了</a></li>
-									<li class="stds"><span class="time">09:45</span><b >蝙蝠侠  对  穿衣搭配 说:</b><a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a></li>
-									<li class="tch"><span class="time">09:45</span><b >nickie老师:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
-								    <li class="stds"><span class="time">09:45</span><b >红玫瑰:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
-									<li class="stds"><span class="time">09:45</span><b >小老鼠::</b><a href="javascript:void(0);">是呀不错呀讲的老师敬业.....</a></li>
-									<li class="stds"><span class="time">09:45</span><b >穿衣搭配:</b><a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a></li>
-									<li class="admin"><span class="time">09:45</span><b >管理员:</b><a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a></li>
-									<li class="stds"><span class="time">09:45</span><b >就是凑字符:</b><a href="javascript:void(0);">你们怎么想的就这点把你们收买了没谁了</a></li>
-									<li class="stds"><span class="time">09:45</span><b >蝙蝠侠  对  穿衣搭配 说:</b><a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a></li>
-									<li class="tch"><span class="time">09:45</span><b >nickie老师:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
-								    <li class="stdsAsk"><i>提问</i><b>红玫瑰:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
-								    <li class="tchAns"><i>回答</i><b>nickie老师:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
-								    	<p><span>【问题】</span><b>红玫瑰:</b><a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a></p>
+									<li class="stds" ><span class="time">09:45</span><b data_userid='124567' data_name='wzh'>红玫瑰:</b><a href="javascript:void(0);">当时的通信技术研究者们正在准备给手机的文字短信订立标准。由于当时的技术条件所限，无线传输的带宽并不高，而且主要是在汽车电话上使用，这就要求手机短信要言简意赅。</a></li>
+									<li class="admin"><span class="time">09:45</span><i class="iconfont">&#xe611;</i><b data_userid='124567' data_name='wzh'>管理员:</b><a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a></li>
+									<li class="teachTo"><span class="time">09:45</span><i class="iconfont">&#xe610;</i><b data_userid='124567' data_name='wzh'>蝙蝠侠 </b><em>对</em><b data_userid='124567' data_name='wzh'>穿衣搭配 </b><em>说</em>:<a href="javascript:void(0);" >同学们要认真观看此视频还要有考试的。</a></li>
+									<li class="adminTo"><span class="time">09:45</span><i class="iconfont">&#xe611;</i><b data_userid='124567' data_name='wzh'>蝙蝠侠 </b><em>对</em><b data_userid='124567' data_name='wzh'>穿衣搭配 </b><em>说</em>:<a href="javascript:void(0);" >同学们要认真观看此视频还要有考试的。</a></li>
+									<li class="studentTo"><span class="time">09:45</span><b data_userid='124567' data_name='wzh'>蝙蝠侠 </b><em>对</em><b data_userid='124567' data_name='wzh'>穿衣搭配 </b><em>说</em>:</b><a href="javascript:void(0);" >同学们要认真观看此视频还要有考试的。</a></li>
+									<li class="tch"><span class="time">09:45</span><i class="iconfont">&#xe610;</i><b >nickie老师:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
+								    <li class="stdsAsk"><i>提问</i><b data_userid='124567' data_name='wzh'>红玫瑰:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
+								    <li class="tchAns"><i>回答</i><i class="iconfont">&#xe610;</i><b data_userid='124567' data_name='wzh'>nickie老师:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
+								    	<p><span>【问题】</span><b data_userid='124567' data_name='wzh'>红玫瑰:</b><a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a></p>
 								    </li>
 								</ul>
 							</li>
@@ -176,6 +154,51 @@
 											<span class="time">时间：4天前</span>
 										</div>
 									</li>
+									<li>
+										<div class="question">
+											<i class="iconfont">&#xe604;</i>
+											<h6>【提问】</h6>
+											<b>红玫瑰</b>
+											<a href="javascript:void(0);">老师ps里面的快捷键视频里为啥没找到，是没有这一节吗？</a>
+										</div>
+										<div class="answer">
+											<i class="iconfont">&#xe605;</i>
+											<h6>【最新回答】</h6>
+											<b>nickie老师</b>
+											<a href="javascript:void(0);">就在视频的结尾呢强调了一次可能你没看到。</a>
+											<span class="time">时间：4天前</span>
+										</div>
+									</li>
+									<li>
+										<div class="question">
+											<i class="iconfont">&#xe604;</i>
+											<h6>【提问】</h6>
+											<b>红玫瑰</b>
+											<a href="javascript:void(0);">老师ps里面的快捷键视频里为啥没找到，是没有这一节吗？</a>
+										</div>
+										<div class="answer">
+											<i class="iconfont">&#xe605;</i>
+											<h6>【最新回答】</h6>
+											<b>nickie老师</b>
+											<a href="javascript:void(0);">就在视频的结尾呢强调了一次可能你没看到。</a>
+											<span class="time">时间：4天前</span>
+										</div>
+									</li>
+									<li>
+										<div class="question">
+											<i class="iconfont">&#xe604;</i>
+											<h6>【提问】</h6>
+											<b>红玫瑰</b>
+											<a href="javascript:void(0);">老师ps里面的快捷键视频里为啥没找到，是没有这一节吗？</a>
+										</div>
+										<div class="answer">
+											<i class="iconfont">&#xe605;</i>
+											<h6>【最新回答】</h6>
+											<b>nickie老师</b>
+											<a href="javascript:void(0);">就在视频的结尾呢强调了一次可能你没看到。</a>
+											<span class="time">时间：4天前</span>
+										</div>
+									</li>
 								</ul>
 							</li>
 							<!--提交回答区域-->
@@ -183,6 +206,7 @@
 								<textarea id="yourMessage" name="yourmessage" rows="" cols="" placeholder="和大伙聊聊吧"></textarea>
 								<div id="callObjectOut">
 									<input type="text" name="callObject" id="callObject" value="" placeholder="对所有人说" />
+									<i class="iconfont" id="closeCharest">&#xe60a;</i>
 								</div>
 								<button type="button" id="submitChat">发表</button>
 								<button type="button" id="sumbitAsk">提问</button>
@@ -192,8 +216,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="content">
-				<div class="left">
+			<div class="content" >
+				<div class="left" >
 					<!--选项卡-->
 					<ul class="callList">
 						<li id="myNoteBtn" class="clickStyle_red"><a href="javascript:void(0);">学习笔记</a></li>
@@ -427,7 +451,7 @@
 					</ul>
 				</div>
 				<!--主体右侧热门推荐部分-->
-				<div class="right">
+				<div class="right" >
 					<h1>热门推荐</h1>
 					<div class="hot_img">
 						<img src="/themes/chinaaet/page/videoPlayer/img/course_one.png" />
@@ -491,74 +515,134 @@
 					<a href="javascript:void(0);" id="changeAskCode">换一张</a>
 					<button type="button" id="upAsk">发布</button>
 				</div>
-				<!--问卷调差-->
-				<div id="questionnaireLayer">
-
+				<!--在线考试-->
+				<div id="examLayer">
+                    <div  class="fn-clear" id="div_exam" >
+					    <div class="fn-left" "line-height: 30px;">
+					        <span >测</span>
+					        <span id="examTitle"></span>
+					        <span>考试时长:<label id="examlength"></label>分钟 </span>
+					        <span>剩余考试次数：<label id="canExamTimes"></label>次 </span>
+					        <span>完成状态：<label id="statuStr"></label></span>
+					    </div>
+					    <div class="fn-right">
+					        <a class="btn" onclick="gotoExam()">进入考试</a>
+					        <a class="btn" onclick="browseDetail()">答卷详情</a>
+					    </div>
+					</div>
+					<input id="userWareId" type="hidden" value="163" />
+					<input id="examUserId" type="hidden" value="" />
+					<input id="examId" type="hidden" value="" />
 				</div>
 			</div>
 		</div>
 		<footer id="footer"></footer>
 		<!--老师发言模板-->
-		<script type="text/javascript" id="tpl_tec">
-			<li class="tch">
-				<span class="time">d.time</span>
-				<b >d.name</b>
-				<a href="javascript:void(0);">d.texts</a>
-			</li>
+		<!--老师发言模板-->
+		<script type="text/html" id="tpl_tec">
+			{{#for (var i = 0; i< d.length; i++) {}} 
+				<li class="tch" >
+				<span class="time">{{d[i].timestamp}}</span>
+				<i class="iconfont">&#xe610;</i>
+				<b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>{{d[i].from.name}}</b>
+				<a href="javascript:void(0);">{{d[i].content.msg}}</a>
+				</li>
+			{{#}}}
 		</script>
 		<!--学生发言模板-->
-		<script type="text/javascript" id="tpl_stds">
-			<li class="stds">
-				<span class="time">09:45</span>
-				<b >红玫瑰:</b>
-				<a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
-			</li>
+		<script type="text/html" id="tpl_stds">
+			{{#for (var i = 0; i< d.length; i++) {}} 
+				<li class="stds" >
+				<span class="time">{{d[i].timestamp}}</span>
+				<b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>{{d[i].from.name}}</b>
+				<a href="javascript:void(0);">{{d[i].content.msg}}</a>
+				</li>
+				{{#}}}
 		</script>
 		<!--管理员发言模板-->
-		<script type="text/javascript" id="tpl_admin">
-		    <li class="admin">
-				<span class="time">09:45</span>
-				<b >管理员:</b>
-				<a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a>
-			</li>	
+		<script type="text/html" id="tpl_admin">
+			{{#for (var i = 0; i< d.length; i++) {}} 
+				<li class="admin" >
+				<span class="time">{{d[i].timestamp}}</span>
+				<i class="iconfont">&#xe611;</i>
+				<b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>管理员:</b>
+				<a href="javascript:void(0);">{{d[i].content.msg}}</a>
+				</li>
+				{{#}}}
 		</script>
 		<!--学生问问题模板-->
-		<script type="text/javascript" id="tpl_tecAns">
-			<li class="stdsAsk">
+		<script type="text/html" id="tpl_tecAns">
+			{{#for (var i = 0; i< d.length; i++) {}} 
+				<li class="stdsAsk" >
 				<i>提问</i>
-				<b>红玫瑰:</b>
-				<a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
-			</li>
+				<b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>{{d[i].from.name}}</b>
+				<a href="javascript:void(0);">{{d[i].content.question}}</a>
+				</li>
+				{{#}}}
+		</script>
+		<!--老师对谁说模板-->
+		<script type="text/html" id="tpl_teachTo">
+			{{#for (var i = 0; i< d.length; i++) {}} 
+				<li class="teachTo" >
+				<span class="time">{{d[i].timestamp}}</span>
+				<i class="iconfont">&#xe610;</i>
+				<b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>{{d[i].from.name}}</b><em>对</em><b data_userid={{d[i].to.userid}} data_name={{d[i].to.name}}>d[i].to.name</b><em>说</em>:
+				<a href="javascript:void(0);" >{{d[i].content.msg}}</a>
+				</li>
+			{{#}}}
+		</script>
+		<!--学生对谁说模板-->
+		<script type="text/html" id="tpl_studentTo">
+			{{#for (var i = 0; i< d.length; i++) {}} 
+				<li class="studentTo" >
+				<span class="time">{{d[i].timestamp}}</span>
+				<b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>{{d[i].from.name}}</b><em>对</em><b data_userid={{d[i].to.userid}} data_name={{d[i].to.name}}>d[i].to.name</b><em>说</em>:
+				<a href="javascript:void(0);" >{{d[i].content.msg}}</a>
+				</li>
+			{{#}}}
+		</script>
+		<!--管理员对谁说-->
+		<script type="text/html" id="tpl_adminTo">
+			{{#for (var i = 0; i< d.length; i++) {}} 
+				<li class="adminTo" >
+				<span class="time">{{d[i].timestamp}}</span>
+				<i class="iconfont">&#xe611;</i>
+				<b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>{{d[i].from.name}}</b><em>对</em><b data_userid={{d[i].to.userid}} data_name={{d[i].to.name}}>d[i].to.name</b><em>说</em>:
+				<a href="javascript:void(0);" >{{d[i].content.msg}}</a>
+				</li>
+			{{#}}}
 		</script>
 		<!--老师回答问题模板-->
-		<script type="text/javascript" id="tpl_stdsAsk">
-			<li class="tchAns">
+		<script type="text/html" id="tpl_stdsAsk">
+			{{#for (var i = 0; i< d.length; i++) {}} <li class="tchAns">
 				<i>回答</i>
-				<b>nickie老师:</b>
-				<a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
+				<i class="iconfont">&#xe610;</i>
+				<b data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>{{d[i].from.name}}</b>
+				<a href="javascript:void(0);">{{d[i].content.answer}}</a>
 				<p>
 					<span>【问题】</span>
-					<b>红玫瑰:</b>
-					<a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a>
+					<b data_userid={{d[i].to.userid}} data_name={{d[i].to.name}}>{{d[i].to.name}}</b>
+					<a href="javascript:void(0);">{{d[i].content.question}}</a>
 				</p>
-			</li>
+				</li>
+				{{#}}}
 		</script>
 		<!--问答区域数据渲染模板-->
-		<script type="text/javascript" id="tpl_tecAnsList">
+		<script type="text/html" id="tpl_tecAnsList">
 			{{#for (var i = 0; i < d.length; i++) {}}
 			<li>
 				<div class="question">
 					<i class="iconfont">&#xe604;</i>
 					<h6>【提问】</h6>
-					<b>红玫瑰</b>
-					<a href="javascript:void(0);">老师ps里面的快捷键视频里为啥没找到，是没有这一节吗？</a>
+					<b>{{d[i].to.name}}</b>
+					<a href="javascript:void(0);">{{d[i].content.question}}</a>
 				</div>
 				<div class="answer">
 					<i class="iconfont">&#xe605;</i>
 					<h6>【最新回答】</h6>
-					<b>nickie老师</b>
-					<a href="javascript:void(0);">就在视频的结尾呢强调了一次可能你没看到。</a>
-					<span class="time">时间：4天前</span>
+					<b>{{d[i].from.name}}</b>
+					<a href="javascript:void(0);">{{d[i].content.answer}}</a>
+					<span class="time">时间：{{d[i].timestamp}}</span>
 				</div>
 			</li>
 			{{#}}}
@@ -572,13 +656,18 @@
 		<script src="/themes/chinaaet/static/lib/layer/layer/layer.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/themes/chinaaet/page/videoPlayer/js/videoControl.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/themes/chinaaet/page/videoPlayer/js/rightList.js" type="text/javascript" charset="utf-8"></script>
-		<script src="/themes/chinaaet/page/videoPlayer/js/middleCotent.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/middleCotent.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="/themes/chinaaet/page/videoPlayer/js/chatAndAsk.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			 $('#header').load('../../widget/header/header.html');
+		   $(document).ready(function  () {
+		   	 $('#header').load('../../widget/header/header.html');
 		     $('#footer').load('../../widget/footer/footer.html');
 			//		初始化富文本编译器
 			var um = UM.getEditor('myUe');
+		   })
+			
 		</script>
+	    		
 	</body>
 
 </html>

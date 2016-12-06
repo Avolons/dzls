@@ -1,0 +1,217 @@
+@using RetechWing.Extensions
+@{
+    ViewBag.Title = "课程聊天室";
+}
+@section head
+{
+    <script src="@Url.Addr("~/Scripts/My97DatePicker/WdatePicker.js")" type="text/javascript"></script>
+}
+@(Html.Action("SiteTenantMapLink", "Common", new
+{
+    linkName = "课程聊天室",
+    area = ""
+}))
+
+
+<div class="list-so fn-clear">
+    <label for="txtsortName">课程分类：</label>
+    <input type="text" id="txtsortName" class="span3" />
+    <label for="txtCoursewareCode">课程编号：</label>
+    <input type="text" id="txtCoursewareCode" class="span3" />
+    <label for="txtCoursewareName">课程名称：</label>
+    <input type="text" id="txtCoursewareName" class="span3" />
+    <label for="txtTag">课程标签：</label>
+    <input type="text" id="txtTag" class="span3" />
+    <label for="wareStatus">状态：</label>
+    <select id="wareStatus" onchange="InitDataList()">
+        <option value="-1">全部</option>
+        <option value="0">草稿</option>
+        <option value="1">未开始</option>
+        <option value="2">进行中</option>
+        <option value="3">暂停</option>
+        <option value="4">已结束</option>
+        <option value="5">下架</option>
+    </select>
+</div>
+<div class="list-so fn-clear">
+    <label>截止报名：</label>
+    <div class="time-choose icon-time">
+        <input type="text" id="txtStartTime" class="span4" readonly="readonly" onclick="WdatePicker({ lang: window.currentLang, dateFmt: 'yyyy-MM-dd', maxDate: '#F{$dp.$D(\'txtEndTime\',{m:-1})}' });" value="" />
+    </div>
+    <label class="to">至</label>
+    <div class="time-choose icon-time">
+        <input type="text" id="txtEndTime" class="span4" readonly="readonly" onclick="WdatePicker({ lang: window.currentLang, dateFmt: 'yyyy-MM-dd', minDate: '#F{$dp.$D(\'txtStartTime\',{m:1})}' });" value="" />
+    </div>
+    <label>创建时间：</label>
+    <div class="time-choose icon-time">
+        <input type="text" id="txtStartStartTime" class="span4" readonly="readonly" onclick="WdatePicker({ lang: window.currentLang, dateFmt: 'yyyy-MM-dd', maxDate: '#F{$dp.$D(\'txtStartEndTime\',{m:-1})}' });" value="" />
+    </div>
+    <label class="to">至</label>
+    <div class="time-choose icon-time">
+        <input type="text" id="txtStartEndTime" class="span4" readonly="readonly" onclick="WdatePicker({ lang: window.currentLang, dateFmt: 'yyyy-MM-dd', minDate: '#F{$dp.$D(\'txtStartStartTime\',{m:1})}' });" value="" />
+    </div>
+    <button class="btn btn-co-a" onclick="InitDataList();" id="btnSearch">搜索</button>
+</div>
+<div class="op-area fn-clear">
+</div>
+<table id="list" class="table">
+    <thead>
+        <tr>
+            <th style="width: 50px">序号</th>
+            <th jsrendersortfield="CourseCode" style="width: 100px">课程编号</th>
+            <th>课程名称</th>
+            <th jsrendersortfield="CreateTime" style="width: 150px">开讲时间</th>
+            <th style="width: 70px">报名人数</th>
+            <th style="width: 70px">在线人数</th>
+            <th style="width: 50px">状态</th>
+            <th style="width: 50px">操作</th>
+        </tr>
+    </thead>
+    <tbody id="dataList"></tbody>
+    <tfoot>
+    </tfoot>
+</table>
+
+<script type="text/x-jsrender" id="courseListTemplate">
+    {{for #data}}
+    <tr>
+        <td>{{:#index+1}}</td>
+        <td>{{:CourseCode}}</td>
+        <td id="courseName" title="{{:CourseName}}">{{>~ShowLimitString(CourseName,10)}}</td>
+        <td>{{:StartTimeStr}}</td>
+        <td>{{:EnterNum}}</td>
+        <td tag='{{:CourseId}}'>0</td>
+        <td>{{:CourseStatusStr}}</td>
+        <td>
+            <a onclick="Detail({{:CourseId}})">详情</a>
+        </td>
+    </tr>
+    {{/for}}
+</script>
+
+<script language="javascript" type="text/javascript">
+    var sortId = 0;
+    $(document).ready(function () {
+        InitDataList();
+    });
+
+    function InitDataList() {
+        var courseCode = encodeURIComponent($("#txtCoursewareCode").val().trim());
+        var courseName = encodeURIComponent($("#txtCoursewareName").val().trim());
+        var sortName = encodeURIComponent($("#txtsortName").val().trim());
+        var joinStartStartTime = ($("#txtStartStartTime").val());
+        var joinStartEndTime = ($("#txtStartEndTime").val());
+        var joinEndStartTime = $("#txtStartTime").val();
+        var joinEndEndTime = $("#txtEndTime").val();
+        var wareStatus = $("#wareStatus").val();
+        var tag = encodeURIComponent($("#txtTag").val());
+
+        var url = '@Url.RetechAction("GetAllChatCourseList", "CourseManage", new { area = "Course" })'
+            + "?courseCode=" + courseCode
+            + "&courseName=" + courseName
+            + "&joinStartStartTime=" + joinStartStartTime
+            + "&joinStartEndTime=" + joinStartEndTime
+            + "&joinEndStartTime=" + joinEndStartTime
+            + "&joinEndEndTime=" + joinEndEndTime
+            + "&wareStatus=" + wareStatus
+            + "&sortName=" + sortName
+            + "&tag=" + tag;
+
+        $("#dataList").JsRenderData({
+            sourceUrl: url,
+            isPage: true,
+            pageSize: 20,
+            pageIndex: 1,
+            jsRenderSortField: "CourseCode",
+            jsRenderASC: 'DESC',
+            templateID: "courseListTemplate",
+            funCallback: function () {
+                loadUserCount();
+            }
+        });
+    }
+
+    /*加载在线人数   ******************start*************************/
+    var ChatUrl = null; //地址
+    var ws = null; //连接对象
+    var tick_heartpac = null;//心跳包
+    function loadUserCount() {
+        if (ws) {
+            sendReq();
+        }
+        else {
+            onLogin();
+        }
+    }
+    function onLogin() {
+        $.ajax({
+            type: "GET",
+            url: "http://zjzx.test.com/zh-CN/Chat/GetUserConfig",
+            dataType: "jsonp",
+            data: { room: 0, time: new Date() },
+            jsonp: "callback",
+            success: function (data) {
+            }
+        });
+    }
+    function callback(json) {
+        if (json.code == 1) {
+            ChatUrl = json.result.websocketurl;
+            OpenWs();
+        }
+    }
+    function OpenWs() {
+        if ("WebSocket" in window) {
+            ws = new WebSocket(ChatUrl);
+        }
+        else if ("MozWebSocket" in window) {
+            ws = new MozWebSocket(ChatUrl);
+        } else {
+            //document.getElementById("message_output").innerHTML = "浏览器不支持WebSocket";
+        }
+        //打开之后
+        ws.onopen = function () {
+            sendReq();
+        }
+        ws.onclose = function () {
+            clearInterval(tick_heartpac);
+        }
+        ws.onerror = function () { }
+        //有消息推送
+        ws.onmessage = function (msg) {
+            var obj = JSON.parse(msg.data);
+            //解析消息
+            if (obj.code == 13)
+                SetOnlineUserCount(obj.data);
+        }
+    }
+    //发送请求
+    function sendReq() {
+        if (ws) {
+            ws.send(JSON.stringify({ act: "GETONLINEUSERCOUNT", "room": "0", "touser": "", "from": "", "content": "" }));
+            clearInterval(tick_heartpac);
+            tick_heartpac = setInterval(function () {
+                ws.send(JSON.stringify({ act: " heart", "room": "001" }));//定时心跳包
+            }, 120000);
+        }
+        else {
+            OpenWs();
+        }
+    }
+    //赋值
+    function SetOnlineUserCount(data) {    
+        if (data != undefined && data.length > 0) {
+        	var obj=JSON.parse(decodeURIComponent(data[0].content));
+            for (var i = 0; i < obj.length; i++) {
+                $("#dataList td[tag='" + obj[i].room + "']").text(obj[i].usercount);
+            }
+        }
+    }
+
+    /*加载在线人数   ******************end*************************/
+
+    //详情
+    function Detail(id) {
+        window.location = '@Url.RetechAction("ChatCourseInfo", "CourseManage", new { area = "Course" })?id=' + id;
+    }
+</script>

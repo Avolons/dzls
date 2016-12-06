@@ -8,23 +8,60 @@
 	</head>
 	<body>-->
 <div id="widget_header">
+	<div class="top">
+		<ul>
+			<li><a href="http://www.chinaaet.com/">AET网站</a></li>
+        <li><a href="http://www.chinaaet.com/lib/">资源下载</a></li>
+        <li><a href="http://www.chinaaet.com/solution/">技术应用</a></li>
+        <li><a href="http://www.chinaaet.com/news/">资&nbsp;讯</a></li>   
+        <li><a href="http://www.chinaaet.com/circuit/">电路图</a></li>                 
+        <li><a href="http://blog.chinaaet.com">博&nbsp;客</a></li>
+        <li><a href="http://group.chinaaet.com">小&nbsp;组</a></li>
+        <li><a href="http://study.chinaaet.com">网络教室</a></li>
+		</ul>
+	</div>
 	<div class="header">
-	<img src="../../widget/header/img/header_logo.png" class="headerLogo" />
-	<h1>在线培训平台</h1>
-	<a href="javascript:void(0);" id="resgit">注册</a>
-	<a href="javascript:void(0);" id="login">登陆</a>
-	<img src="../../widget/header/img/header_phone.png" class="headerPhone" />
+		<img src="../../widget/header/img/logo.png" class="headerLogo" />
+		<div class="noLOgin">
+			<a href="javascript:void(0);" id="resgit">注册</a>
+		    <a href="javascript:void(0);" id="login">登陆</a>
+		</div>
+		<div class="logined">
+			<img src="img/charest.png"/>
+			<a href="javascript:void(0);">电子六所</a>
+			<i class="iconfont">&#xe60f;</i>
+			<ul id="charestList">
+				<li>我的证书</li>
+				<li>我的提问</li>
+				<li>退出</li>
+			</ul>
+		</div>
+		<a class="guidance" href="">新手入门</a>
+	</div>
+	<nav>
+		<ul id="headerNavList">
+			<li><a href="javascript:void(0);">首页</a><i class="line_right"></i></li>
+			<li><i class="line_left"></i><a href="javascript:void(0);">即将培训</a><i class="line_right"></i></li>
+			<li><i class="line_left"></i><a href="javascript:void(0);">课程中心</a><i class="line_right"></i></li>
+			<li><i class="line_left"></i><a href="javascript:void(0);">我的云课堂</a><i class="line_right"></i></li>
+			<li><i class="line_left"></i><a href="javascript:void(0);">证书查询</a></li>
+		</ul>
+	</nav>
 </div>
-<nav>
-	<ul>
-		<li><a href="javascript:void(0);">首页</a></li>
-		<li><a href="javascript:void(0);">即将培训</a></li>
-		<li><a href="javascript:void(0);">课程中心</a></li>
-		<li><a href="javascript:void(0);">我的云课堂</a></li>
-		<li><a href="javascript:void(0);">证书查询</a></li>
-	</ul>
-</nav>
-</div>
-
+<script type="text/javascript">
+	//获取所有的li标签
+	var lis = document.getElementById('headerNavList').getElementsByTagName('li');
+	//把所有对应的url按照顺序写在下面的数组里面；
+	var urls = [];
+	//遍历li标签，并且绑定事件用以打开对应的网址
+	for (var i = 0; i < lis.length; i++) {
+		//自执行函数，封闭作用于
+		(function(i) {
+			lis[i].addEventListener('click', function() {
+                window.location.href=urls[i];
+			})
+		}(i))
+	}
+</script>
 <!--</body>
 </html>-->

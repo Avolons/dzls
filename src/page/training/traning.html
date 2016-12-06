@@ -7,12 +7,15 @@
 		<link rel="stylesheet" type="text/css" href="css/traning.scss" />
 		<link rel="stylesheet" type="text/css" href="../../widget/header/css/header.scss" />
 		<link rel="stylesheet" type="text/css" href="../../widget/footer/css/footer.scss" />
-		<script src="../../static/lib/jquery/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../../static/lib/jsRender/css/jsrender.css"/>
+		<link href="//libs.baidu.com/fontawesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+		<script src="../../static/lib/jquery/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<header id="header"></header>
 		<div class="tranings">
-			<ul class="traningsList">
+			<div id="traningsList">
+					<!--<ul class="traningsList" id="traningsList">
 				<li>
 					<figure>
 						<img src="img/one.png"/>
@@ -58,11 +61,31 @@
 					<button class="signed">已报名</button>
 				</li>
 			</ul>
-		</div>
+	-->
+			</div>
+			</div>
 		<footer id="footer"></footer>
+		<script type="text/x-jsrender" id="courseListTemplate">
+			{{for #data}}
+				<div class="courseInformation" data-others = {CourseId:{{:CourseId}},StartLearning:{{:StartLearning}},EndLearning:{{:EndLearning}},Teacher:{{:Teacher}},DrawInfo:{{:DrawInfo}},CourseEnterId:{{:CourseEnterId}},FrontImageStr:{{:FrontImageStr}}}>
+					<figure>
+						<img src={{:FrontImageStr}}/>
+					</figure>
+					<div class="intrdouce">
+						<h1>{{:CourseName}}</h1>
+						<p><i class="iconfont">&#xe60d;</i>{{:StartTime}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{:EndTime}}</p>
+						<p>{{:Description}}</p>
+					</div>
+					{{if IsEnter}}
+					<button class=''>报名</button>
+					{{else}}
+					<button class='signed'>已报名</button> 
+					{{/if}}
+				</div>
+			{{/for}}
+		</script>
 	</body>
-	<script type="text/javascript">
-		 $('#header').load('../../widget/header/header.html');
-		 $('#footer').load('../../widget/footer/footer.html');
-	</script>
+	<script src="../../static/lib/jsRender/jsrender.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../static/lib/jsRender/extend.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/traning.js" type="text/javascript" charset="utf-8"></script>
 </html>

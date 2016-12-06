@@ -1,0 +1,181 @@
+.chat {
+	#chatWindow {
+		position: absolute;
+		width: 310px;
+		padding: 10px 15px;
+		top: 0;
+		left: 0;
+		background-color: #f1f2f3;
+		display: flex;
+		height: calc(100% - 140px);
+		flex-direction: column;
+		/*时间显示格式*/
+		#messageListOut {
+			flex-grow: 0;
+			overflow-y: auto;
+		}
+		#Notice {
+			flex-grow: 1;
+			max-height: 60px;
+			overflow: hidden;
+			border-bottom: 1px solid #dddddd;
+			background-color: #ffffff;
+			margin: -10px -15px 0;
+			padding: 0 15px;
+			img {
+				display: block;
+				height: 14px;
+				margin-top: 8px;
+				float: left;
+			}
+			>p {
+				line-height: 30px;
+				font-size: 12px;
+				text-indent: 10px;
+				color: #ff4412;
+			}
+		}
+		li {
+			width: 100%;
+			line-height: 25px;
+			span {
+				display: inline-block;
+				color: #848484;
+				font-size: 12px;
+				line-height: 14px;
+				height: 14px;
+			}
+			b {
+				font-size: 12px;
+				color: #ca4dc9;
+				margin-left: 7px;
+				margin-right: 7px;
+				cursor: pointer;
+				font-weight: 400;
+				text-align: center;
+			}
+			a {
+				color: #bdbdbd;
+				font-size: 12px;
+				cursor: default;
+			}
+			img {
+				position: relative;
+				top: 2px;
+			}
+		}
+		/*老师发言的样式*/
+		.tch {
+			a {
+				color: #434343;
+			}
+			b {
+				color: #ca4dc9;
+				margin-left: 0;
+			}
+		}
+		/*学生发言的样式*/
+		.stds {
+			b {
+				color: #3a92e4;
+			}
+			a {
+				color: #434343;
+			}
+		}
+		/*私聊公屏的样式*/
+		.teachTo,
+		.studentTo,
+		.adminTo {
+			em {
+				font-style: normal;
+				margin: 0 2px;
+				color: #ababab;
+				font-size: 12px;
+			}
+			b {
+				margin: 0;
+			}
+		}
+		.teachTo {
+			b {
+				margin-left: 0;
+			}
+			b:nth-of-type(1) {
+				color: #b41ca0;
+			}
+			b:nth-of-type(2) {
+				color: #3a92e4;
+			}
+			a {
+				color: #434343;
+			}
+		}
+		.studentTo {
+			b {
+				color: #3a92e4;
+			}
+			a {
+				color: #434343;
+			}
+			span {
+				margin-right: 7px;
+			}
+		}
+		.adminTo {
+			b {
+				margin-left: 0;
+			}
+			b:nth-of-type(1) {
+				color: #e43a3d;
+			}
+			b:nth-of-type(2) {
+				color: #3a92e4;
+			}
+			a {
+				color: #434343;
+			}
+		}
+		/*管理员发言的样式*/
+		.admin {
+			b {
+				color: #e43a3d;
+				margin-left: 0;
+			}
+			a {
+				color: #434343;
+			}
+		}
+		/*老师回答问题的样式*/
+		.tchAns {
+			p:nth-of-type(1) {
+				line-height: 25px;
+				b {
+					margin-left: 0;
+					color: #b41ca0;
+				}
+				a {
+					color: #434343;
+				}
+			}
+			p:nth-of-type(2) {
+				line-height: 25px;
+				b {
+					color: #3a92e4;
+				}
+				a {
+					color: #434343;
+				}
+			}
+		}
+		.stdsAsk {
+			/*学生提问的样式*/
+			b {
+				color: #3a92e4;
+			}
+			a {
+				color: #434343;
+			}
+		}
+	}
+}

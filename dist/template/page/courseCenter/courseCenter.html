@@ -1,0 +1,555 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <title>中教在线培训平台</title>
+    <meta name="renderer" content="webkit">
+    
+    <link rel="stylesheet" type="text/css" href="/themes/red/css/style.css?v=V0.0.1"/>
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="/themes/default/css/font-awesome-ie7.min.css?v=V0.0.1">
+    <![endif]-->
+    <script>
+        window.currentLang = 'zh-cn';
+        //2分钟在线请求路径,防止长时间不操作session丢失 yxt
+        var aliveurl = 'http://peixun.zjzx.cn/zh-CN/Common/alive';
+    </script>
+
+    <script src="http://peixun.zjzx.cn/static/jq.js?v=43IBXxXAarrPQ3rKfKRIcDq3XycqyZTeUSUqhwrTffQ1"></script>
+<script src="http://peixun.zjzx.cn/static/plug.js?v=wr7vWC64yB2uxVe0RCNeGo4jSw_yWydrm-iDKUyzzCk1"></script>
+
+    <script type="text/javascript" src="http://peixun.zjzx.cn/Scripts/objectExtend.js?v=V0.0.1"></script>
+    <script type="text/javascript" src="http://peixun.zjzx.cn/Scripts/lhgdialog.js?skin=discuz"> </script>
+    <script type="text/javascript" src="http://peixun.zjzx.cn/Scripts/jquery-scrolltofixed-min.js"> </script>
+    <script src="http://peixun.zjzx.cn/Scripts/jquery.tableCheck.js" type="text/javascript"></script>
+    <script src="http://peixun.zjzx.cn/Scripts/artDialog4.1.6/jquery.artDialog.js?skin=twitter" type="text/javascript"></script>
+    <script src="http://peixun.zjzx.cn/Scripts/artDialog4.1.6/plugins/iframeTools.source.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://peixun.zjzx.cn/Scripts/common.js"></script>
+    <style>
+        .wrapper {
+            width: 990px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 26px;
+        }
+
+        .ui-grid-row {
+            margin-bottom: 15px;
+        }
+        /*以下是自定义的样子*/
+         /*直接更改样式*/
+        .course-page .side_by_sec .tit {
+		    background: #e43a3d;
+		}
+        .course-page .menus-item{
+        	background-color: #f85558;
+        }
+        .menus-item {
+		    border-bottom: 1px solid #e43a3d;
+		}
+        .menus-subs{
+        	border-left: 1px solid #e43a3d;
+        	width: 234px;
+        }
+        .menus-subs ul {
+		    display: none;
+		    width: 360px;
+		    background: #fff;
+		    border: 1px solid #e43a3d;
+		    border-left-color: #FFFFFF;
+		 }
+		 .menus-subs ul:after{
+		 	display: block;
+		 	content: '';
+		 	clear: both;
+		 }
+		 .menus-subs ul>li{
+		 	position: relative;
+		 	width: 120px;
+		 	text-align:center;
+		 	float: left;
+		 }
+		 .menus-subs ul>li:before{
+		 	position: absolute;
+		 	content: '';
+		 	display: block;
+		 	height: 15px;
+		 	background-color: #f0f0f0;
+		 	top: 7.5px;
+		 	left:-1px;
+		 	width: 1px;
+		 }
+		 .menus-subs .menus-item ul>li a{
+		 	font-size: 14px;
+		 	color: #3e3e3e;
+		 	width: 120px;
+		 	margin: 0;
+		 	height: 30px;
+		 	line-height: 30px;
+		 	display: block;
+		 	padding: 0;
+		 	overflow: hidden;
+		 	white-space: pre;
+		 	text-overflow: ellipsis;
+		 }
+		 .menus-subs .menus-item ul>li a:hover{
+		 	color:#f85558 ;
+		 }
+		 .menus-item:hover ul{
+		 	left: 234px;
+		 	padding: 15px 0;
+		 }
+		.menus-item:hover{
+			background-color: #FFFFFF;
+		}
+		.menus-item:hover p>a{
+			color:#f85558 ;
+		}
+		.menus-item:hover .menus-tit>b{
+			color:#f85558 ;
+		}
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            initUserMessageCount();
+            //if ($(".icon-cog").length > 0) {
+            //    initUserMessageCount();
+            //}
+            //$("#first_menu").css("background", "#b51315");
+        });
+
+        //注册
+        function regisertUser() {
+            window.location.href = "http://peixun.zjzx.cn/zh-CN/UserRegister/Register?backurl=" + window.location.href;
+        }
+
+        //登录
+        function atrLogin(type) {
+            type = type == undefined ? 0 : type;
+            art.artDialog.load("http://peixun.zjzx.cn/Admin/StudentIndex?from=" + type, { id: "login", title: "登录", width: 480, height: 350 });
+        }
+
+        //第三方登录
+        function atrSinaLogin() {
+            art.artDialog.load(
+                "http://peixun.zjzx.cn/Admin/SinaLogin",
+                {
+                    id: "sinaLogin",
+                    title: "",
+                    width: 480,
+                    height: 250
+                    
+                });
+        }
+
+        //关闭
+        function closeDialog(id) {
+            art.dialog.list[id].close();
+        }
+
+        function third_Login(type) {
+            closeDialog("sinaLogin");
+            atrLogin(type);
+        }
+
+
+        function self_login() {
+            closeDialog("login");
+            atrSinaLogin();
+        }
+
+        function Studentlogin(from) {
+            //if (!checkinput() || !checkCode(2)) return;
+            if (!checkinput()) return false;
+            var code = Replace($("#tCode").val());
+            if (code == "") {
+                $("#spanError").html("验证码不能为空");
+                return false;
+            }
+            $.getJSON("http://peixun.zjzx.cn/Common/CheckVCode?type=2&code=" + $("#tCode").val(), function (data) {
+                if (data == 0) {
+                    $("#spanError").html("验证码不正确");
+                    return false;
+                } else {
+                    $("#spanError").html("");
+                    $.post('http://peixun.zjzx.cn/Admin/StudentIndex', {
+                        username: escape(document.getElementById("txtUserName").value),
+                        password: escape(document.getElementById("txtPwd").value),
+                        rememberPwd: $("#cbRememberPwd:checked").length,
+                        from: from
+                    }, function (datas) {
+                        if (datas.result == 0) {
+                            window.location.href = 'http://peixun.zjzx.cn/';
+                        } else {
+                            if (datas.result == 99) {
+                                
+                                if (from != 1) {
+                                    window.location.href = "http://peixun.zjzx.cn/zh-CN/UserRegister/MobileVerification?userId=" + datas.userId;
+                                } else {
+                                    $("#spanError").html("");
+                                    window.location.href = 'http://peixun.zjzx.cn/';
+                                }
+                            }
+                            $("#spanError").html(datas.message);
+                        }
+                    });
+                }
+            });
+        }
+
+        var sureLan = "确定";
+        var cancelLan = "取消";
+        var exitTitle = "退出";
+        var sureExit = "确认退出吗？";
+        var msgCountUrl = 'http://peixun.zjzx.cn/zh-CN/Student/UserInfo/GetUserMessageCount';
+    </script>
+    <script type="text/javascript" src="http://peixun.zjzx.cn/Scripts/jquery.slide.js"></script>
+    
+    
+    <script src="http://peixun.zjzx.cn/Scripts/My97DatePicker/WdatePicker.js" type="text/javascript"> </script>
+    <script type="text/javascript">
+
+        var sortId = 0;
+        var courseStatus = -1;
+        $(document).ready(function() {
+            InitDataList();
+            InitTree();
+            BindMenu();
+        });
+        ///绑定事件
+        function BindMenu() {
+            $("#sortmenu .seq-item").click(function() {
+                var index =parseInt($(this).index());
+                $("#sortmenu .seq-item").removeClass("active");
+                $(this).addClass("active");
+                switch(index)
+                {
+                    case 0://全部课程
+                        courseStatus = -1;
+                        break;
+                    case 1://即将开始
+                        courseStatus = 1;
+                        break;
+                    case 2://正在进行
+                        courseStatus = 2;
+                        break;
+                    case 3://已结束
+                        courseStatus =4;
+                        break;
+                }
+                InitDataList();
+            });
+        }
+
+        //分类树
+        function InitTree() {
+            var url = 'http://peixun.zjzx.cn/zh-CN/Student/Learn/GetSortList';
+            $.post(url, function(data) {
+                $("#sortList").html($("#sortListTemplate").render(data.dataList));
+            });
+        }
+
+        //课程
+        function InitDataList() {
+            var name = encodeURIComponent($("#txtCoursename").val());
+            var url = 'http://peixun.zjzx.cn/zh-CN/Student/Learn/GetAllCourseList?sortId=' + sortId
+                    +"&courseStatus="+courseStatus+"&sort="+$("#selSort").val()+"&name="+name;
+
+            $("#dataList").JsRenderData({
+                sourceUrl: url,
+                isPage: true,
+                pageSize: 18,
+                pageIndex: 1,
+                templateID: "courseListTemplate",
+                funCallback: function(data) {
+                    $("#sort_menu").html(data.sortLength);
+                }
+            });
+        }
+
+        function SelectSort(id) {
+            //$("#sortList li").removeClass("arrive");
+            //$("#sort_" + id).addClass("arrive");
+            sortId = id;
+            //InitDataList();
+            window.location.href = 'http://peixun.zjzx.cn/zh-CN/Student/Learn/Course?sortId=' + id;
+        }
+
+        function ArriveSort(id) {
+            $("#sortList li").removeClass("arrive");
+            $("#sort_" + id).addClass("arrive");
+        }
+
+        function GoToCourse(id) {
+            if (0 == 1) {
+                GotoNoEnter(id);
+            } else {
+                $.post('http://peixun.zjzx.cn/zh-CN/Student/Learn/JudgeCanEnter?courseId=' + id, function(data) {
+                    if (data.result == 1) {
+                        GotoNoEnter(id);
+                    } else {
+                        window.location.href = 'http://peixun.zjzx.cn/zh-CN/Student/Learn/MyCourseLearn?courseId=' + id + '&recordId=' + data.recordId + "&comfrom=2";
+                    }
+                });
+            }
+        }
+
+        function GotoNoEnter(id) {
+            window.location.href = 'http://peixun.zjzx.cn/zh-CN/Student/Learn/CourseDetail?courseId=' + id + "&comfrom=2";
+        }
+    </script>
+    <style>
+        .menus-subs{
+            width:240px;
+        }
+        .side_by_sec{
+            width:240px;
+        }
+        #list-page{
+            margin: 0 0 0 15px;
+        }
+        .menus-item:hover ul{
+            left:240px;
+        }
+        .menus-item p a{
+            font-size:12px;
+        }
+        #menu.student_menu .menus-item ul li a{
+            font-size:12px;
+        }
+        .course-page-right{
+            width:740px;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div id="head" class="fn-clear">
+        <div class="welcome"><div class="span25">欢迎访问中教在线施教机构管理中心！</div></div>
+        <div class="head-con fn-clear  top-con clb">
+            <div class="wrapper clb">
+                <h1 class="logo">
+                    <a href="http://peixun.zjzx.cn/" style="background:url(/UploadFiles/TenantPic/cfe1f696-9b0b-403b-886d-478e90d89630.png) no-repeat center center">
+                
+                    </a>
+                </h1>
+                        <div class="head-per">
+                            <div class="per-cen fn-clear">
+                                <a href="http://peixun.zjzx.cn/zh-CN/Student/UserInfo/Profile" class="per-head">
+                                    <div class="img-header">
+                                        <img id="imgUserPhotoLayout" src="/UploadFiles/UserPhoto/man.png" alt="">
+                                    </div>
+                                    <span title="培训" style="padding-left: 0">培训</span>
+                                </a>
+                                <a href="http://peixun.zjzx.cn/zh-CN/Student/UserInfo/SystemInboxMessage" title="系统信息">
+                                    <i class="icon-envelope"></i><strong id="spanSystemInboxCount">1</strong>
+                                </a>
+                                <hr>
+                                <a href="http://peixun.zjzx.cn/Admin/StudentLoginOut" title="注销">
+                                    <i class="icon-off"></i>
+                                </a>
+                            </div>
+
+
+                        </div>
+                <div id="menu" class="student_menu">
+                    <ul>
+                        
+                        
+    <!--游客-->
+        <li >
+            <a id="first_menu"  href="http://peixun.zjzx.cn/zh-CN/Student/Learn/Course">
+                课程中心
+            </a>
+        </li>
+        <li>
+            <a class="" href="http://peixun.zjzx.cn/zh-CN/Student/User/Card">
+                激活学习卡
+            </a>
+        </li>
+        <li>
+            <a class="" href="http://peixun.zjzx.cn/zh-CN/Student/Task/MyTask">
+                我的任务
+            </a>
+        </li>
+        <li>
+            <a class="" href="http://peixun.zjzx.cn/zh-CN/Student/ExamTest/MyExaminationList">
+                我的考试
+            </a>
+        </li>
+        <li>
+            <a class="" href="http://peixun.zjzx.cn/zh-CN/Student/Learn/MyCourse">
+                我的云课堂
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                我的交易<i></i>
+            </a>
+            <ul style="z-index: 900; visibility: hidden;" class="sub-menu">
+                <li><a class="" href="http://peixun.zjzx.cn/zh-CN/Student/User/MyBook">我订购的教材</a></li>
+                <li><a class="" href="http://peixun.zjzx.cn/zh-CN/Student/User/MyCard">我激活的学习卡</a></li>
+                <li><a class="" href="http://peixun.zjzx.cn/zh-CN/Student/User/MyBuyCourse">我购买的课程</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="" href="http://peixun.zjzx.cn/zh-CN/Student/User/CertificateList">
+                证书查询
+            </a>
+        </li>
+
+<script>
+    function Youke_login(obj) {
+        var url = $(obj).attr("url");
+        atrLogin(2, url);
+    }
+</script>
+
+                    </ul>
+                </div>
+                
+            </div>
+          </div>
+    </div>
+
+    <div class="main-box span25">
+        <div id="main">
+            
+
+<div class="crumbs">
+    <span>
+        <a class="crumbs_a" href="http://peixun.zjzx.cn/"><i class="home"></i>首页</a> > 
+        
+课程中心    </span>
+</div>
+
+
+    <div class="fn-clear course-page" style="min-height:800px;">
+        <div class="side_by_sec">
+            <div class="tit" onclick="SelectSort(0)">全部课程</div>
+            <div class="menus-subs" id="sortList" >
+            </div>
+            <div id="sortList1" style="display: none"></div>
+            <div id="sortList2" style="display: none"></div>
+        </div>
+        <div class="course-page-right fn-left">
+            <div class="row fn-clear">
+                <div class="box-search fn-left fn-ml10">
+                    <div class="input_txt">
+                        <input type="text" id="txtCoursename" class="span6">
+                        <button onclick="InitDataList();" id="btnSearch"><i class="icon-search"></i></button>
+                    </div>
+                </div>
+                <div class="ui-seq fn-right" id="sortmenu">
+                    <span class="seq-item active">全部课程</span>
+                    <span class="seq-item">即将开始</span>
+                    <span class="seq-item">正在进行</span>
+                    <span class="seq-item">已结束</span>
+                    <label style="margin-left: 10px;">排序：</label>
+                    <select id="selSort" onchange="InitDataList()">
+                        <option value="CreateTime desc">默认</option>
+                        <option value="EnterNum desc">按热门</option>
+                        <option value="CreateTime desc">按最新</option>
+                    </select>
+                </div>
+            </div>
+            <div class="list-box fn-mt20 fn-ml10">
+                <div id="dataList" class="hot-course-list fn-clear">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/x-jsrender" id="courseListTemplate">
+    {{for #data}}
+    <a class="hot-course-item" onclick="GoToCourse({{:CourseId}})">
+        {{if FrontImageStr==""}}
+        <span>暂无图片</span>
+        {{else}}
+        <img alt="" src="{{:FrontImageStr}}" width="240" height="145" />
+        {{/if}}
+        <span class="hot-course-tit" title="{{:CourseName}}">{{>~ShowLimitString(CourseName,5)}}</span>
+        {{if PriceStr == "0.00"}}
+        <span class="free">免费</span>
+        {{else}}
+        <span class="money">¥{{:PriceStr}}</span>
+        {{/if}}
+    </a>
+    {{/for}}
+</script>
+<script type="text/x-jsrender" id="sortListTemplate">
+    {{for #data}}
+    <div class="menus-item" id="sort_{{:#index}}">
+        <div class="menus-tit"><b onclick="SelectSort({{:CategoryId}})" style="cursor:pointer">{{>CategoryName}}</b> <i class="icon-caret-right"></i></div>
+        <p>
+            {{for FirstList}}
+            <a onclick="SelectSort({{:CategoryId}})">{{>CategoryName}}</a>
+            {{/for}}
+        </p>
+        <ul>
+            {{for MoreList}}
+            <li>
+                <a onclick="SelectSort({{:CategoryId}})">{{>CategoryName}}</a>
+            </li>
+            {{/for}}
+
+        </ul>
+    </div>
+    {{/for}}
+</script>
+
+        </div>
+    </div>
+    <div id="foot">
+        <ul class="span25">
+                   <li>
+                       <p style="white-space: normal; text-align: center;">Copyright 2016. All right reserved www.zjzx.cn&nbsp;<br/></p><p style="white-space: normal; text-align: center;">版权所有：北京中教在线科技有限公司</p><p><br/></p>
+                   </li>
+            
+        </ul>
+    </div>
+    
+
+    <script id="imageListTemplate" type="text/x-jsrender">
+        {{for #data}}
+        <li>
+            <a onclick="GoToDetails({{:CourseId}})">
+                <img src="{{:PicUrl}}" width="100%" height="300" alt="" />
+            </a>
+        </li>
+        {{/for}}
+    </script>
+
+<script type="text/x-jsrender" id="sortListTemplate">
+        {{for #data}}
+        <div class="menus-item">
+            <div class="menus-tit"><b>{{>CategoryName}}</b> <i class="icon-caret-right"></i></div>
+            <p>
+                {{for FirstList}}
+                   <a>{{>CategoryName}}</a>
+                {{/for}}
+            </p>
+            <ul>
+                {{for MoreList}}
+                    <li onclick="SelectSort({{:CategoryId}})">
+                        <a>{{>CategoryName}}</a>
+                    </li>
+                {{/for}}
+
+            </ul>
+        </div>
+        {{/for}}
+    </script>
+</body>
+
+</html>

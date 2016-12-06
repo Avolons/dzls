@@ -1,0 +1,37 @@
+{
+    "result": 1,
+    "dataList": [
+    {
+        "CourseId": 470,
+        "CourseName": "璇剧▼鍚嶅瓧",
+        "FrontImage": "~/UploadFiles/CoursePic/701f791b-3ffc-4f17-a0a8-b5a97e21e7cb.jpg",
+        "Description": "鍟﹀暒鍟   绉嶅お闃筹紝鍟﹀暒鍟  绉嶅お闃  鍟﹀暒鍟﹀暒鍟﹀暒鍟﹀暒鍟﹀暒鍟﹀暒",
+        "StartLearning": "/Date(1464935793000)/",
+        "EndLearning": "/Date(1465886210000)/",
+        "Teacher": "asdf",
+        "StartTime": "2016/6/2 15:19:24",
+        "EndTime": "2016/6/13 15:19:47",
+        "DrawInfo": "鎴戞槸鑾淇℃伅",
+        "CourseEnterId": 302,
+        "IsEnter": true,
+        "FrontImageStr": "/UploadFiles/CoursePic/701f791b-3ffc-4f17-a0a8-b5a97e21e7cb.jpg"
+    },
+    {
+        "CourseId": 471,
+        "CourseName": "鎴戞槸鏂板鐨绋",
+        "FrontImage": "~/UploadFiles/CoursePic/701f791b-3ffc-4f17-a0a8-b5a97e21e7cb.jpg",
+        "Description": "鍟﹀暒鍟   绉嶅お闃筹紝鍟﹀暒鍟  绉嶅お闃  鍟﹀暒鍟﹀暒鍟﹀暒鍟﹀暒鍟﹀暒鍟﹀暒",
+        "StartLearning": "/Date(1464935793000)/",
+        "EndLearning": "/Date(1465886210000)/",
+        "Teacher": "鏉庡ぉ璧",
+        "StartTime": "2016/6/2 15:19:24",
+        "EndTime": "2016/6/13 15:19:47",
+        "DrawInfo": " 111",
+        "CourseEnterId": 301,
+        "IsEnter": false,
+        "FrontImageStr": "/UploadFiles/CoursePic/701f791b-3ffc-4f17-a0a8-b5a97e21e7cb.jpg"
+    }
+]
+,
+    "recordCount": 135
+}

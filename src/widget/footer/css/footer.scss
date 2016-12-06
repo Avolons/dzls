@@ -1,92 +1,103 @@
-#widget_footer{
-    .footer-nav{
-    height: 225px;
-    background-color: #323232
-}
-.container{
-    height: 200px;
-    margin: 0 auto;
-    width: 1000px;
-}
-.footer{
-    position: relative;
-    height: 170px;
-    padding-top: 20px;
-    width: 1000px;
-    display: -webkit-box;
-    display: -moz-box;
-    -moz-box-pack: justify;
-    -webkit-box-pack: justify;
-    border-bottom: 1px solid #474747;
-}
-.footer:after{
-    content: "";
-    display: block;
-    height: 1px;
-    width: 1000px;
-    background-color: #212121;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-.footer>li{
-    display: block;
-    width: 250px;
-    text-align: center;
-    margin-top: 5px;
-}
-.footer .last{
-    margin-top: 0;
-}
-.footer .wechat{
- margin-left: 10px;
-    margin-bottom: -4px;
-    display: inline-block;
-    width: 24px;
-    height: 19px;
-    background-image: url(../../img/footer/ico_weixin_weibo.png);
-}
-.footer .weibo{
- margin-left: 10px;
-    margin-bottom: -4px;
-    display: inline-block;
-    width: 24px;
-    height: 19px;
-    background-image: url(../../img/footer/ico_weixin_weibo.png);
-    background-position-x: -32px;
-}
-.footer .last strong{
-    font-size: 14px;
-    color: #FFFFFF;
-}
-
-.footer .last .qrcode{
-    margin-top: 10px;
-}
-.footer>li ul>li{
-    display: block;
-    font-size: 14px;
-    color: #FFFFFF;
-    height: 37px;
-    line-height: 37px;
-}
-.footer>li ul>li a{
-    font-size: 14px;
-    color: #999999;
-}
-.footer>li strong{
-    font-size: 16px;
-    color: #FFFFFF;
-}
-.footer>li ul{
-    margin-top: 15px;
-}
-.footer-nav p{
-    text-align: center;
-    height: 25px;
-    line-height: 25px;
-    background-color: #000000;
-    color: #999999;
-    font-size: 14px;
-}
+#widget_footer {
+    .footer-nav {
+        height: 225px;
+        background-color: #323232;
+    }
+    .container {
+        height: 190px;
+        margin: 0 auto;
+        width: 1000px;
+    }
+    .footer {
+        box-sizing: border-box;
+        position: relative;
+        height: 190px;
+        padding: 20px 0;
+        width: 1000px;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        -webkit-flex-direction: row;
+        border-bottom: 1px solid #474747;
+    }
+    .footer:after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 1000px;
+        background-color: #212121;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .footer>li {
+        display: block;
+        width: 250px;
+        text-align: center;
+        margin-top: 5px;
+        border-right: 1px dashed #4d4d4d;
+    }
+    .footer .last {
+        margin-top: 0;
+        border: none;
+    }
+    .footer .wechat {
+        margin-left: 10px;
+        margin-bottom: -4px;
+        display: inline-block;
+        width: 24px;
+        height: 19px;
+        background-image: url("../../img/footer/ico_weixin_weibo.png");
+    }
+    .footer .weibo {
+        margin-left: 10px;
+        margin-bottom: -4px;
+        display: inline-block;
+        width: 24px;
+        height: 19px;
+        background-image: url("../../img/footer/ico_weixin_weibo.png");
+        background-position-x: -32px;
+    }
+    .footer .last strong {
+        font-size: 14px;
+        color: #FFFFFF;
+    }
+    .footer .last .qrcode {
+        margin-top: 10px;
+    }
+    .footer>li ul>li {
+        display: block;
+        font-size: 14px;
+        color: #FFFFFF;
+        height: 37px;
+        line-height: 37px;
+    }
+    .footer>li ul>li a {
+        font-size: 14px;
+        color: #999999;
+    }
+    .footer>li strong {
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+    .footer>li ul {
+        margin-top: 15px;
+    }
+    .footer-nav p {
+        text-align: center;
+        height: 25px;
+        line-height: 25px;
+        background-color: #000000;
+        color: #999999;
+        font-size: 12px;
+    }
+    .footer-nav .telphone {
+        text-align: center;
+        height: 25px;
+        line-height: 25px;
+        background-color: #323232;
+        color: #999999;
+        font-size: 12px;
+        margin: 5px 0;
+    }
 }

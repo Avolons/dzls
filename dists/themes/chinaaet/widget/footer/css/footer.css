@@ -4,15 +4,16 @@
 }
 
 #widget_footer .container {
-  height: 200px;
+  height: 190px;
   margin: 0 auto;
   width: 1000px;
 }
 
 #widget_footer .footer {
+  box-sizing: border-box;
   position: relative;
-  height: 170px;
-  padding-top: 20px;
+  height: 190px;
+  padding: 20px 0;
   width: 1000px;
   display: -webkit-box;
   display: -moz-box;
@@ -37,10 +38,12 @@
   width: 250px;
   text-align: center;
   margin-top: 5px;
+  border-right: 1px dashed #4d4d4d;
 }
 
 #widget_footer .footer .last {
   margin-top: 0;
+  border: none;
 }
 
 #widget_footer .footer .wechat {
@@ -49,7 +52,7 @@
   display: inline-block;
   width: 24px;
   height: 19px;
-  background-image: url(../../img/footer/ico_weixin_weibo.png);
+  background-image: url("../../img/footer/ico_weixin_weibo.png");
 }
 
 #widget_footer .footer .weibo {
@@ -58,7 +61,7 @@
   display: inline-block;
   width: 24px;
   height: 19px;
-  background-image: url(../../img/footer/ico_weixin_weibo.png);
+  background-image: url("../../img/footer/ico_weixin_weibo.png");
   background-position-x: -32px;
 }
 
@@ -99,5 +102,15 @@
   line-height: 25px;
   background-color: #000000;
   color: #999999;
-  font-size: 14px;
+  font-size: 12px;
+}
+
+#widget_footer .footer-nav .telphone {
+  text-align: center;
+  height: 25px;
+  line-height: 25px;
+  background-color: #323232;
+  color: #999999;
+  font-size: 12px;
+  margin: 5px 0;
 }

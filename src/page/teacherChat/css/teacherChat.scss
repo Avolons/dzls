@@ -1,0 +1,177 @@
+.chat {
+    padding: 20px 0;
+    width: 1000px;
+    margin: 0 auto;
+    #chatWindow {
+        box-sizing: border-box;
+        height: 650px;
+        width: 1000px;
+        padding: 10px 15px;
+        background-color: #ebebeb;
+        overflow-y: auto;
+        li {
+            padding: 2px 0;
+            width: 100%;
+            line-height: 30px;
+            span {
+                display: inline-block;
+                color: #848484;
+                font-size: 12px;
+                line-height: 14px;
+                height: 14px;
+            }
+            b {
+                font-size: 14px;
+                color: #6d6d6d;
+                margin-left: 4px;
+                cursor: pointer;
+            }
+            a {
+                color: #bdbdbd;
+                font-size: 14px;
+            }
+        }
+        .tch {
+            b {
+                color: #ca4dc9;
+            }
+            a {
+                color: #ca4dc9;
+            }
+        }
+        .stds {
+            b {
+                color: #54a7fb;
+            }
+            a {
+                color: #434343;
+            }
+        }
+        .admin {
+            b {
+                color: #cd955e;
+            }
+            a {
+                color: #cd955e;
+            }
+        }
+        .tchAns {
+            i {
+                height: 20px;
+                width: 30px;
+                font-style: normal;
+                font-size: 12px;
+                display: inline-block;
+                background-color: #ca4dc9;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 20px;
+            }
+            b {
+                color: #ca4dc9;
+            }
+            a {
+                color: #ca4dc9;
+            }
+            p {
+                span {
+                    margin-left: 30px;
+                    color: #ca4dc9;
+                    font-size: 11px;
+                }
+                b {
+                    font-size: 11px;
+                }
+                a {
+                    font-size: 11px;
+                }
+            }
+        }
+        .stdsAsk {
+            i {
+                height: 20px;
+                width: 30px;
+                font-style: normal;
+                font-size: 12px;
+                display: inline-block;
+                background-color: #54a7fb;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 20px;
+            }
+            b {
+                color: #54a7fb;
+            }
+            a {
+                color: #54a7fb;
+            }
+        }
+    }
+    #submitWindow {
+        height: 100px;
+        width: 1000px;
+        position: relative;
+        #yourMessage {
+            box-sizing: border-box;
+            resize: none;
+            display: block;
+            height:80px;
+            margin-bottom: 10px;
+            width: 100%;
+            font-size: 14px;
+            font-family: "微软雅黑";
+            background-color: #FFFFFF;
+            color: #606060;
+            padding-left: 10px;
+        }
+        #callObjectOut {
+            height: 20px;
+            width: 147px;
+            position: relative;
+            &:after {
+                content: "×";
+                display: block;
+                font-size: 16px;
+                line-height: 20px;
+                cursor: pointer;
+                text-align: center;
+                height: 20px;
+                width: 20px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                color: #606060;
+            }
+            #callObject {
+                display: block;
+                height: 20px;
+                width: 137px;
+                padding-left: 10px;
+                font-size: 12px;
+                font-family: "微软雅黑";
+                background-color: #d0d0d0;
+                border: none;
+                overflow: hidden;
+                white-space: pre;
+                text-overflow: ellipsis;
+                color: #606060;
+            }
+        }
+        #submitChat {
+            font-family: "微软雅黑";
+            position: absolute;
+            left: 180px;
+            top: 90px;
+            z-index: 2;
+            height: 20px;
+            border: none;
+            border-radius: 9px;
+            background-color: #e43a3d;
+            width: 59px;
+            height: 21px;
+            color: #FFFFFF;
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+}

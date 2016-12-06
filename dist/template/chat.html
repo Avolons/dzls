@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Chat</title>
+    <script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            onLogin();
+        });
+        var url;
+        var ws = null;
+        var tick_heartpac = null;//心跳包
+        function onLogin() {
+            $.ajax({
+                type: "GET",
+                url: "http://zjzx.test.com/zh-CN/Chat/GetUserConfig",
+                dataType: "jsonp",
+                data: { room: $("#room").val(), time: new Date() },
+                jsonp: "callback",
+                success: function (data) {
+                    alert(1);
+                }
+            });
+        }
+
+        function callback(json) {
+            if (json.code == 0) {
+                document.getElementById("message_output").innerHTML += json.msg + "<br/>";
+            }
+            else {
+                $("#username").text(json.result.name);
+				$("#UserID").text(json.result.userid);
+                url = json.result.websocketurl;
+                OpenWs();
+            }
+        }
+
+        function OpenWs() {
+            var fullUrl = url;
+            if ("WebSocket" in window) {
+                ws = new WebSocket(fullUrl);
+            }
+            else if ("MozWebSocket" in window) {
+                ws = new MozWebSocket(fullUrl);
+            } else {
+                document.getElementById("message_output").innerHTML = "浏览器不支持WebSocket";
+            }
+
+            ws.onopen = function () {
+                changeElementEnabled(true);
+            }
+            ws.onclose = function () {
+                document.getElementById("message_output").innerHTML += "与服务器断开连接" + "<br/>";
+                changeElementEnabled(false);
+                clearInterval(tick_heartpac);
+            }
+
+            ws.onerror = function () {
+                document.getElementById("message_output").innerHTML += "通信发生错误" + "<br/>";
+            }
+            ws.onmessage = function (msg) {
+                document.getElementById("message_output").innerHTML += msg.data + "<br/>";
+            }
+        }
+
+        function sendMessage(val) {
+            var msg = document.getElementById("txt_message").value;
+            if (ws) {
+                ws.send(JSON.stringify({ act: "TOAll", "room": "001", "touser": "王五", "from": "me", "content": msg }));
+                clearInterval(tick_heartpac);
+                tick_heartpac = setInterval(function () {
+                    ws.send(JSON.stringify({ act: "heart", "room": "001" }));//定时心跳包
+                }, 120000);
+            }
+            else {
+                OpenWs();
+            }
+        }//发送消息
+
+
+
+        function changeElementEnabled(state) {
+            if (state) {
+                document.getElementById("txt_message").removeAttribute("disabled");
+                document.getElementById("btn_send").removeAttribute("disabled");
+            } else {
+                document.getElementById("txt_message").setAttribute("disabled", "disabled");
+                document.getElementById("btn_send").setAttribute("disabled", "disabled");
+            }
+        }//不解释
+
+
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <span id="roomname">A</span>聊天室
+        <input type="hidden" value="0001" id="room" />
+    </div>
+    <p>
+        姓名:<span id="username"></span>
+    </p>
+    <p>
+        ID:<span id="UserID"></span>
+    </p>
+    <div>
+        内容:<input type="text" value="" id="txt_message" disabled="disabled" />
+        <input type="button" value="Send" id="btn_send" disabled="disabled" onclick="sendMessage(0)" />
+    </div>
+    <div id="message_output"></div>
+</body>
+</html>

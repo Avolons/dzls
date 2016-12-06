@@ -1,0 +1,171 @@
+.content {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.content:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.content .leftList {
+  width: 660px;
+  float: left;
+}
+
+.content .leftList .myAskListTitle {
+  padding-bottom: 40px;
+}
+
+.content .leftList .myAskListTitle > h1 {
+  color: #000000;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.content .leftList .myAskListTitle > p {
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 10px;
+}
+
+.content .leftList .myAskListTitle > p:after {
+  clear: both;
+  display: block;
+  content: '';
+}
+
+.content .leftList .myAskListTitle > p img {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: block;
+  float: left;
+  margin-right: 4px;
+}
+
+.content .leftList .myAskListTitle > p span {
+  float: left;
+  display: block;
+  font-size: 12px;
+  color: #a9a9a9;
+  height: 25px;
+  line-height: 25px;
+}
+
+.content .leftList .myAskListTitle > p .charseter_name {
+  margin-right: 30px;
+}
+
+.content .leftList .myAskListTitle > p .answer_number {
+  float: right;
+}
+
+.content .leftList #myAskList > li {
+  border-bottom: 1px solid #DDDDDD;
+  padding: 0 0 20px;
+  margin-bottom: 15px;
+}
+
+.content .leftList #myAskList > li > div:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.content .leftList #myAskList > li > div > figure {
+  width: 45px;
+  float: left;
+  margin-right: 10px;
+}
+
+.content .leftList #myAskList > li > div > figure img {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  display: block;
+  margin: 0 auto;
+}
+
+.content .leftList #myAskList > li > div > figure a {
+  width: 45px;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+  margin-top: 10px;
+  display: block;
+  color: #92a6a9;
+  font-size: 12px;
+}
+
+.content .leftList #myAskList > li > div > div {
+  float: left;
+  width: 565px;
+}
+
+.content .leftList #myAskList > li > div > div > p {
+  line-height: 25px;
+  color: #504f4f;
+  font-size: 14px;
+}
+
+.content .leftList #myAskList > li > div > div > span {
+  color: #CCCCCC;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.content .leftList #myAskList > li > .question > div {
+  width: 605px;
+}
+
+.content .leftList #myAskList > li .answer {
+  box-sizing: border-box;
+  padding-left: 40px;
+  padding-top: 15px;
+}
+
+.content .leftList .uritor {
+  height: 250px;
+}
+
+.content .leftList .uritor #askAgain {
+  height: 35px;
+  padding: 0 15px;
+  color: #FFFFFF;
+  background-color: #E43A3D;
+  line-height: 35px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.content .rightList {
+  width: 270px;
+  float: right;
+}
+
+.content .rightList > h1 {
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+  color: #FFFFFF;
+  background-color: #f85558;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.content .rightList ul li {
+  width: 100%;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+  height: 45px;
+  line-height: 45px;
+  color: #494949;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 1px solid #ededed;
+}

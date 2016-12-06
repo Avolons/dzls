@@ -1,0 +1,344 @@
+@using System.Configuration
+@using RetechWing.Extensions
+@model RetechWing.Models.Resource.ResResource
+@{
+    ViewBag.Title = "课件学习";
+    Layout = null;
+    var ProgressPercent = Convert.ToInt32(ViewBag.ProgressPercent);
+    var playSrc = "";
+    var playswf = "";
+    if (Model.ResourceType == 2)
+    {
+        playSrc = ConfigurationManager.AppSettings["VedioPlay"] + Model.ResourceName + "/out.m3u8";
+        playswf = Url.Addr("~/Scripts/MediaPlay/flashosmf.swf");
+    }
+    else
+    {
+        playSrc = "http://" + ConfigurationManager.AppSettings["PlayDomain"] + Model.ResourceName;
+        playswf = Url.Addr("~/Scripts/MediaPlay/HLSProviderOSMF.swf");
+    }
+}
+<script type="text/javascript" src="@Url.Addr("~/Scripts/MediaPlay/swfobject.js")" > </script>
+<script type="text/javascript" src="@Url.Addr("~/Scripts/MediaPlay/ParsedQueryString.js")"> </script>
+
+<div class="main-con fn-clear">
+    <div>
+        <span></span>
+    </div>
+    <div class="ln-course-right">
+       
+        <div class="ln-floatdiv" id="StrobeMediaPlayback">
+        </div>
+    </div>
+
+</div>
+<div "margin-left: 20px;">
+    <input id="hidstatus" type="hidden" value="@ViewBag.Status" />
+    @if (ViewBag.PassType == 1 || ViewBag.PassType == 4)
+    {
+        <div class="bod c_red"><span class="icon_red"></span>需学习时长：<label>@ViewBag.PassTime</label>分钟</div>
+    }
+    <div class="bod c_blue"><span class="icon_blue"></span>已学习时长：<label id="learnTime">@ViewBag.fenzhongLearnTime</label>分钟</div>
+</div>
+<div "margin-left: 20px; padding: 5px 10px; background: #d2efec; width: 620px;display: none" class="fn-clear" id="div_exam" >
+    <div class="fn-left" "line-height: 30px;">
+        <span "padding: 0 3px; background: #c00; color: #fff">测</span>
+        <span id="examTitle"></span>
+        <span "margin-left: 15px;">考试时长:<label id="examlength"></label>分钟 </span>
+        <span "margin-left: 15px;">剩余考试次数：<label id="canExamTimes"></label>次 </span>
+        <span "margin-left: 15px;">完成状态：<label id="statuStr"></label></span>
+    </div>
+    <div class="fn-right">
+        <a class="btn" onclick="gotoExam()">进入考试</a>
+        <a class="btn" onclick="browseDetail()">答卷详情</a>
+    </div>
+</div>
+<input id="userWareId" type="hidden" value="@ViewBag.userWareId" />
+<input id="examUserId" type="hidden" value="" />
+<input id="examId" type="hidden" value="" />
+<script type="text/javascript">
+    var player = null;
+    var time = @ViewBag.LearnTime;//开始播放时间（秒）
+    var i = 0;//是否开启继续播放 0：开启 1：不开启
+    var j = 0;
+    var datatime = 0;//总时长
+    var questionList = [];
+    //var filepath="@(ConfigurationManager.AppSettings["VedioPlay"])@(Model.ResourceName)/out.m3u8";
+    var filepath = "@playSrc";
+
+    $(document).ready(function () {
+        // Collect query parameters in an object that we can
+        // forward to SWFObject:
+
+        var pqs = new ParsedQueryString();
+        var parameterNames = pqs.params(false);
+        var parameters = {
+            src: filepath,
+            autoPlay: "false",
+            verbose: true,
+            controlBarAutoHide: "true",
+            controlBarPosition: "bottom",
+            poster: "images/poster.png",
+            javascriptCallbackFunction: "jsbridge",
+            //plugin_hls: "../../bin/release/flashlsOSMF.swf",
+            plugin_hls: "@playswf",
+            hls_minbufferlength: -1,//最小缓冲区长度秒，需要达到之前播放可以开始
+            hls_maxbufferlength: 30,//最大的缓冲区长度秒（0表示无限缓冲）
+            hls_lowbufferlength: 3,//低门槛的缓冲秒
+            hls_seekmode: "ACCURATE",
+            hls_startfromlevel: -1,
+            hls_seekfromlevel: -1,
+            hls_live_flushurlcache: false,
+            hls_info: true,
+            hls_debug: true,
+            hls_debug2: true,
+            hls_warn: true,
+            hls_error: true,
+            hls_fragmentloadmaxretry: -1,
+            hls_manifestloadmaxretry: -1,
+            hls_capleveltostage: false,
+            hls_maxlevelcappingmode: "downscale"
+        };
+
+        for (var i = 0; i < parameterNames.length; i++) {
+            var parameterName = parameterNames[i];
+            parameters[parameterName] = pqs.param(parameterName) ||
+            parameters[parameterName];
+        }
+
+        var wmodeValue = "opaque";
+        var wmodeOptions = ["direct", "opaque", "transparent", "window"];
+        if (parameters.hasOwnProperty("wmode")) {
+            if (wmodeOptions.indexOf(parameters.wmode) >= 0) {
+                wmodeValue = parameters.wmode;
+            }
+            delete parameters.wmode;
+        }
+
+        // Embed the player SWF:
+        swfobject.embedSWF(
+            "@Url.Addr("~/Scripts/MediaPlay/StrobeMediaPlayback.swf")"
+            , "StrobeMediaPlayback"
+            , 640
+            , 480
+            , "10.1.0"
+            , "expressInstall.swf"
+            , parameters
+            , {
+                allowFullScreen: "true",
+                wmode: wmodeValue
+            }
+            , {
+                name: "StrobeMediaPlayback"
+            }
+        );
+
+        if ("@Model.ResourceType" == "2") {
+            ShowVedio();
+        }
+
+        //GetQuestion();
+        //ShowExam();
+
+    });
+
+    function ShowVedio() {
+        $.post("@ConfigurationManager.AppSettings["IsVedio"]/@Model.ResourceName", function (result) {
+            //result 0不存在视频 1 存在视频
+            if (result == 0) {
+                showDialog("视频不存在，或正在转换中，请稍后");
+            }
+        });
+    }
+
+
+    ///获取此项目中添加的所有问题
+    function GetQuestion() {
+        $.get("@Url.RetechAction("GetShowQuestion", "CourseWare", new { area = "Course" })?id="+sortId, function(data) {
+            questionList = data.dataList;
+        });
+    }
+
+    function loadStream(url) {
+        player.setMediaResourceURL(url);
+    }
+
+    var sum = 0;
+    function jsbridge(playerId, event, data) {
+        if (player == null) {
+            player = document.getElementById(playerId);
+        }
+        switch (event) {
+
+            case "onJavaScriptBridgeCreated":
+                listStreams(teststreams, "streamlist");
+                break;
+            case "play":
+                if (i == 0) {
+                    player.seek(time);
+                    i++;
+                }
+                break;
+            case "timeChange":
+            case "timeupdate":
+                
+                onCurrentTimeChange(data);
+
+                if (j < 10) {
+                    j++;
+                } else {
+                   // debugger;
+                    datatime = data.duration;
+                   // if ('@ViewBag.Status'!='2') {
+                    SaveLearnWare(j, data.duration);
+                   // }
+                        j = 0;
+
+                }
+
+                sum++;
+                break;
+            case "progress":
+                break;
+            case "complete":
+                if ('@ViewBag.Status'!='2')
+                {
+                    SaveLearnWare(datatime, datatime);
+                }
+                break;
+            default:
+
+
+        }
+    }
+
+    //记录时间
+    function SaveLearnWare(time,sumTime) {
+        $.get('@Url.RetechAction("SaveLearnWare", "Learn", new { area = "Student" })?userWareId=@ViewBag.userWareId'+
+               '&wareType=2&time='+time+"&PassTime=@ViewBag.PassTime&sumTime="+sumTime+"&recordId=@ViewBag.recordId&passType=@ViewBag.PassType&courseId=@ViewBag.courseId",
+            function(data) {
+                if (data.result == 1) {
+                    $("#learnTime").html(data.fenzhong);
+                    $("#hidstatus").val(data.status);
+                }
+            });
+    }
+
+    var flag = true;
+    var showIds = []; //已经弹出的ID
+    function onCurrentTimeChange(data) {
+        //  console.log(data.currentTime);
+
+        $.each(questionList, function(index, value) {
+
+            var id = questionList[index].QuestionID;
+            var time = questionList[index].SumTime;
+            if (parseInt(data.currentTime) == time) {
+                if ($.inArray(id, showIds) == -1) { //没弹出过
+                    showIds.push(id);
+                    player.pause();
+                    ShowQuestion(id);
+                }
+            }
+
+        });
+
+    }
+
+    ///弹出问题
+    function ShowQuestion(id) {
+        art.dialog.load('@Url.RetechAction("ShowQuestion", "CourseWare", new { area = "Course" })?id=' + id, {
+            title: '回答问题',
+            id: "pop_showQuestion",
+            width: 450,
+            height: 300,
+            left:'60%',
+            top:'50%',
+            cancel: false,
+            lock: true,
+            close: function() {
+                //player.play2();
+            }
+        });
+    }
+
+
+    ///获取考试数据
+    function ShowExam() {
+        var url = '@Url.RetechAction("GetShowExam", "Learn", new { area = "Student" })?id=@ViewBag.sortId&userWareId=@ViewBag.userWareId';
+        $.getJSON(url,function(data) {
+            if (data.examId == 0) {
+                $("#div_exam").hide();
+            } else
+            {
+                $("#div_exam").show();
+                $("#examTitle").html(data.dataList.examTitle.length>4?data.dataList.examTitle.substring(0,4)+"...":data.dataList.examTitle);
+                $("#examTitle").attr("title",data.dataList.examTitle);
+                $("#examlength").html(data.dataList.examlength);
+                $("#canExamTimes").html(data.dataList.canExamTimes);
+                $("#examUserId").val(data.dataList.examUserId);
+                $("#examId").val(data.dataList.id);
+                $("#statuStr").html(data.dataList.statuStr);
+            }
+        });
+    }
+
+    ///进入考试
+    function gotoExam() {
+
+        if ($("#examUserId").val() == "0") {
+            CreateExam();
+        } else {
+            GoIntoExam();
+        }
+    }
+
+    var waitDialog;
+    ///没有考试信息，生成信息
+    function CreateExam() {
+        waitDialog = $.dialog({
+            title: "提示",
+            content: "正在生成试卷...",
+            lock:true
+        });
+        $.getJSON('@Url.RetechAction("CreateQuestionByExamId", "Learn", new { area = "Student" })?id='+$("#examId").val()
+                 +"&userWareId=@ViewBag.userWareId",function(data) {
+                     waitDialog.close();
+                     // debugger;
+                     if (data.error == 0) {
+                         $("#examUserId").val(data.examUserId);
+                         GoIntoExam();
+
+                     } else {
+                         showDialog(data.errorMessge);
+                     }
+                 });
+
+    }
+
+    //进去考试
+    function GoIntoExam() {
+        $.getJSON('@Url.RetechAction("JudgeCanExamTest", "ExamTest", new { area = "Exam" })?euID=' +$("#examUserId").val() + '&flag=0', function (data) {
+            if (data.result == 1) {
+                readyExamUrl(0, '@Url.RetechAction("ExamTestOnline", "ExamTest", new { area = "Exam" })?euID=' + $("#examUserId").val()
+                                  +"&passType=@ViewBag.PassType&courseId=@ViewBag.courseId&recordId=@ViewBag.recordId", "", "",
+                                  function () {
+                    ShowExam();
+                });
+            } else {
+                showDialog(data.message);
+            }
+        });
+    }
+
+    ///试卷详情
+    function browseDetail() {
+        if ($("#examUserId").val() == "0") {
+            showDialog("未找到答卷详情！");
+        } else {
+            var url = '@Url.RetechAction("ExamTestDetail", "ExamTest", new { area = "Exam" })?euID=' + $("#examUserId").val();
+            window.open(url);
+        }
+
+    }
+</script>

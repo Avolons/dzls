@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../static/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/teacherChat.scss" />
+	</head>
+
+	<body>
+		<div class="chat">
+			<div id="chatWindow">
+				<ul id="messageList">
+					<li class="stds" data_userid='3324' data_name='奥特曼'><span class="time">09:45</span><b>红玫瑰:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
+					<li class="stds"><span class="time">09:45</span><b>小老鼠::</b><a href="javascript:void(0);">是呀不错呀讲的老师敬业.....</a></li>
+					<li class="stds"><span class="time">09:45</span><b>穿衣搭配:</b><a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a></li>
+					<li class="admin"><span class="time">09:45</span><b>管理员:</b><a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a></li>
+					<li class="stds"><span class="time">09:45</span><b>就是凑字符:</b><a href="javascript:void(0);">你们怎么想的就这点把你们收买了没谁了</a></li>
+					<li class="stds"><span class="time">09:45</span><b>蝙蝠侠  对  穿衣搭配 说:</b><a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a></li>
+					<li class="tch"><span class="time">09:45</span><b>nickie老师:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
+					<li class="stds"><span class="time">09:45</span><b>红玫瑰:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
+					<li class="stds"><span class="time">09:45</span><b>小老鼠::</b><a href="javascript:void(0);">是呀不错呀讲的老师敬业.....</a></li>
+					<li class="stds"><span class="time">09:45</span><b>穿衣搭配:</b><a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a></li>
+					<li class="admin"><span class="time">09:45</span><b>管理员:</b><a href="javascript:void(0);">本课程有很重要的知识点望同学们采纳。</a></li>
+					<li class="stds"><span class="time">09:45</span><b>就是凑字符:</b><a href="javascript:void(0);">你们怎么想的就这点把你们收买了没谁了</a></li>
+					<li class="stds"><span class="time">09:45</span><b>蝙蝠侠  对  穿衣搭配 说:</b><a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a></li>
+					<li class="tch"><span class="time">09:45</span><b>nickie老师:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
+					<li class="stdsAsk"><i>提问</i><b>红玫瑰:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a></li>
+					<li class="tchAns"><i>回答</i><b>nickie老师:</b><a href="javascript:void(0);">老师讲的好好呀真让我大开眼界学到了好多知识呀</a>
+						<p><span>【问题】</span><b>红玫瑰:</b><a href="javascript:void(0);">同学们要认真观看此视频还要有考试的。</a></p>
+					</li>
+				</ul>
+			</div>
+			<div id="submitWindow">
+				<textarea id="yourMessage" name="yourmessage" rows="" cols="" placeholder="和大伙聊聊吧"></textarea>
+				<div id="callObjectOut">
+					<input type="text" name="callObject" id="callObject" value="" placeholder="对所有人说" />
+				</div>
+				<button type="button" id="submitChat">发表</button>
+			</div>
+		</div>
+		<!--老师发言模板-->
+		<script type="text/html" id="tpl_tec">
+			{{#for (var i = 0; i< d.length; i++) {}} 
+				<li class="tch" data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>
+				<span class="time">{{d[i].timestamp}}</span>
+				<b>{{d[i].from.name}}</b>
+				<a href="javascript:void(0);">{{d[i].content.msg}}</a>
+				</li>
+				{{#}}}
+		</script>
+		<!--学生发言模板-->
+		<script type="text/html" id="tpl_stds">
+			{{#for (var i = 0; i< d.length; i++) {}} 
+				<li class="stds" data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>
+				<span class="time">{{d[i].timestamp}}</span>
+				<b>{{d[i].from.name}}</b>
+				<a href="javascript:void(0);">{{d[i].content.msg}}</a>
+				</li>
+				{{#}}}
+		</script>
+		<!--管理员发言模板-->
+		<script type="text/html" id="tpl_admin">
+			{{#for (var i = 0; i< d.length; i++) {}} 
+				<li class="admin" data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>
+				<span class="time">{{d[i].timestamp}}</span>
+				<b>管理员:</b>
+				<a href="javascript:void(0);">{{d[i].content.msg}}</a>
+				</li>
+				{{#}}}
+		</script>
+		<!--学生问问题模板-->
+
+		<script type="text/html" id="tpl_tecAns">
+			{{#for (var i = 0; i< d.length; i++) {}} 
+				<li class="stdsAsk" data_userid={{d[i].from.userid}} data_name={{d[i].from.name}}>
+				<i>提问</i>
+				<b>{{d[i].from.name}}</b>
+				<a href="javascript:void(0);">{{d[i].content.question}}</a>
+				</li>
+				{{#}}}
+		</script>
+		<!--老师回答问题模板-->
+		<script type="text/html" id="tpl_stdsAsk">
+			{{#for (var i = 0; i< d.length; i++) {}} <li class="tchAns">
+				<i>回答</i>
+				<b>{{d[i].from.name}}</b>
+				<a href="javascript:void(0);">{{d[i].content.answer}}</a>
+				<p>
+					<span>【问题】</span>
+					<b>d[i].to.name</b>
+					<a href="javascript:void(0);">{{d[i].content.question}}</a>
+				</p>
+				</li>
+				{{#}}}
+		</script>
+		<script src="../../static/lib/jquery/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/teacherChat.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+    
+</html>

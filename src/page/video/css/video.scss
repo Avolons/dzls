@@ -1,0 +1,283 @@
+.chat {
+    padding: 20px 0;
+    width: 1000px;
+    margin: 0 auto;
+    #chatWindow {
+        box-sizing: border-box;
+        height: 650px;
+        width: 1000px;
+        padding: 10px 15px;
+        background-color: #ebebeb;
+        overflow-y: auto;
+        li {
+            padding: 2px 0;
+            width: 100%;
+            line-height: 30px;
+            span {
+                    display: inline-block;
+                    color: #848484;
+                    font-size: 12px;
+                    line-height: 14px;
+                    height: 14px;
+                }
+                b {
+                    font-size: 12px;
+                    color: #ca4dc9;
+                    margin-left: 7px;
+                    margin-right: 7px;
+                    cursor:pointer;
+                }
+                a {
+                    color: #bdbdbd;
+                    font-size: 12px;
+                    cursor:default;
+                }
+                .iconfont{
+                    font-size:18px;
+                    margin:0 2px;
+                }
+        }
+        .tch {
+            a {
+                color: #3061a6;
+            }
+            b {
+                color: #ca4dc9;
+                font-weight: 700;
+                margin-left: 0;
+            }
+            i {
+                font-size: 18px;
+                color: #3061a6;
+                margin: 0 2px -4px;
+            }
+        }
+        /*学生发言的样式*/
+        .stds {
+            b {
+                color: #ca4dc9;
+            }
+            a {
+                color: #434343;
+            }
+        }
+        /*私聊公屏的样式*/
+        .teachTo,
+        .studentTo,
+        .adminTo {
+            em {
+                font-style: normal;
+                margin: 0 2px;
+                color: #ababab;
+                font-size: 12px;
+            }
+            b {
+                margin: 0;
+            }
+        }
+        .teachTo {
+            b {
+                margin-left: 0;
+            }
+            a {
+                color: #3061a6;
+            }
+            i {
+                color: #3061a6;
+            }
+        }
+        .studentTo {
+            a {
+                color: #434343;
+            }
+            span {
+                margin-right: 7px;
+            }
+        }
+        .adminTo {
+            b {
+                margin-left: 0;
+            }
+            a {
+                color: #e43a3d;
+            }
+            i {
+                color: #e43a3d;
+            }
+        }
+        /*管理员发言的样式*/
+        .admin {
+            b {
+                color: #ca4dc9;
+                font-weight: 700;
+                margin-left: 0;
+            }
+            a {
+                color: #e43a3d;
+                font-weight: 700;
+            }
+            i {
+                font-size: 18px;
+                color: #e43a3d;
+                margin: 0 2px -4px;
+            }
+        }
+        /*老师回答问题的样式*/
+        .tchAns {
+            i {
+                height: 20px;
+                width: 30px;
+                font-style: normal;
+                font-size: 12px;
+                display: inline-block;
+                background-color: #ca4dc9;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 20px;
+            }
+            .iconfont {
+                display: inline;
+                background-color: transparent;
+                color: #3061a6;
+                font-size: 18px;
+            }
+            b {
+                color: #ca4dc9;
+                font-weight: 700;
+                margin-left: 0;
+            }
+            a {
+                color: #3061a6;
+                font-weight: 700;
+            }
+            p {
+                span {
+                    margin-left: 30px;
+                    color: #ca4dc9;
+                    font-size: 11px;
+                }
+                b,
+                a {
+                    font-size: 11px;
+                }
+            }
+        }
+        .stdsAsk {
+            /*学生提问的样式*/
+            i {
+                height: 20px;
+                width: 30px;
+                font-style: normal;
+                font-size: 12px;
+                display: inline-block;
+                background-color: #54a7fb;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 20px;
+            }
+            b,
+            a {
+                color: #54a7fb;
+                font-weight: 700;
+            }
+        }
+    }
+    #submitWindow {
+        height: 100px;
+        width: 1000px;
+        position: relative;
+        #yourMessage {
+            box-sizing: border-box;
+            resize: none;
+            display: block;
+            height: 80px;
+            margin-bottom: 10px;
+            width: 100%;
+            font-size: 14px;
+            font-family: "微软雅黑";
+            background-color: #FFFFFF;
+            color: #606060;
+            padding-left: 10px;
+        }
+        #callObjectOut {
+            height: 20px;
+            width: 147px;
+            position: relative;
+            #closeCharest{
+                display: block;
+                font-size: 16px;
+                line-height: 20px;
+                cursor: pointer;
+                text-align: center;
+                height: 20px;
+                width: 20px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                color: #606060;
+            }
+            #callObject {
+                display: block;
+                height: 20px;
+                width: 137px;
+                padding-left: 10px;
+                font-size: 12px;
+                font-family: "微软雅黑";
+                background-color: #d0d0d0;
+                border: none;
+                overflow: hidden;
+                white-space: pre;
+                text-overflow: ellipsis;
+                color: #606060;
+            }
+        }
+        #submitChat {
+            font-family: "微软雅黑";
+            position: absolute;
+            left: 180px;
+            top: 90px;
+            z-index: 2;
+            height: 20px;
+            border: none;
+            border-radius: 9px;
+            background-color: #e43a3d;
+            width: 59px;
+            height: 21px;
+            color: #FFFFFF;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        #sumbitAsk {
+            font-family: "微软雅黑";
+            position: absolute;
+            left: 260px;
+            top: 90px;
+            z-index: 1;
+            height: 20px;
+            border: none;
+            border-radius: 9px;
+            background-color: #e43a3d;
+            width: 59px;
+            height: 21px;
+            color: #FFFFFF;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        #closeChat {
+            font-family: "微软雅黑";
+            position: absolute;
+            left: 340px;
+            top: 90px;
+            z-index: 1;
+            height: 20px;
+            border: none;
+            border-radius: 9px;
+            background-color: #e43a3d;
+            width: 89px;
+            height: 21px;
+            color: #FFFFFF;
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+}

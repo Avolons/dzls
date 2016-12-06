@@ -1,0 +1,33 @@
+{
+	"result": 1,
+	"dataList": [
+		{
+			"QuestionId": 1,
+			"Title": " 这个课程的证书国家认可吗？",
+			"CreateTimeStr": "0001-01-01 00:00",
+			"LastUpdateStr": "0001-01-01 00:00",
+			"UserPhoto": "http://avaimg.chinaaet.com/user/images/head/head_aet.png",
+			"UserName": "huangjiaojiao_123",
+			"IsKnotPaste": false,
+			"Isreply": true,
+			"IsOpenUp": false,
+			"TeacherName": "钱大大",
+			"ShowReply": "你好，是国家认可的.",
+			"Count": 0
+		}, {
+			"QuestionId": 2,
+			"Title": " 这个课程什么时候发证书？",
+			"CreateTimeStr": "0001-01-01 00:00",
+			"LastUpdateStr": "",
+			"UserPhoto": "http://avaimg.chinaaet.com/user/images/head/head_aet.png",
+			"UserName": "huangjiaojiao_123",
+			"IsKnotPaste": false,
+			"Isreply": false,
+			"IsOpenUp": false,
+			"TeacherName": null,
+			"ShowReply": "",
+			"Count": 0
+		}
+	],
+	"recordCount": 2
+}

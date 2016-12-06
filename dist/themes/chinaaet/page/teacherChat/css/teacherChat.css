@@ -1,0 +1,192 @@
+@charset "UTF-8";
+.chat {
+  padding: 20px 0;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.chat #chatWindow {
+  box-sizing: border-box;
+  height: 650px;
+  width: 1000px;
+  padding: 10px 15px;
+  background-color: #ebebeb;
+  overflow-y: auto;
+}
+
+.chat #chatWindow li {
+  padding: 2px 0;
+  width: 100%;
+  line-height: 30px;
+}
+
+.chat #chatWindow li span {
+  display: inline-block;
+  color: #848484;
+  font-size: 12px;
+  line-height: 14px;
+  height: 14px;
+}
+
+.chat #chatWindow li b {
+  font-size: 14px;
+  color: #6d6d6d;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.chat #chatWindow li a {
+  color: #bdbdbd;
+  font-size: 14px;
+}
+
+.chat #chatWindow .tch b {
+  color: #ca4dc9;
+}
+
+.chat #chatWindow .tch a {
+  color: #ca4dc9;
+}
+
+.chat #chatWindow .stds b {
+  color: #54a7fb;
+}
+
+.chat #chatWindow .stds a {
+  color: #434343;
+}
+
+.chat #chatWindow .admin b {
+  color: #cd955e;
+}
+
+.chat #chatWindow .admin a {
+  color: #cd955e;
+}
+
+.chat #chatWindow .tchAns i {
+  height: 20px;
+  width: 30px;
+  font-style: normal;
+  font-size: 12px;
+  display: inline-block;
+  background-color: #ca4dc9;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 20px;
+}
+
+.chat #chatWindow .tchAns b {
+  color: #ca4dc9;
+}
+
+.chat #chatWindow .tchAns a {
+  color: #ca4dc9;
+}
+
+.chat #chatWindow .tchAns p span {
+  margin-left: 30px;
+  color: #ca4dc9;
+  font-size: 11px;
+}
+
+.chat #chatWindow .tchAns p b {
+  font-size: 11px;
+}
+
+.chat #chatWindow .tchAns p a {
+  font-size: 11px;
+}
+
+.chat #chatWindow .stdsAsk i {
+  height: 20px;
+  width: 30px;
+  font-style: normal;
+  font-size: 12px;
+  display: inline-block;
+  background-color: #54a7fb;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 20px;
+}
+
+.chat #chatWindow .stdsAsk b {
+  color: #54a7fb;
+}
+
+.chat #chatWindow .stdsAsk a {
+  color: #54a7fb;
+}
+
+.chat #submitWindow {
+  height: 100px;
+  width: 1000px;
+  position: relative;
+}
+
+.chat #submitWindow #yourMessage {
+  box-sizing: border-box;
+  resize: none;
+  display: block;
+  height: 80px;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 14px;
+  font-family: "微软雅黑";
+  background-color: #FFFFFF;
+  color: #606060;
+  padding-left: 10px;
+}
+
+.chat #submitWindow #callObjectOut {
+  height: 20px;
+  width: 147px;
+  position: relative;
+}
+
+.chat #submitWindow #callObjectOut:after {
+  content: "×";
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #606060;
+}
+
+.chat #submitWindow #callObjectOut #callObject {
+  display: block;
+  height: 20px;
+  width: 137px;
+  padding-left: 10px;
+  font-size: 12px;
+  font-family: "微软雅黑";
+  background-color: #d0d0d0;
+  border: none;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+  color: #606060;
+}
+
+.chat #submitWindow #submitChat {
+  font-family: "微软雅黑";
+  position: absolute;
+  left: 180px;
+  top: 90px;
+  z-index: 2;
+  height: 20px;
+  border: none;
+  border-radius: 9px;
+  background-color: #e43a3d;
+  width: 59px;
+  height: 21px;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 21px;
+}

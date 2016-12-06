@@ -5,7 +5,8 @@ fis.match('*', {
 
 // 所有模板放到 tempalte 目录下
 fis.match('*.html', {
-    release: '/template/$0'
+    release: '/template/$0',
+    useMap:true
 });
 
 // widget源码目录下的资源被标注为组件
@@ -27,11 +28,20 @@ fis.match('/test/**/*', {
 
 //对page下的scss文件进行转换
 fis.match('/page/**/*.scss', {
+	isMod: true,
+//useHash: true,
   rExt: '.css',
   parser: fis.plugin('node-sass')
 })
 
+//对page下的js进行模块申明
+fis.match('/page/**/*.js', {
+	isMod: true,
+})
+
 fis.match('/widget/**/*.scss', {
+	isMod: true,
+//	useHash: true,
   rExt: '.css',
   parser: fis.plugin('node-sass')
 })
@@ -61,15 +71,15 @@ fis.media('prod')
             margin: '15'
         })
     })
-    .match('*.js', {
-        packTo: '/static/all_others.js'
+    .match('/page/**/*.js', {
+        packTo: '/package/all_others.js'
     })
-    .match('*.css', {
-        packTo: '/staitc/all_others.css'
+    .match('/page/**/*.css', {
+        packTo: '/package/all_others.css'
     })
     .match('/widget/**/*.js', {
-        packTo: '/static/all_comp.js'
+        packTo: '/package/all_comp.js'
     })
     .match('/widget/**/*.css', {
-        packTo: '/static/all_comp.css'
+        packTo: '/package/all_comp.css'
     });

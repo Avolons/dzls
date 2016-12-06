@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		body,html{
+			height: 100%;
+		}
+			.out{
+				height: 100%;
+				width: 300px;
+				background-color: #FFFFFF;
+				border: 1px solid #000000;
+				display: -moz-box;
+				-moz-box-orient: vertical;
+				-moz-box-pack: center;
+			    position: absolute;
+			}
+			li{
+				display: block;
+				box-sizing: border-box;
+			}
+			.red, .blue, .green{
+				width: 300px;
+				height: 200px;
+			}
+			.red{
+				background-color:red;
+			}
+			.blue{
+				background-color:blue;
+			}
+			.green{
+				background-color:green;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="out">
+			"<li class="red"></li><li class="blue"></li><li class="green"></li>"
+		</ul>
+	</body>
+</html>
